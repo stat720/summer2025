@@ -2,22 +2,22 @@
 title: Introduction to Java
 ---
 
-Sep 28
-: [Java & Git](#)
-  : [1.1](#)
+May 27
+: Welcome!
+  : [html](#)
 
-Sep 29
+May 28
 : **Section**{: .label .label-purple }[Intro to Java](#)
   : [Solution](#)
 
-Sep 30
+May 29
 : [Variables & Objects](#)
   : [1.2](#), [2.1](#)
 
-Oct 1
-: **Lab**{: .label .label-purple } [Intro to Java](#)
+May 30
+: [Variables & Objects](#)
+  : [1.2](#), [2.1](#)
 
-Oct 2
-: [Tracing, IntLists, & Recursion](#)
-  : [2.1](#)
-: **HW 1 due**{: .label .label-red }
+May 31
+: [Variables & Objects](#)
+  : [1.2](#), [2.1](#)
