@@ -19,7 +19,7 @@ description: a
 author: Josefina Lacasa
 baseurl: '/summer2025' # the subpath of your site, e.g. /blog
 url: 'https://stat720.github.io' # the base hostname & protocol for your site, e.g. http://example.com
-exclude: ["Gemfile", "Gemfile.lock", "LICENSE", "README.md", "disabled", "vendor", "_plugins", "temp"]
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
 
 # Theme settings
 remote_theme: just-the-docs/just-the-docs@v0.10.1
