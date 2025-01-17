@@ -1,5 +1,5 @@
 ---
-title: Introduction to Java
+title: Introduction 
 ---
 
 May 27
@@ -7,15 +7,15 @@ May 27
   : [html](#)
 
 May 28
-: **Section**{: .label .label-purple }[Intro to Java](#)
+: What are designed experiments? 
   : [Solution](#)
 
 May 29
-: [Variables & Objects](#)
+: Completely randomized design
   : [1.2](#), [2.1](#)
 
 May 30
-: [Variables & Objects](#)
+: Treatment design \& experiment design
   : [1.2](#), [2.1](#)
 
 May 31
