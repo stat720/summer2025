@@ -4,7 +4,7 @@ title: Introduction
 
 May 27
 : Welcome!
-  : [html](#)
+  : [html](https://stat720.github.io/book2025/index.html)
 
 May 28
 : What are designed experiments? 
