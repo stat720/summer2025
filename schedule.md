@@ -1,11 +1,12 @@
 ---
 layout: page
 title: Schedule
-description: The weekly event schedule.
+description: The weekly schedule.
+nav_order: 2
 ---
 
 # Weekly Schedule
 
-{% for schedule in site.schedules %}
-{{ schedule }}
+{% for schedule in site.modules %}
+{{ module }}
 {% endfor %}
