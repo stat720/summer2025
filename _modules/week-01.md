@@ -2,22 +2,22 @@
 title: Introduction 
 ---
 
-May 26
+May 27
 : Welcome!
   : [html](https://stat720.github.io/book2025/index.html)
 
-May 27
-: What are designed experiments? 
-  : [html](https://stat720.github.io/book2025/index.html)
-
 May 28
-: Completely randomized design
-  : [html](https://stat720.github.io/book2025/index.html)
+: What are designed experiments? 
+  : [Solution](#)
 
 May 29
-: Treatment design & experiment design
-  : [html](https://stat720.github.io/book2025/index.html)
+: Completely randomized design
+  : [1.2](#), [2.1](#)
 
 May 30
-: Treatment design & experiment design
-  : [html](https://stat720.github.io/book2025/index.html)
+: Treatment design \& experiment design
+  : [1.2](#), [2.1](#)
+
+May 31
+: [Variables & Objects](#)
+  : [1.2](#), [2.1](#)

@@ -1,23 +1,23 @@
 ---
-title: Linear models
+title: Basic Data Structures
 ---
 
-June 2
-: Review I
+Oct 5
+: [Linked Lists & Encapsulation](#)
   : [3.1](#), [2.2](#), [2.3](#)
 
-June 3
-: Review II
+Oct 6
+: **Section**{: .label .label-purple }[Linked Lists](#)
   : [Solution](#)
 
-June 4
-: Applied linear models I
+Oct 7
+: [Resizing Arrays](#)
   : [2.4](#), [2.5](#)
 
-June 5
-: Kahoot
+Oct 8
+: **Lab**{: .label .label-purple } [Resizing Arrays](#)
 
-June 6
+Oct 9
 : [Runtime Analysis](#)
   : [8.1](#), [8.2](#), [8.3](#), [8.4](#)
 : **HW 2 due**{: .label .label-red }
