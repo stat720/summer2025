@@ -1,11 +1,11 @@
 ---
-name: Kevin Lin
+name: Dr. Josefina Lacasa
 role: Instructor
-email: me@example.com
-website: https://kevinl.info
-photo: kevin.jpg
+email: lacasa@ksu.edu
+website: https://jlacasa.github.io
+photo: profile.png
 meta:
-  Office Hours: Somewhere on the internet
+  Office Hours: Dickens 107
 ---
 
 [Schedule an appointment](#){: .btn .btn-outline }
