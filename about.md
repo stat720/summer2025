@@ -41,14 +41,14 @@ The process to fit a statistical model to data taught in this course focuses on 
 ## Software  
 Course material and examples will be provided in R. However, students may use other programming languages if appropriate.
 
-### Attendance  
+## Attendance  
 Attendance to lectures and in-class participation are expected. Coming
 late to class, leaving early, or failing to attend class will lower your grade.
 
-### Assignments  
+## Assignments  
 Homework assignments will be notified at least a week in advance. Incorrect assignments may be resubmitted once for full points. After that, assignments may be resubmitted for 80% of their last point worth. Late submissions will be considered for 80% of the original points.
 
-### Final project  
+## Final project  
 Semester projects may deal with any topic that interests the student and is approved by the instructor. Projects are expected to identify a research problem and develop a designed experiment that is appropriate for solving that problem. Projects consist of a manuscript and a tutorial that describes the research problem, the experiment design and the treatment design. More information here.
 
 ## Grading
@@ -58,23 +58,23 @@ Attendance and participation 20% | Assignments 40% | Midterm Exam 20% | Final pr
 
 ## General Policies
 
-## Generative AI policy  
+### Generative AI policy  
 Students may use generative AI tools as an assistant to complete their homework or projects but are required to understand every step of their work. Failure to justify their own work may reduce the student’s grade.
 
-## Academic Honesty  
+### Academic Honesty  
 
 Undergraduate and graduate students, by registration, acknowledge the jurisdiction of the Honor System (www.ksu.edu/honor). The policies and procedures of the Honor System apply to all full and part-time students enrolled. A grade of XF can result from a breach of academic honesty.
 
-## Academic Accommodations for Students with Disabilities  
+### Academic Accommodations for Students with Disabilities  
 
 Students with disabilities who need classroom accommodations, access to technology, or information about emergency building/campus evacuation processes should contact the Student Access Center and/or their instructor.  Services are available to students with a wide range of disabilities including, but not limited to, physical disabilities, medical conditions, learning disabilities, attention deficit disorder, depression, and anxiety.  If you are a student enrolled in campus/online courses through the Manhattan or Olathe campuses, contact the Student Access Center at accesscenter@k-state.edu, 785-532-6441.
 
 
-## Expectations for Classroom Conduct  
+### Expectations for Classroom Conduct  
 
 All student activities in the University, including this course, are governed by the Student Judicial Conduct Code as outlined in the Student Government Association By Laws, Article VI, Section 3, number 2. Students that engage in behavior that disrupts the learning environment may be asked to leave the class.
 
 
-## Copyright Notification  
+### Copyright Notification  
 
 During this course, students are prohibited from selling notes to or being paid for taking notes by any person or commercial firm, or posting lecture notes on any websites without the express written permission of the professor teaching this course.
