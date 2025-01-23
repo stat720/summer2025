@@ -5,7 +5,7 @@ description: The weekly schedule.
 nav_order: 2
 ---
 
-# Weekly Schedule
+# Schedule
 
 {% for module in site.modules %}
 {{ module }}
