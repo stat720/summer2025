@@ -4,18 +4,19 @@ title: Linear Models Review
 
 June 2
 : Linear models review
-  : [3.1](#), [2.2](#), [2.3](#)
+  : [html](#)
 
 June 3
 : Linear models review
-  : [Solution](#)
+  : [html](#)
 
 June 4
 : Linear models review
-  : [2.4](#), [2.5](#)
+  : [html](#)
 
 June 5
-: Applied linear models
+: Linear models applied to designed experiments 
+  : [html](#)
 
 June 6
 : Kahoot!
