@@ -15,7 +15,7 @@ May 28
   : [html](https://stat720.github.io/book2025/designed-experiments-1.html)
 
 May 29
-: Treatment design \& experiment design
+: Treatment design & experiment design
   : [html](https://stat720.github.io/book2025/designed-experiments-2.html)
 
 May 30
