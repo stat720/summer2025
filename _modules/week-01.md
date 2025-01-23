@@ -8,16 +8,16 @@ May 26
 
 May 27
 : What are designed experiments? 
-  : [Solution](#)
+  : [html](https://stat720.github.io/book2025/what-are-designed-experiments.html)
 
 May 28
 : Completely randomized design
-  : [1.2](#), [2.1](#)
+  : [html](https://stat720.github.io/book2025/what-are-designed-experiments.html)
 
 May 29
 : Treatment design \& experiment design
-  : [1.2](#), [2.1](#)
+  : [html](https://stat720.github.io/book2025/experiment-design.html)
 
 May 30
 : Kahoot!
-  : [1.2](#), [2.1](#)
+  : **HW 1**{: .label .label-green }

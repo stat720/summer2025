@@ -19,4 +19,4 @@ June 5
 
 June 6
 : Kahoot!
-: **HW 2 due**{: .label .label-red }
+  : **HW 1 due**{: .label .label-red }
