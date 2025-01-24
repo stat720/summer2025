@@ -1,0 +1,51 @@
+--- 
+title: "STAT 720 - Design of Experiments"
+author: "Josefina Lacasa"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+---
+
+# Welcome to STAT 720  
+
+
+- [About me](https://jlacasa.github.io/)  
+- About you:    
+
+```{r }
+
+```
+
+## About this course:  
+
+### Logistics  
+
+- [Website](https://stat720.github.io/summer2025)
+- Syllabus
+- Statistical programming requirements  
+- Rough draft of the course  
+- Semester project - design your own experiment.   
+- Grades: A (100-89.999999999(!!!)), B (89.99-79.99), C (79.99-69.99), D (69.99-59.99), F (<59.99).
+
+### Philosophy  
+
+#### Statistics  
+
+- Statistical thinking. How are the data generated?  
+- Writing out statistical models
+- Fitting the model using R  
+
+#### Teaching  
+- Applied problems  
+- Kahoot  
+
+## Learning goals   
+
+By the end of this course, you should be able to:  
+- Be able to identify the treatment design and experiment design (and other components of the design).  
+- Be able to write out the statistical model.  
+- Know the benefits/disadvantages of different experiment designs.  
+
+## Why do we design experiments?  
+
+## For next class  
+
