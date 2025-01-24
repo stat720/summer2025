@@ -6,8 +6,8 @@ nav_order: 5
 ---
 
 **Recommended Textbooks:**
-- Milliken, G.A., & Johnson, D.E. (2009). Analysis of Messy Data Volume 1: Designed Experiments, Second Edition (2nd ed.). Chapman and Hall/CRC. https://doi.org/10.1201/EBK1584883340
-- Stroup, W.W., Ptukhina, M., & Garai, J. (2024). Generalized Linear Mixed Models: Modern Concepts, Methods and Applications (2nd ed.). Chapman and Hall/CRC. ISBN 9781498755566
+- Milliken, G.A., & Johnson, D.E. (2009). Analysis of Messy Data Volume 1: Designed Experiments, Second Edition (2nd ed.). Chapman and Hall/CRC. [[link](https://doi.org/10.1201/EBK1584883340)]
+- Stroup, W.W., Ptukhina, M., & Garai, J. (2024). Generalized Linear Mixed Models: Modern Concepts, Methods and Applications (2nd ed.). Chapman and Hall/CRC. ISBN 9781498755566 [[link](https://www.routledge.com/Generalized-Linear-Mixed-Models-Modern-Concepts-Methods-and-Applications/Stroup-Ptukhina-Garai/p/book/9781498755566?srsltid=AfmBOop80SBSwTFMCIzkiTtYe-5uir_Xnw2KVZxa1oXb4LJWrLRx0Wwq)]
 
 **Recommended software-related resources:**
 - R Core Team (2023) R: A Language and Environment for Statistical Computing. R Foundation for Statistical Computing. [[link](https://cran.r-project.org/)]
