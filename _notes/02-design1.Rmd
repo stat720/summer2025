@@ -1,0 +1,13 @@
+# What are designed experiments?  
+
+## Some examples  
+
+
+## What do they all have in common?  
+
+- Experimental unit  
+
+
+
+
+*More complex:* Observational unit
