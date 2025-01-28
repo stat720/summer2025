@@ -1,12 +1,11 @@
 welcome-to-stat-720
 about-this-course
 logistics
-philosophy
-statistics
-teaching
 learning-goals
-why-do-we-design-experiments
-for-next-class
+notes-on-notation
+why-do-designed-experiments-exist
+example
+the-golden-rules-of-designed-experiments
 what-are-designed-experiments
 some-examples
 what-do-they-all-have-in-common

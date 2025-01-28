@@ -1,21 +1,16 @@
 --- 
 title: "STAT 720 - Design of Experiments"
 author: "Josefina Lacasa"
-date: "`r Sys.Date()`"
+date: 06-09-2025 #"`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Welcome to STAT 720  
+# Welcome to STAT 720!  
 
+## About this course:  
 
 - [About me](https://jlacasa.github.io/)  
 - About you:    
-
-```{r }
-
-```
-
-## About this course:  
 
 ### Logistics  
 
@@ -26,17 +21,6 @@ site: bookdown::bookdown_site
 - Semester project - design your own experiment.   
 - Grades: A (100-89.999999999(!!!)), B (89.99-79.99), C (79.99-69.99), D (69.99-59.99), F (<59.99).
 
-### Philosophy  
-
-#### Statistics  
-
-- Statistical thinking. How are the data generated?  
-- Writing out statistical models
-- Fitting the model using R  
-
-#### Teaching  
-- Applied problems  
-- Kahoot  
 
 ## Learning goals   
 
@@ -45,7 +29,34 @@ By the end of this course, you should be able to:
 - Be able to write out the statistical model.  
 - Know the benefits/disadvantages of different experiment designs.  
 
-## Why do we design experiments?  
+## Notes on notation  
 
-## For next class  
+- scalars: $y$, $\sigma$, $\beta_0$  
+- vectors: $\mathbf{y} \equiv [y_1, y_2, ..., y_n]'$, $\boldsymbol{\beta} \equiv [\beta_1, \beta_2, ..., \beta_p]'$, $\boldsymbol{u}$  
+- matrices: $\mathbf{X}$, $\Sigma$  
+- probability distribution: $\mathbf{y} \sim N(\boldsymbol{0}, \sigma^2\mathbf{I})$     
+
+## Why do designed experiments exist?  
+
+### Example  
+
+Your friend Susie is planting tomatos in her backyard. She bought three different varieties and wishes to know which one she likes the best, to buy more next year. The traits Susie values the most are yield (in kg week^-1^) and size (in g tomato^-1^).  
+
+Which scenario do you think is more appropriate?  
+
+**Case A:**   
+Susie buys 3 plants of each variety. She divides her orchard into three sectors and plants each variety in a different sector.  
+
+**Case B:**   
+Susie buys 1 plant of each variety. She divides her orchard into three sectors and plants each variety in a different sector.  
+
+**Case C:**   
+Susie buys 3 plants of each variety. She randomly assigns what variety goes into which hole.  
+
+
+## The golden rules of designed experiments  
+
+- Randomization  
+- Replication  
+- Local control  
 
