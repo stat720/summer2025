@@ -11,13 +11,13 @@ May 27
   : [html](https://stat720.github.io/summer2025/notes/what-are-designed-experiments.html)
 
 May 28
-: Designed experiments basics II
+: Design structures
   : [html](https://stat720.github.io/summer2025/notes/designed-experiments.html)
 
 May 29
-: Treatment design & experiment design
+: Design structures
   : [html](https://stat720.github.io/summer2025/notes/designed-experiments.html)
 
 May 30
-: Kahoot!
+: Kahoot! Review, organizing data and other helpful tips  
   : **HW 1**{: .label .label-green }
