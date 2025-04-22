@@ -3,19 +3,23 @@ title: Linear Models Review
 ---
 
 June 2
-: Linear models review
+: Treatment structure
   : [html](#)
+: 
+  : Chapter 4 in Milliken and Johnson. 
 
 June 3
-: Linear models review
+: Treatment structure
   : [html](#)
+: 
+  : Chapter 4 in Milliken and Johnson. 
 
 June 4
-: Linear models review
+: Applied examples  
   : [html](#)
 
 June 5
-: Linear models applied to designed experiments 
+: Applied examples 
   : [html](#)
 
 June 6
