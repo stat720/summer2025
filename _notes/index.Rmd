@@ -1,26 +1,28 @@
 --- 
 title: "STAT 720 - Design of Experiments"
 author: "Josefina Lacasa"
-date: 06-09-2025 #"`r Sys.Date()`"
+date: Summer 2025 #"`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
 # Welcome to STAT 720!  
+June 9th, 2025  
 
 ## About this course:  
 
-- [About me](https://jlacasa.github.io/)  
-- About you:    
+- [About me](https://jlacasa.github.io/) 
+- About you: 
+- What's your major, what do you expect to learn?
 
 ### Logistics  
 
 - [Website](https://stat720.github.io/summer2025)
 - Syllabus
 - Statistical programming requirements  
-- Rough draft of the course  
-- Semester project - design your own experiment.   
+- Rough mindmap of the course (on whiteboard)  
+- [Semester project - design your own experiment.](https://stat720.github.io/2025summer/summer2025/notes/semester-project.html)   
 - Grades: A (100-89.999999999(!!!)), B (89.99-79.99), C (79.99-69.99), D (69.99-59.99), F (<59.99).
-
+- Attendance policies  
 
 ## Learning goals   
 
@@ -29,29 +31,39 @@ By the end of this course, you should be able to:
 - Be able to write out the statistical model.  
 - Know the benefits/disadvantages of different experiment designs.  
 
-## Notes on notation  
+
+## On notation  
 
 - scalars: $y$, $\sigma$, $\beta_0$  
 - vectors: $\mathbf{y} \equiv [y_1, y_2, ..., y_n]'$, $\boldsymbol{\beta} \equiv [\beta_1, \beta_2, ..., \beta_p]'$, $\boldsymbol{u}$  
 - matrices: $\mathbf{X}$, $\Sigma$  
-- probability distribution: $\mathbf{y} \sim N(\boldsymbol{0}, \sigma^2\mathbf{I})$     
+- probability distribution: $y \sim N(0, \sigma^2)$, $\mathbf{y} \sim N(\boldsymbol{0}, \sigma^2\mathbf{I})$.     
 
 ## Why do designed experiments exist?  
 
 ### Example  
 
-Your friend Susie is planting tomatos in her backyard. She bought three different varieties and wishes to know which one she likes the best, to buy more next year. The traits Susie values the most are yield (in kg week^-1^) and size (in g tomato^-1^).  
+You want to bake cookies and are not sure about the amount of baking powder vs. baking soda. 
 
-Which scenario do you think is more appropriate?  
+- more baking powder = smaller, more cakey cookies   
+- more baking soda = larger, crispier cookies  
 
-**Case A:**   
-Susie buys 3 plants of each variety. She divides her orchard into three sectors and plants each variety in a different sector.  
+How can we estimate the cookie diameter 
 
-**Case B:**   
-Susie buys 1 plant of each variety. She divides her orchard into three sectors and plants each variety in a different sector.  
-
-**Case C:**   
-Susie buys 3 plants of each variety. She randomly assigns what variety goes into which hole.  
+> **Case A:**   
+> Bake 3 cookies, each with a different levels of baking powder:baking soda ratio.
+> 
+> **Case B:**   
+> - On Monday: Bake 3 cookies, each with a different levels of baking powder:baking soda ratio.     
+> - On Tuesday: Bake 3 cookies, each with a different levels of baking powder:baking soda ratio.     
+> - On Wednesday: Bake 3 cookies, each with a different levels of baking powder:baking soda ratio.     
+> 
+> **Case C:**   
+> - On Monday: Bake 3 cookies with the first level of baking powder:baking soda ratio.     
+> - On Tuesday: Bake 3 cookies with the second level of baking powder:baking soda ratio.     
+> - On Wednesday: Bake 3 cookies with the third level of baking powder:baking soda ratio.     
+> 
+> Group discussion: which is preferrable?  
 
 
 ## The golden rules of designed experiments  
@@ -59,4 +71,8 @@ Susie buys 3 plants of each variety. She randomly assigns what variety goes into
 - Randomization  
 - Replication  
 - Local control  
+
+## Concepts in designed experiments  
+- Experimental unit: smallest unit to which a treatment is independently assigned/applied. 
+- Observational unit: smallest unit on which observations are made. 
 
