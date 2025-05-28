@@ -2,27 +2,27 @@
 title: Linear Models Review
 ---
 
-June 2
+June 16
 : Treatment structure
   : [html](#)
 : [](#)
   : Chapter 4 in Milliken and Johnson. 
 
-June 3
+June 17
 : Treatment structure
   : [html](#)
 : [](#)
   : Chapter 4 in Milliken and Johnson. 
 
-June 4
+June 18
 : Applied examples  
   : [html](#)
 
-June 5
+June 19
 : Applied examples 
   : [html](#)
 
-June 6
+June 20
 : Kahoot!
   : **HW 1 due**{: .label .label-red }
   : **HW 2**{: .label .label-green }
