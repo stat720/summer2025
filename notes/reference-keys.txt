@@ -42,6 +42,7 @@ design-structure-versus-treatment-structure
 semester-project
 learning-objectives
 partial-deadlines
-project-proposal---due-friday-june-13-at-2pm-ct
+project-proposal---due-friday-june-20-at-2pm-ct
 written-report---due-friday-july-25-at-2pm-ct
+oral-presentation---somewhere-between-july-21---august-1
 practical-reads

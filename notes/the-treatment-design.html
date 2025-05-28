@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 4 Linear models applied to the basic types of designed experiments | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 4 Linear models applied to the basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <title>Day 6 The treatment design | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 6 The treatment design | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 4 Linear models applied to the basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 6 The treatment design | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 4 Linear models applied to the basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 6 The treatment design | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="basic-types-of-designed-experiments-1.html"/>
-<link rel="next" href="review-organizing-data-and-other-helpful-tips.html"/>
+<link rel="prev" href="review-organizing-data-and-other-helpful-tips.html"/>
+<link rel="next" href="semester-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -127,20 +127,15 @@
 <li class="chapter" data-level="5.2" data-path="review-organizing-data-and-other-helpful-tips.html"><a href="review-organizing-data-and-other-helpful-tips.html#organizing-data"><i class="fa fa-check"></i><b>5.2</b> Organizing data</a></li>
 <li class="chapter" data-level="5.3" data-path="review-organizing-data-and-other-helpful-tips.html"><a href="review-organizing-data-and-other-helpful-tips.html#other-helpful-tips"><i class="fa fa-check"></i><b>5.3</b> Other helpful tips</a></li>
 </ul></li>
-<li class="chapter" data-level="6" data-path="the-treatment-structure.html"><a href="the-treatment-structure.html"><i class="fa fa-check"></i><b>6</b> The treatment structure</a>
-<ul>
-<li class="chapter" data-level="6.1" data-path="the-treatment-structure.html"><a href="the-treatment-structure.html#review-3"><i class="fa fa-check"></i><b>6.1</b> Review</a></li>
-<li class="chapter" data-level="6.2" data-path="the-treatment-structure.html"><a href="the-treatment-structure.html#design-structure-versus-treatment-structure"><i class="fa fa-check"></i><b>6.2</b> Design structure versus treatment structure</a></li>
-</ul></li>
+<li class="chapter" data-level="6" data-path="the-treatment-design.html"><a href="the-treatment-design.html"><i class="fa fa-check"></i><b>6</b> The treatment design</a></li>
 <li class="chapter" data-level="7" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>7</b> Semester Project</a>
 <ul>
 <li class="chapter" data-level="7.1" data-path="semester-project.html"><a href="semester-project.html#learning-objectives"><i class="fa fa-check"></i><b>7.1</b> Learning objectives</a></li>
 <li class="chapter" data-level="7.2" data-path="semester-project.html"><a href="semester-project.html#partial-deadlines"><i class="fa fa-check"></i><b>7.2</b> Partial deadlines</a>
 <ul>
-<li class="chapter" data-level="7.2.1" data-path="semester-project.html"><a href="semester-project.html#project-proposal---due-friday-june-20-at-2pm-ct"><i class="fa fa-check"></i><b>7.2.1</b> Project proposal - Due Friday June 20 at 2pm CT</a></li>
+<li class="chapter" data-level="7.2.1" data-path="semester-project.html"><a href="semester-project.html#project-proposal---due-friday-june-13-at-2pm-ct"><i class="fa fa-check"></i><b>7.2.1</b> Project proposal - Due Friday June 13 at 2pm CT</a></li>
 <li class="chapter" data-level="7.2.2" data-path="semester-project.html"><a href="semester-project.html#written-report---due-friday-july-25-at-2pm-ct"><i class="fa fa-check"></i><b>7.2.2</b> Written report - Due Friday July 25 at 2pm CT</a></li>
-<li class="chapter" data-level="7.2.3" data-path="semester-project.html"><a href="semester-project.html#oral-presentation---somewhere-between-july-21---august-1"><i class="fa fa-check"></i><b>7.2.3</b> Oral presentation - Somewhere between July 21 - August 1</a></li>
-<li class="chapter" data-level="7.2.4" data-path="semester-project.html"><a href="semester-project.html#practical-reads"><i class="fa fa-check"></i><b>7.2.4</b> Practical reads</a></li>
+<li class="chapter" data-level="7.2.3" data-path="semester-project.html"><a href="semester-project.html#practical-reads"><i class="fa fa-check"></i><b>7.2.3</b> Practical reads</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -162,47 +157,18 @@
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="linear-models-applied-to-the-basic-types-of-designed-experiments" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Day 4</span> Linear models applied to the basic types of designed experiments<a href="linear-models-applied-to-the-basic-types-of-designed-experiments.html#linear-models-applied-to-the-basic-types-of-designed-experiments" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 12th, 2025</p>
-<div id="review-1" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Review<a href="linear-models-applied-to-the-basic-types-of-designed-experiments.html#review-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Experimental unit<br />
-</li>
-<li>The golden rules of designed experiments:
-<ul>
-<li>Replication</li>
-<li>Randomization</li>
-<li>Local control (blocking)</li>
-</ul></li>
-<li>Types of designs</li>
-</ul>
-</div>
-<div id="experiment-designs-and-their-models" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Experiment designs and their models<a href="linear-models-applied-to-the-basic-types-of-designed-experiments.html#experiment-designs-and-their-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="completely-randomized-design-crd-2" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Completely randomized design (CRD)<a href="linear-models-applied-to-the-basic-types-of-designed-experiments.html#completely-randomized-design-crd-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><em>Blueprint</em>: all experimental units were</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="../figures/designs_crd.PNG" alt="Schematic description of an experiment with a completely randomized design" width="100%" />
-<p class="caption">
-Figure 4.1: Schematic description of an experiment with a completely randomized design
-</p>
-</div>
+<div id="the-treatment-design" class="section level1 hasAnchor" number="6">
+<h1><span class="header-section-number">Day 6</span> The treatment design<a href="the-treatment-design.html#the-treatment-design" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>June 16th, 2025</p>
 
-</div>
-</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="basic-types-of-designed-experiments-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="review-organizing-data-and-other-helpful-tips.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="review-organizing-data-and-other-helpful-tips.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semester-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -216,42 +182,42 @@ Figure 4.1: Schematic description of an experiment with a completely randomized 
 <script>
 gitbook.require(["gitbook"], function(gitbook) {
 gitbook.start({
-  "sharing": {
-    "github": false,
-    "facebook": true,
-    "twitter": true,
-    "linkedin": false,
-    "weibo": false,
-    "instapaper": false,
-    "vk": false,
-    "whatsapp": false,
-    "all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
-  },
-  "fontsettings": {
-    "theme": "white",
-    "family": "sans",
-    "size": 2
-  },
-  "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/04-design3.Rmd",
-    "text": "Edit"
-  },
-  "history": {
-    "link": null,
-    "text": null
-  },
-  "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/04-design3.Rmd",
-    "text": null
-  },
-  "download": null,
-  "search": {
-    "engine": "fuse",
-    "options": null
-  },
-  "toc": {
-    "collapse": "subsection"
-  }
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/stat720/book2025/edit/main/06-trt_design.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/stat720/book2025/blob/main/06-trt_design.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
 });
 });
 </script>
