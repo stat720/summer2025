@@ -15,4 +15,3 @@ Some sources of 'famous' datasets you can use to practice:
   - `cox.stripsplit` Strip-split-plot of barley with fertilizer, calcium, and soil factors.  
   - `gomez.splitplot.subsample` Split-plot experiment of rice, with subsamples  
   
-- This paper. [[link](#)]
