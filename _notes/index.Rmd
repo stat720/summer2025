@@ -12,7 +12,20 @@ June 9th, 2025
 
 - [About me](https://jlacasa.github.io/) 
 - About you: 
-- What's your major, what do you expect to learn?
+
+```{r message=F, warning=FALSE}
+library(tidyverse)
+read.csv("../../students_STAT_720_C.csv") %>% 
+  ggplot(aes(x = degreeProgram))+
+  geom_bar(fill = "#B388EB")+
+  theme_bw()+
+  theme(panel.grid.minor = element_blank(),
+        panel.border = element_blank(),
+        axis.title.x = element_blank(), 
+        axis.text.x = element_text(angle = 50, vjust = 1, hjust=1))
+```
+
+- In rounds: What's your major, what do you expect to learn?  
 
 ### Logistics  
 
@@ -23,13 +36,15 @@ June 9th, 2025
 - [Semester project - design your own experiment.](https://stat720.github.io/2025summer/summer2025/notes/semester-project.html)   
 - Grades: A (100-89.999999999(!!!)), B (89.99-79.99), C (79.99-69.99), D (69.99-59.99), F (<59.99).
 - Attendance policies  
+- Semester projects
 
 ## Learning goals   
 
 By the end of this course, you should be able to:  
-- Be able to identify the treatment design and experiment design (and other components of the design).  
-- Be able to write out the statistical model.  
-- Know the benefits/disadvantages of different experiment designs.  
+- Be able to identify the treatment design, experiment design, experimental unit and observational unit.  
+- Be able to write the statistical model that corresponds to (simple) designed experiments.  
+- Be able to write the Materials and Methods section in a paper (or thesis) that describes the designed experiment.  
+- Distinguish the benefits/disadvantages of different experiment designs.  
 
 
 ## On notation  
@@ -72,7 +87,11 @@ How can we estimate the cookie diameter
 - Replication  
 - Local control  
 
-## Concepts in designed experiments  
+## Other concepts in designed experiments  
 - Experimental unit: smallest unit to which a treatment is independently assigned/applied. 
 - Observational unit: smallest unit on which observations are made. 
 
+## For tomorrow    
+
+- Install R and RStudio. 
+- Read chapter 1 in Box, Hunter and Hunter. 
