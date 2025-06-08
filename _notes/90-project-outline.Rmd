@@ -4,9 +4,10 @@ Semester projects may deal with any topic that interests you [the student], as l
 
 Broadly, projects are expected to **identify a research problem** and **develop a designed experiment that is appropriate for solving that problem**. Projects consist of a manuscript and a tutorial that describes the research problem, the experiment design and the treatment design.  
 
-## Learning objectives  
-Be able to identify an experiment design that is appropriate for answering a given research question and discuss the strengths and weaknesses of that design for answering the question.  
-Be able to write out a statistical model that is appropriate for that design.
+## Learning objectives   
+
+- Be able to identify an experiment design that is appropriate for answering a given research question and discuss the strengths and weaknesses of that design for answering the question.  
+- Be able to write the materials and methods section of a paper/thesis, including the statistical model that corresponds the experiment design.
 
 ## Partial deadlines
 

@@ -1,0 +1,13 @@
+---
+title: "Project proposal example"
+author: "J Lacasa"
+date: "2025-06-08"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+

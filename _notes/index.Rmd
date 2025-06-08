@@ -58,7 +58,7 @@ By the end of this course, you should be able to:
 
 ### Example  
 
-You want to bake cookies and are not sure about the amount of baking powder vs. baking soda. 
+You want to bake cookies with a certain diameter (to fit the box) and are not sure about the amount of baking powder vs. baking soda. 
 
 - more baking powder = smaller, more cakey cookies   
 - more baking soda = larger, crispier cookies  

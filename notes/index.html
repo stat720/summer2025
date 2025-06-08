@@ -243,14 +243,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </ul>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="index.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="index.html#cb1-2" tabindex="-1"></a><span class="fu">read.csv</span>(<span class="st">&quot;../../students_STAT_720_C.csv&quot;</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(degreeProgram))<span class="sc">+</span></span>
+<span id="cb1-3"><a href="index.html#cb1-3" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> degreeProgram))<span class="sc">+</span></span>
 <span id="cb1-4"><a href="index.html#cb1-4" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">fill =</span> <span class="st">&quot;#B388EB&quot;</span>)<span class="sc">+</span></span>
 <span id="cb1-5"><a href="index.html#cb1-5" tabindex="-1"></a>  <span class="fu">theme_bw</span>()<span class="sc">+</span></span>
 <span id="cb1-6"><a href="index.html#cb1-6" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb1-7"><a href="index.html#cb1-7" tabindex="-1"></a>        <span class="at">panel.border =</span> <span class="fu">element_blank</span>(),</span>
 <span id="cb1-8"><a href="index.html#cb1-8" tabindex="-1"></a>        <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(), </span>
 <span id="cb1-9"><a href="index.html#cb1-9" tabindex="-1"></a>        <span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">50</span>, <span class="at">vjust =</span> <span class="dv">1</span>, <span class="at">hjust=</span><span class="dv">1</span>))</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 <ul>
 <li>In rounds: What’s your major, what do you expect to learn?</li>
 </ul>
@@ -275,9 +275,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="learning-goals" class="section level2 hasAnchor" number="1.2">
 <h2><span class="header-section-number">1.2</span> Learning goals<a href="index.html#learning-goals" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>By the end of this course, you should be able to:<br />
-- Be able to identify the treatment design and experiment design (and other components of the design).<br />
-- Be able to write out the statistical model.<br />
-- Know the benefits/disadvantages of different experiment designs.</p>
+- Be able to identify the treatment design, experiment design, experimental unit and observational unit.<br />
+- Be able to write the statistical model that corresponds to (simple) designed experiments.<br />
+- Be able to write the Materials and Methods section in a paper (or thesis) that describes the designed experiment.<br />
+- Distinguish the benefits/disadvantages of different experiment designs.</p>
 </div>
 <div id="on-notation" class="section level2 hasAnchor" number="1.3">
 <h2><span class="header-section-number">1.3</span> On notation<a href="index.html#on-notation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -295,7 +296,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">1.4</span> Why do designed experiments exist?<a href="index.html#why-do-designed-experiments-exist" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="example" class="section level3 hasAnchor" number="1.4.1">
 <h3><span class="header-section-number">1.4.1</span> Example<a href="index.html#example" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p>You want to bake cookies and are not sure about the amount of baking powder vs. baking soda.</p>
+<p>You want to bake cookies with a certain diameter (to fit the box) and are not sure about the amount of baking powder vs. baking soda.</p>
 <ul>
 <li>more baking powder = smaller, more cakey cookies<br />
 </li>
