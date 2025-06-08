@@ -1,3 +1,3 @@
 ---
-title: Simpler Designs 
+title: Simpler Design Structures  
 ---

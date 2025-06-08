@@ -1,3 +1,3 @@
 ---
-title: Split-Plot Designs 
+title: Nested Design Structures 
 ---

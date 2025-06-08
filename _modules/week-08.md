@@ -1,3 +1,3 @@
 ---
-title: Bayesian Analysis of designed Experiments 
+title: Topic TBD y class 
 ---

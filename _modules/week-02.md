@@ -1,5 +1,5 @@
 ---
-title: Linear Models Review
+title: Treatment Structure of a Designed Experiment
 ---
 
 June 16
