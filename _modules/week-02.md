@@ -19,8 +19,7 @@ June 18
   : [html](#)
 
 June 19
-: Applied examples 
-  : [html](#)
+: Juneteenth (Observed Holiday) 
 
 June 20
 : Kahoot!
