@@ -1,3 +1,3 @@
 ---
-title: Nested Design Structures 
+title: Nested Design Structures & Mixed Models
 ---

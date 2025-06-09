@@ -1,3 +1,3 @@
 ---
-title: Mixed Models 
+title: Generalized Linear Mixed Models 
 ---
