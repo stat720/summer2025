@@ -16,7 +16,7 @@ The following guides are solved homeworks, indicating what was expected from eac
 | HW2       |             |             |             |
 | HW3       |             |             |             |
 | HW4       |             |             |             |
-|Project proposal | https://jlacasa.github.io/stat705_fall2024/homeworks/finalproj_manuscript.pdf |             |             |
+|Project proposal | [pdf](https://stat720.github.io/summer2025/assignments/proposal_example.pdf) |             |             |
 |Project tutorial |             |             |             |
 |Project manuscript |             |             |             |
 
