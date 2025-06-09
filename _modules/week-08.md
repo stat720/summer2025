@@ -1,3 +1,3 @@
 ---
-title: Topic TBD y class 
+title: Topic TBD by class 
 ---
