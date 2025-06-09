@@ -17,7 +17,7 @@ Legume species, however, often present growth requirements that may restrict the
 For example, waterlogging (i.e., periods of flooding that result in anaerobic soil conditions) is a common challenge in many cattle operations. 
 Waterlogging may hinder plant growth and ultimately cattle nutrition. 
 However, there is previous evidence about genotypic difference in the tolerance to waterlogging (Malik et al., 2015). 
-The objective of this experiment is to determine the effect of waterlogging on plant growth among three legume species.
+The objective of this experiment is to determine the effect of waterlogging on plant growth among three legume species: A, B, and C.
 
 
 ## References  
