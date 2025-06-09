@@ -22,51 +22,43 @@ schedule:
   - name: Monday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:20 AM
-        location: TBD
+        start: 9:10 AM
+        end: 10:10 AM
+        location: BB
       - name: Office Hours
-        start: 10:30 AM
-        end: 11:30 AM
-        location: 107 Dickens
+        start: 10:10 AM
+        end: 11:10 AM
+        location: BB
   - name: Tuesday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:20 AM
-        location: TBD
-      - name: Office Hours
-        start: 10:30 AM
-        end: 11:30 AM
-        location: 107 Dickens
+        start: 9:10 AM
+        end: 10:10 AM
+        location: BB
   - name: Wednesday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:20 AM
-        location: TBD
-      - name: Office Hours
-        start: 10:30 AM
-        end: 11:30 AM
-        location: 107 Dickens
+        start: 9:10 AM
+        end: 10:10 AM
+        location: BB
+      - name: Zoom Office Hours
+        start: 3 PM
+        end: 4 PM
+        location: See Syllabus
   - name: Thursday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:20 AM
-        location: TBD
-      - name: Office Hours
-        start: 10:30 AM
-        end: 11:30 AM
-        location: 107 Dickens
+        start: 9:10 AM
+        end: 10:10 AM
+        location: BB
   - name: Friday
     events:
       - name: Lecture
-        start: 9:30 AM
-        end: 10:20 AM
-        location: TBD
+        start: 9:10 AM
+        end: 10:10 AM
+        location: BB
       - name: Office Hours
-        start: 10:30 AM
-        end: 11:30 AM
-        location: 107 Dickens
+        start: 10:10 AM
+        end: 11:10 AM
+        location: BB
 ---
