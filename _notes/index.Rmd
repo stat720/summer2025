@@ -94,4 +94,3 @@ How can we estimate the cookie diameter
 ## For tomorrow    
 
 - Install R and RStudio. 
-- Read chapter 1 in Box, Hunter and Hunter. 
