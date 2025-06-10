@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 4 Linear models, ANOVA shells applied to the more basic experiment designs | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 4 Linear models, ANOVA shells applied to the more basic experiment designs | STAT 720 - Design of Experiments" />
+  <title>Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 4 Linear models, ANOVA shells applied to the more basic experiment designs | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 4 Linear models, ANOVA shells applied to the more basic experiment designs | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="basic-types-of-designed-experiments-1.html"/>
-<link rel="next" href="review-organizing-data-and-other-helpful-tips.html"/>
+<link rel="prev" href="basic-types-of-designed-experiments.html"/>
+<link rel="next" href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,70 +53,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -235,11 +171,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs" class="section level1 hasAnchor" number="4">
-<h1><span class="header-section-number">Day 4</span> Linear models, ANOVA shells applied to the more basic experiment designs<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html#linear-models-anova-shells-applied-to-the-more-basic-experiment-designs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 12th, 2025</p>
-<div id="review-2" class="section level2 hasAnchor" number="4.1">
-<h2><span class="header-section-number">4.1</span> Review<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html#review-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="basic-types-of-designed-experiments-1" class="section level1 hasAnchor" number="3">
+<h1><span class="header-section-number">Day 3</span> Basic types of designed experiments<a href="basic-types-of-designed-experiments-1.html#basic-types-of-designed-experiments-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>June 11th, 2025</p>
+<div id="review-1" class="section level2 hasAnchor" number="3.1">
+<h2><span class="header-section-number">3.1</span> Review<a href="basic-types-of-designed-experiments-1.html#review-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Experimental unit<br />
 </li>
@@ -249,22 +185,198 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Randomization</li>
 <li>Local control (blocking)</li>
 </ul></li>
-<li>Types of designs</li>
 </ul>
 </div>
-<div id="experiment-designs-and-their-models" class="section level2 hasAnchor" number="4.2">
-<h2><span class="header-section-number">4.2</span> Experiment designs and their models<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html#experiment-designs-and-their-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="completely-randomized-design-crd-2" class="section level3 hasAnchor" number="4.2.1">
-<h3><span class="header-section-number">4.2.1</span> Completely randomized design (CRD)<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html#completely-randomized-design-crd-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li><em>Blueprint</em>: all experimental units were</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-7"></span>
+<div id="types-of-designs" class="section level2 hasAnchor" number="3.2">
+<h2><span class="header-section-number">3.2</span> Types of designs<a href="basic-types-of-designed-experiments-1.html#types-of-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="completely-randomized-design-crd-1" class="section level3 hasAnchor" number="3.2.1">
+<h3><span class="header-section-number">3.2.1</span> Completely randomized design (CRD)<a href="basic-types-of-designed-experiments-1.html#completely-randomized-design-crd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-1"></span>
 <img src="../figures/designs_crd.PNG" alt="Schematic description of an experiment with a completely randomized design" width="100%" />
 <p class="caption">
-Figure 4.1: Schematic description of an experiment with a completely randomized design
+Figure 3.1: Schematic description of an experiment with a completely randomized design
 </p>
 </div>
+</div>
+<div id="randomized-complete-block-design-rcbd-1" class="section level3 hasAnchor" number="3.2.2">
+<h3><span class="header-section-number">3.2.2</span> Randomized complete block design (RCBD)<a href="basic-types-of-designed-experiments-1.html#randomized-complete-block-design-rcbd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Blocks are groups of similar experimental units and are large enough to fit each treatment at least once</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-2"></span>
+<img src="../figures/designs_rcbd.PNG" alt="Schematic description of an experiment with a randomized complete block design" width="100%" />
+<p class="caption">
+Figure 3.2: Schematic description of an experiment with a randomized complete block design
+</p>
+</div>
+</div>
+<div id="incomplete-block-design-ibd-1" class="section level3 hasAnchor" number="3.2.3">
+<h3><span class="header-section-number">3.2.3</span> Incomplete block design (IBD)<a href="basic-types-of-designed-experiments-1.html#incomplete-block-design-ibd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Blocks are groups of similar experimental units and are not large enough to fit each treatment at least once</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-3"></span>
+<img src="../figures/designs_ibd.png" alt="Schematic description of an experiment with an incomplete block design" width="100%" />
+<p class="caption">
+Figure 3.3: Schematic description of an experiment with an incomplete block design
+</p>
+</div>
+</div>
+</div>
+<div id="building-an-anova-skeleton-using-topographical-and-design-elements" class="section level2 hasAnchor" number="3.3">
+<h2><span class="header-section-number">3.3</span> Building an ANOVA skeleton using topographical and design elements<a href="basic-types-of-designed-experiments-1.html#building-an-anova-skeleton-using-topographical-and-design-elements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-4">Table 3.1: </span>Constructing the ANOVA skeleton
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-4">Table 3.1: </span>Topographical</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Block</td>
+<td align="left">b-1</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Pens(Block)</td>
+<td align="left">(u-1)*b</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-4">Table 3.1: </span>Treatment</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment</td>
+<td align="left">t-1</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Parallels</td>
+<td align="left">N-t</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-4">Table 3.1: </span>Combined Table</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Block</td>
+<td align="left">b-1</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment</td>
+<td align="left">t-1</td>
+</tr>
+<tr class="odd">
+<td align="left">Pens(Block x Trt)</td>
+<td align="left">(u-1)*b - (t-1)</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="linear-model-good-old-friend" class="section level2 hasAnchor" number="3.4">
+<h2><span class="header-section-number">3.4</span> Linear model good old friend<a href="basic-types-of-designed-experiments-1.html#linear-model-good-old-friend" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>What does “linear” mean?<br />
+</li>
+<li>What does “ANOVA” mean?</li>
+</ul>
+<p><span class="math display">\[\begin{equation}
+  y_{ij} = \mu + \tau_i + \varepsilon_{ij}; \ \varepsilon_{ij} \sim N(0, \sigma^2),
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+  y_{i} = \beta_0 + \x_{1i}\beta_1 +\x_{2i}\beta_2 + \x_{3i}\beta_3 + \varepsilon_{i}; \ \varepsilon_{i} \sim N(0, \sigma^2), \\
+\x_{1i} = \begin{cases}
+            1, &amp; \text{if treatment A}\\
+            0, &amp; \text{otherwise}
+         \end{cases}
+\end{equation}\]</span></p>
+<div id="the-most-common-assumptions-behind-most-software" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> The most common assumptions behind most software<a href="basic-types-of-designed-experiments-1.html#the-most-common-assumptions-behind-most-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Constant variance<br />
+</li>
+<li>Independence<br />
+</li>
+<li>Normality</li>
+</ul>
+<p>We can describe the general linear model as
+<span class="math display">\[\begin{equation}
+  y_{ij} = \mu + \tau_i + \varepsilon_{ij},
+\end{equation}\]</span>
+<span class="math display">\[\begin{equation}
+  \varepsilon_{ij} \sim N(0, \sigma^2),
+\end{equation}\]</span>
+where <span class="math inline">\(y_{ij}\)</span> is the <span class="math inline">\(j\)</span>th observation of the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(\mu\)</span> is the overall mean, <span class="math inline">\(\tau_i\)</span> is the treatment effect of the <span class="math inline">\(i\)</span>th treatment, and <span class="math inline">\(\varepsilon_{ij}\)</span> is the residual for the <span class="math inline">\(j\)</span>th observation of the <span class="math inline">\(i\)</span>th treatment (i.e., the difference between observed and predicted).</p>
+<p>The form used to describe the model above is called “Model equation form”.
+Another way of saying the same is the “Probability distribution form”, where we describe the distribution of <span class="math inline">\(y\)</span> directly.<br />
+<span class="math display">\[\begin{equation}
+  y_{ij} \sim N(\mu_{ij}, \sigma^2),
+\end{equation}\]</span>
+or
+<span class="math display">\[\begin{equation}
+  \mathbf{y} \sim N(\mu_{ij}, \sigma^2).
+\end{equation}\]</span></p>
 
 </div>
 </div>
@@ -274,8 +386,8 @@ Figure 4.1: Schematic description of an experiment with a completely randomized 
           </div>
         </div>
       </div>
-<a href="basic-types-of-designed-experiments-1.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="review-organizing-data-and-other-helpful-tips.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="basic-types-of-designed-experiments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -306,7 +418,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/04-design3.Rmd",
+    "link": "https://github.com/stat720/book2025/edit/main/03-design2.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -314,7 +426,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/04-design3.Rmd",
+    "link": "https://github.com/stat720/book2025/blob/main/03-design2.Rmd",
     "text": null
   },
   "download": null,
