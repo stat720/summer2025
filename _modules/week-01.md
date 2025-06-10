@@ -8,16 +8,18 @@ June 9
 
 June 10
 : Designed experiments basics I 
-  : [html](https://stat720.github.io/summer2025/notes/what-are-designed-experiments.html)
+  : [html](https://stat720.github.io/summer2025/notes/basic-types-of-designed-experiments.html)
 
 June 11
-: Design structures
-  : [html](https://stat720.github.io/summer2025/notes/designed-experiments.html)
+: Design structures & Applications in R
+  : [html](https://stat720.github.io/summer2025/notes/basic-types-of-designed-experiments-1.html)
 
 June 12
-: Design structures
-  : [html](https://stat720.github.io/summer2025/notes/designed-experiments.html)
+: Design structures & Applications in R
+  : [html](https://stat720.github.io/summer2025/notes/linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html)
 
 June 13
-: Kahoot! Review, organizing data and other helpful tips  
-  : **HW 1**{: .label .label-green }
+: Kahoot! & Review, organizing data and other helpful tips  
+  : [html](https://stat720.github.io/summer2025/notes/review-organizing-data-and-other-helpful-tips.html)
+: [](#)  
+  : **HW 1**{: .label .label-green }  
