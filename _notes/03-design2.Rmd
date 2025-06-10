@@ -35,12 +35,68 @@ knitr::include_graphics("../figures/designs_ibd.png")
 
 ## Building an ANOVA skeleton using topographical and design elements  
 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+t_topo <- data.frame(Source = c("Block", " ", "Pens(Block)", "", "Total"),
+                     df = c("b-1", "-", "(u-1)*b", "-", "N-1"))
+t_trt <- data.frame(Source = c(" ", "Treatment", "", "Parallels", "Total"),
+                    df = c("-", "t-1", "-", "N-t", "N-1"))
+t_comb <- data.frame(Source = c("Block", "Treatment", "Pens(Block x Trt)", "", "Total"),
+                    df = c("b-1", "t-1", "(u-1)*b - (t-1)", "-", "N-1"))
+
+knitr::kables(
+  list(
+    knitr::kable(t_topo, caption = "Topographical"),
+    knitr::kable(t_trt, caption = "Treatment"),
+    knitr::kable(t_comb, caption = "Combined Table")
+  ),
+  caption = 'Constructing the ANOVA skeleton'
+)
+```
+
 
 
 ## Linear model good old friend  
 
 - What does "linear" mean?  
 - What does "ANOVA" mean?  
+
+\begin{equation}
+  y_{ij} = \mu + \tau_i + \varepsilon_{ij}, \\ \varepsilon_{ij} \sim N(0, \sigma^2),
+\end{equation}
+
+OR 
+
+\begin{equation}
+  y_{i} = \beta_0 + x_{1i}\beta_1 +x_{2i}\beta_2 + x_{3i}\beta_3 + \varepsilon_{i}, \\
+  \varepsilon_{i} \sim N(0, \sigma^2), \\
+  x_{1i} = \begin{cases}
+      1, & \text{if treatment A}\\
+			0, & \text{otherwise}
+		 \end{cases} \\
+  x_{2i} = \begin{cases}
+      1, & \text{if treatment B}\\
+			0, & \text{otherwise}
+		 \end{cases} \\
+  x_{3i} = \begin{cases}
+      1, & \text{if treatment C}\\
+			0, & \text{otherwise}
+		 \end{cases}
+\end{equation}
+
+OR 
+
+\begin{equation}
+  \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}, \\
+  \boldsymbol{\varepsilon} \sim N(\boldsymbol{0}, \sigma^2 \mathbf{I}), \\
+\end{equation}
+
+OR 
+
+\begin{equation}
+  \mathbf{y} \sim N(\boldsymbol{\mu}, \sigma^2 \mathbf{I}), \\
+  \boldsymbol{\mu} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
+\end{equation}
+
 
 ### The most common assumptions behind most software  
 
