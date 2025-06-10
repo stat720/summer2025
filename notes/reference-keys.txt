@@ -36,7 +36,7 @@ incomplete-block-design-ibd-1
 building-an-anova-skeleton-using-topographical-and-design-elements
 linear-model-good-old-friend
 the-most-common-assumptions-behind-most-software
-linear-models-applied-to-the-basic-types-of-designed-experiments
+linear-models-anova-shells-applied-to-the-more-basic-experiment-designs
 review-2
 experiment-designs-and-their-models
 completely-randomized-design-crd-2
