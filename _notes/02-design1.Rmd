@@ -74,7 +74,7 @@ The factors driving differences between observations are the treatment and the b
 knitr::include_graphics("../figures/designs_ibd.png")
 ```
 
-### Skeleton ANOVA tables    
+## Skeleton ANOVA tables    
 
 The Analysis of Variance (ANOVA) can be considered a special case of a linear model that divides the predictors in bins to evaluate their influence on the response ([Gelman 2005](https://projecteuclid.org/journals/annals-of-statistics/volume-33/issue-1/Analysis-of-variancewhy-it-is-more-important-than-ever/10.1214/009053604000001048.full)).
 
@@ -84,7 +84,15 @@ The Analysis of Variance (ANOVA) can be considered a special case of a linear mo
   - An intuitive approach to degrees of freedom: number of independent values. Whiteboard demo. 
 - Combine the combined skeleton ANOVA. 
 
+### Practice examples  
+
+- **Plant breeding**. A field has 4 homogeneous regions and is divided into 18 smaller plots. Withing those regions, the researchers have randomly assigned the 18 genotypes being tested in the study. 
+
+- **Swine nutrition**. A swine facility has 3 rooms containing 12 pens (i.e. 36 total pens), each with 4 pigs (note: pigs are similar across pens in a room). Within each room, 6 feeding treatments are randomly allocated to each pen (i.e. each treatment is repeated twice in each room). 
+
 ## Homeworks  
 
-- Start reading Chapter 2 in Stroup (2012) - 1st edition of the GLMM book, until "Complication".  
+- Start reading: 
+  - Chapter 4 in Messy Data Vol1 (Milliken & Johnson) OR   
+  - Chapter 2 in GLMM (Stroup, 1st ed) - 1st edition of the GLMM book, until "Complication"   
 - Schedule a meeting to discuss your project topic. 

@@ -1,0 +1,29 @@
+---
+title: "Class 06/10"
+author: "J Lacasa"
+date: "2025-06-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(glmmTMB)
+library(agridat)
+```
+
+```{r}
+data("omer.sorghum")
+df <- omer.sorghum %>% filter(env == "E1")
+
+m <- lm(yield ~ gen + rep, data= df)
+
+n_distinct(df$gen)
+n_distinct(df$rep)
+
+car::Anova(m, type =2 )
+```
+
