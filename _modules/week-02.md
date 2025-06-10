@@ -24,4 +24,5 @@ June 19
 June 20
 : Kahoot!
   : **HW 1 due**{: .label .label-red }
+  : **Project proposal**{: .label .label-red }
   : **HW 2**{: .label .label-green }
