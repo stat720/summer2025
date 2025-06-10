@@ -33,6 +33,9 @@ knitr::include_graphics("../figures/designs_rcbd.PNG")
 knitr::include_graphics("../figures/designs_ibd.png")
 ```
 
+## Building an ANOVA skeleton using topographical and design elements  
+
+
 
 ## Linear model good old friend  
 

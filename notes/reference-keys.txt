@@ -2,10 +2,11 @@ fig:blueprint
 fig:crd
 fig:rcbd
 fig:ibd
-fig:unnamed-chunk-2
+tab:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 fig:unnamed-chunk-5
+fig:unnamed-chunk-6
 welcome-to-stat-720
 about-this-course
 logistics
@@ -32,6 +33,7 @@ types-of-designs
 completely-randomized-design-crd-1
 randomized-complete-block-design-rcbd-1
 incomplete-block-design-ibd-1
+building-an-anova-skeleton-using-topographical-and-design-elements
 linear-model-good-old-friend
 the-most-common-assumptions-behind-most-software
 linear-models-applied-to-the-basic-types-of-designed-experiments

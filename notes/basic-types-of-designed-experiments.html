@@ -180,9 +180,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="3.2.2" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#randomized-complete-block-design-rcbd-1"><i class="fa fa-check"></i><b>3.2.2</b> Randomized complete block design (RCBD)</a></li>
 <li class="chapter" data-level="3.2.3" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#incomplete-block-design-ibd-1"><i class="fa fa-check"></i><b>3.2.3</b> Incomplete block design (IBD)</a></li>
 </ul></li>
-<li class="chapter" data-level="3.3" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#linear-model-good-old-friend"><i class="fa fa-check"></i><b>3.3</b> Linear model good old friend</a>
+<li class="chapter" data-level="3.3" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#building-an-anova-skeleton-using-topographical-and-design-elements"><i class="fa fa-check"></i><b>3.3</b> Building an ANOVA skeleton using topographical and design elements</a></li>
+<li class="chapter" data-level="3.4" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#linear-model-good-old-friend"><i class="fa fa-check"></i><b>3.4</b> Linear model good old friend</a>
 <ul>
-<li class="chapter" data-level="3.3.1" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#the-most-common-assumptions-behind-most-software"><i class="fa fa-check"></i><b>3.3.1</b> The most common assumptions behind most software</a></li>
+<li class="chapter" data-level="3.4.1" data-path="basic-types-of-designed-experiments-1.html"><a href="basic-types-of-designed-experiments-1.html#the-most-common-assumptions-behind-most-software"><i class="fa fa-check"></i><b>3.4.1</b> The most common assumptions behind most software</a></li>
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="linear-models-applied-to-the-basic-types-of-designed-experiments.html"><a href="linear-models-applied-to-the-basic-types-of-designed-experiments.html"><i class="fa fa-check"></i><b>4</b> Linear models applied to the basic types of designed experiments</a>
@@ -350,6 +351,42 @@ Figure 2.4: Schematic description of an experiment with an incomplete block desi
 <li><p><strong>Plant breeding</strong>. A field has 4 homogeneous regions and is divided into 18 smaller plots. Withing those regions, the researchers have randomly assigned the 18 genotypes being tested in the study.</p></li>
 <li><p><strong>Swine nutrition</strong>. A swine facility has 3 rooms containing 12 pens (i.e. 36 total pens), each with 4 pigs (note: pigs are similar across pens in a room). Within each room, 6 feeding treatments are randomly allocated to each pen (i.e. each treatment is repeated twice in each room).</p></li>
 </ul>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="basic-types-of-designed-experiments.html#cb2-1" tabindex="-1"></a><span class="fu">data.frame</span>(<span class="st">`</span><span class="at">Source of variation</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">c</span>(<span class="st">&quot;Blocks&quot;</span>, <span class="st">&quot;Treatment&quot;</span>, <span class="st">&quot;Error&quot;</span>, <span class="st">&quot;Total&quot;</span>),</span>
+<span id="cb2-2"><a href="basic-types-of-designed-experiments.html#cb2-2" tabindex="-1"></a>           <span class="at">df =</span> <span class="fu">c</span>(<span class="st">&quot;b-1 = 3-1 = 2&quot;</span>, <span class="st">&quot;t-1 = 6-1 = 5&quot;</span>, <span class="st">&quot;(u-1)*b - (t-1) = (12-1)3 - (5-1) = 28&quot;</span>, <span class="st">&quot;N-1 = 36 - 1 = 35&quot;</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="basic-types-of-designed-experiments.html#cb2-3" tabindex="-1"></a>  knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="at">caption =</span> <span class="st">&quot;ANOVA table for the swine example, where b is the number of blocks, t is the number of treatments, u is the number of experimental units per block, and N is the total number of observations.&quot;</span>)</span></code></pre></div>
+<pre><code>## Warning in attr(x, &quot;align&quot;): &#39;xfun::attr()&#39; is deprecated.
+## Use &#39;xfun::attr2()&#39; instead.
+## See help(&quot;Deprecated&quot;)</code></pre>
+<pre><code>## Warning in attr(x, &quot;format&quot;): &#39;xfun::attr()&#39; is deprecated.
+## Use &#39;xfun::attr2()&#39; instead.
+## See help(&quot;Deprecated&quot;)</code></pre>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 2.1: </span>ANOVA table for the swine example, where b is the number of blocks, t is the number of treatments, u is the number of experimental units per block, and N is the total number of observations.</caption>
+<thead>
+<tr class="header">
+<th align="left">Source.of.variation</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Blocks</td>
+<td align="left">b-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Treatment</td>
+<td align="left">t-1 = 6-1 = 5</td>
+</tr>
+<tr class="odd">
+<td align="left">Error</td>
+<td align="left">(u-1)*b - (t-1) = (12-1)3 - (5-1) = 28</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 36 - 1 = 35</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div id="homeworks" class="section level2 hasAnchor" number="2.5">
