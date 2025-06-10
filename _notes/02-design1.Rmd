@@ -51,10 +51,10 @@ knitr::include_graphics("../figures/designs_crd.PNG")
 The factors driving differences between observations are the treatment and the blocks (and randomness).  
 
 \begin{equation}
-  y_{ij} = \mu + \tau_i + \rho_j + \varepsilon_{ij},
+  y_{ijk} = \mu + \tau_i + \rho_j + \varepsilon_{ijk},
 \end{equation}
 \begin{equation}
-  \varepsilon_{ij} \sim N(0, \sigma^2),
+  \varepsilon_{ijk} \sim N(0, \sigma^2),
 \end{equation}
 where $y_{ij}$ is the $j$th observation of the $i$th treatment, $\mu$ is the overall mean, $\tau_i$ is the effect of the $i$th treatment, $\rho_j$ is the effect of the $j$th block, and $\varepsilon_{ij}$ is the residual for the $j$th observation of the $i$th treatment (i.e., the difference between observed and predicted).  
 
@@ -71,7 +71,7 @@ The factors driving differences between observations are the treatment and the b
 - We will define the model for this design later on, after learning more about mixed models.
 
 ```{r ibd, echo=FALSE, fig.cap="Schematic description of an experiment with an incomplete block design", out.width = '100%'}
-knitr::include_graphics("../figures/designs_ibd.PNG")
+knitr::include_graphics("../figures/designs_ibd.png")
 ```
 
 ### Skeleton ANOVA tables    

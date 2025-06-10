@@ -30,7 +30,7 @@ knitr::include_graphics("../figures/designs_rcbd.PNG")
 - Blocks are groups of similar experimental units and are not large enough to fit each treatment at least once   
 
 ```{r echo=FALSE, fig.cap="Schematic description of an experiment with an incomplete block design", out.width = '100%'}
-knitr::include_graphics("../figures/designs_ibd.PNG")
+knitr::include_graphics("../figures/designs_ibd.png")
 ```
 
 
