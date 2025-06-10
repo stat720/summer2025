@@ -2,10 +2,10 @@ fig:blueprint
 fig:crd
 fig:rcbd
 fig:ibd
-fig:unnamed-chunk-2
-fig:unnamed-chunk-3
-fig:unnamed-chunk-4
-fig:unnamed-chunk-5
+fig:unnamed-chunk-17
+fig:unnamed-chunk-18
+fig:unnamed-chunk-19
+fig:unnamed-chunk-20
 welcome-to-stat-720
 about-this-course
 logistics
@@ -24,6 +24,7 @@ completely-randomized-design-crd
 randomized-complete-block-design-rcbd
 incomplete-block-design-ibd
 skeleton-anova-tables
+practice-examples
 homeworks
 basic-types-of-designed-experiments-1
 review-1
