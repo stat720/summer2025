@@ -25,14 +25,6 @@ knitr::include_graphics("../figures/designs_crd.PNG")
 knitr::include_graphics("../figures/designs_rcbd.PNG")
 ```
 
-### Incomplete block design (IBD)   
-
-- Blocks are groups of similar experimental units and are not large enough to fit each treatment at least once   
-
-```{r echo=FALSE, fig.cap="Schematic description of an experiment with an incomplete block design", out.width = '100%'}
-knitr::include_graphics("../figures/designs_ibd.png")
-```
-
 ## Building an ANOVA skeleton using topographical and design elements  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -123,4 +115,16 @@ or
   \mathbf{y} \sim N(\mu_{ij}, \sigma^2).
 \end{equation}
 
+## Some Practice  
+
+Check out [this R script](../scripts/06102025_rcbd.Rmd) to follow along!  
+
+
+
+## To do  
+
+- Start reading: 
+  - Chapter 4 in Messy Data Vol1 (Milliken & Johnson) OR   
+  - Chapter 2 in GLMM (Stroup, 1st ed) - 1st edition of the GLMM book, until "Complication"   
+- Schedule a meeting to discuss your project topic. 
 
