@@ -28,12 +28,12 @@ knitr::include_graphics("../figures/designs_rcbd.PNG")
 ## Building an ANOVA skeleton using topographical and design elements  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-t_topo <- data.frame(Source = c("Block", " ", "Pens(Block)", "", "Total"),
-                     df = c("b-1", "-", "(u-1)*b", "-", "N-1"))
-t_trt <- data.frame(Source = c(" ", "Treatment", "", "Parallels", "Total"),
-                    df = c("-", "t-1", "-", "N-t", "N-1"))
-t_comb <- data.frame(Source = c("Block", "Treatment", "Pens(Block x Trt)", "", "Total"),
-                    df = c("b-1", "t-1", "(u-1)*b - (t-1)", "-", "N-1"))
+t_topo <- data.frame(Source = c("Block", " ", "Pens(Block)", "Total"),
+                     df = c("b-1", "-", "(u-1)*b", "N-1"))
+t_trt <- data.frame(Source = c(" ", "Treatment", "Parallels", "Total"),
+                    df = c("-", "t-1", "N-t", "N-1"))
+t_comb <- data.frame(Source = c("Block", "Treatment", "Pens(Block x Trt)", "Total"),
+                    df = c("b-1", "t-1", "(u-1)*b - (t-1)", "N-1"))
 
 knitr::kables(
   list(
@@ -117,7 +117,7 @@ or
 
 ## Some Practice  
 
-Check out [this R script](../scripts/06102025_rcbd.Rmd) to follow along!  
+Check out [this R script](../scripts/06112025_rcbd.Rmd) to follow along!  
 
 
 
