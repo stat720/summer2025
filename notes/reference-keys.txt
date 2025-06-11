@@ -2,10 +2,10 @@ fig:blueprint
 fig:crd
 fig:rcbd
 fig:ibd
-tab:unnamed-chunk-13
-fig:unnamed-chunk-14
-fig:unnamed-chunk-15
-tab:unnamed-chunk-16
+tab:unnamed-chunk-30
+fig:unnamed-chunk-31
+fig:unnamed-chunk-32
+tab:unnamed-chunk-33
 welcome-to-stat-720
 about-this-course
 logistics
@@ -40,7 +40,11 @@ linear-models-anova-shells-applied-to-the-more-basic-experiment-designs
 review-2
 linear-models
 the-most-common-model---assumptions
+connection-between-df-error-and-sigma2
 sorghum-example
+takehomes
+if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error
+if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error-1
 tomorrow
 review-organizing-data-and-other-helpful-tips
 review-3

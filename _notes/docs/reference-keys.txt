@@ -108,3 +108,9 @@ some-practice
 to-do
 building-an-anova-skeleton-using-design-aka-topographical-and-treatment-elements
 tomorrow
+linear-models
+the-most-common-model---assumptions
+sorghum-example
+takehomes
+if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error
+if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error-1

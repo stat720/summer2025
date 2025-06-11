@@ -57,6 +57,7 @@ car::qqPlot(m)
 
 ```{r}
 car::Anova(m, type = 2)
+emmeans::emmeans(m, ~gen)
 ```
 
 
