@@ -106,3 +106,5 @@ practical-reads-1
 tab:unnamed-chunk-3
 some-practice
 to-do
+building-an-anova-skeleton-using-design-aka-topographical-and-treatment-elements
+tomorrow

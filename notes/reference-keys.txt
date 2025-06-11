@@ -6,7 +6,6 @@ tab:unnamed-chunk-2
 fig:unnamed-chunk-3
 fig:unnamed-chunk-4
 tab:unnamed-chunk-5
-fig:unnamed-chunk-6
 welcome-to-stat-720
 about-this-course
 logistics
@@ -32,7 +31,7 @@ review-1
 types-of-designs
 completely-randomized-design-crd-1
 randomized-complete-block-design-rcbd-1
-building-an-anova-skeleton-using-topographical-and-design-elements
+building-an-anova-skeleton-using-design-aka-topographical-and-design-elements
 linear-model-good-old-friend
 the-most-common-assumptions-behind-most-software
 some-practice
@@ -41,6 +40,7 @@ linear-models-anova-shells-applied-to-the-more-basic-experiment-designs
 review-2
 experiment-designs-and-their-models
 completely-randomized-design-crd-2
+tomorrow
 review-organizing-data-and-other-helpful-tips
 review-3
 organizing-data

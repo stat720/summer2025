@@ -25,7 +25,7 @@ knitr::include_graphics("../figures/designs_crd.PNG")
 knitr::include_graphics("../figures/designs_rcbd.PNG")
 ```
 
-## Building an ANOVA skeleton using topographical and design elements  
+## Building an ANOVA skeleton using design (aka topographical) and treatment elements  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 t_topo <- data.frame(Source = c("Block", " ", "Pens(Block)", "Total"),
@@ -37,7 +37,7 @@ t_comb <- data.frame(Source = c("Block", "Treatment", "Pens(Block x Trt)", "Tota
 
 knitr::kables(
   list(
-    knitr::kable(t_topo, caption = "Topographical"),
+    knitr::kable(t_topo, caption = "Experiment or Topographical"),
     knitr::kable(t_trt, caption = "Treatment"),
     knitr::kable(t_comb, caption = "Combined Table")
   ),
