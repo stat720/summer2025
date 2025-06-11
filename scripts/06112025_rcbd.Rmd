@@ -69,11 +69,14 @@ n_distinct(df2$gen)
 # find out how many blocks
 n_distinct(df2$rep)
 
+# fit the same model with the new (smaller) data
 m2 <- lm(yield ~ gen + rep, data= df2)
 
+# check assumptions
 plot(m2$fitted.values, abs(m2$residuals))
 car::qqPlot(m2)
 
+# see how DF of the error change!
 car::Anova(m, type = 2)
 car::Anova(m2, type = 2)
 ```
