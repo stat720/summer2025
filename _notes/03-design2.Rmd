@@ -45,7 +45,11 @@ knitr::kables(
 )
 ```
 
+This way to do an ANOVA is normally considered the "What Would Fisher Do" ANOVA. Sir R.A. Fisher did plenty of his very influential work while he was working at the Rothamsted Agricultural Station! 
 
+<center>
+![Sir R.A. Fisher](https://www.ucl.ac.uk/biosciences/sites/biosciences/files/styles/medium_image/public/untitled_design_3_0.png?itok=oQ8Gv5fq){width=90%}
+</center>
 
 ## Linear model good old friend  
 

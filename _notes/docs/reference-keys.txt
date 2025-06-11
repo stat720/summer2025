@@ -103,3 +103,6 @@ project-proposal---due-friday-june-20-at-2pm-ct-1
 written-report---due-friday-july-25-at-2pm-ct-1
 oral-presentation---somewhere-between-july-21---august-1-1
 practical-reads-1
+tab:unnamed-chunk-3
+some-practice
+to-do
