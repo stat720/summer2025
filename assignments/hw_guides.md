@@ -12,7 +12,7 @@ The following guides are solved homeworks, indicating what was expected from eac
 
 | Homework  | Link 1  |Link 2       |Link 3       |
 | --------- | ------- | ----------- | ----------- |
-| HW1       |             |             |             |
+| HW1       |         |             |             |
 | HW2       |             |             |             |
 | HW3       |             |             |             |
 | HW4       |             |             |             |
