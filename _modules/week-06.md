@@ -1,3 +1,3 @@
 ---
-title: Power analysis 
+title: Generalized Linear Mixed Models 
 ---

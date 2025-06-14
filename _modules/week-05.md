@@ -1,3 +1,3 @@
 ---
-title: A week of practice 
+title: Power analysis 
 ---
