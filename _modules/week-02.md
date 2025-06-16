@@ -4,7 +4,7 @@ title: Treatment Structure of a Designed Experiment
 
 June 16
 : Treatment structure
-  : [html](#)
+  : [html](https://stat720.github.io/summer2025/notes/the-treatment-structure.html)
 : [](#)
   : Chapter 4 in Milliken and Johnson. 
 
