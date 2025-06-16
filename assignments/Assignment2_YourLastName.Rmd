@@ -1,0 +1,34 @@
+---
+title: "Assignment 2"
+author: "Your Name"
+date: "2025-06-20"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## About this assignment  
+
+- **Goal:** to review the concepts learned about treatment structure and design structure of an experiment. 
+- **Due:** Wednesday, July 2. 
+
+## 1. 
+
+### a. What is the treatment structure? How many levels for each factor?   
+### b. What is the design structure? 
+
+Fill out the following table with the values you consider:
+
+```{r}
+
+```
+
+
+## 2. Find a publication from your domain and paste a snippet of the Materials and Methods section where they describe the designed experiment. Answer the following questions  
+
+### a. What is the treatment structure? How many levels for each factor?   
+### b. What is the design structure? 
+### c. 
+

@@ -114,3 +114,13 @@ sorghum-example
 takehomes
 if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error
 if-you-dont-include-the-design-elements-blocks-their-portion-of-the-variance-goes-to-the-error-1
+connection-between-this-and-your-classical-anova-table
+kahoot-as-review
+homework
+treatment-structure
+types-of-treatment-structures
+where-is-the-treatment-structure-connected-to-the-statistical-model
+tomorrow-1
+the-treatment-structure-ii
+announcements-2
+setting-the-stage-expected-marginal-means
