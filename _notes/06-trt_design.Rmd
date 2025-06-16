@@ -75,5 +75,5 @@ $$\mathbf{y} \sim N(\boldsymbol{\mu}, \mathbf{R}), \\ \mu_{jk} = \mu + \tau_j + 
 
 ## Tomorrow:  
 
-- This is all in Chapter 4 in Milliken and Johnson. 
+- All this is in Chapter 4 in Milliken and Johnson. 
 
