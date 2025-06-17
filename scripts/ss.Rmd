@@ -1,0 +1,121 @@
+---
+title: "Sums of Squares Demo"
+author: "J Lacasa"
+date: "2025-06-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+library(tidyverse)
+library(emmeans)
+library(multcomp)
+```
+
+
+```{r}
+url <- "https://raw.githubusercontent.com/stat720/summer2025/refs/heads/main/data/blood_study_pigs.csv"
+df_pigs <- read.csv(url)
+unique(df_pigs$Day)
+```
+
+## Type I 
+```{r}
+m_intercept.only <- lm(Serum_haptoglobin_mg.dL ~ 1, data = df_pigs)
+m_Trt.only <- lm(Serum_haptoglobin_mg.dL ~ Trt, data = df_pigs)
+m_Trt.Day <- lm(Serum_haptoglobin_mg.dL ~ Trt+factor(Day), data = df_pigs)
+m_Trt.Day.TxD <- lm(Serum_haptoglobin_mg.dL ~ Trt*factor(Day), data = df_pigs)
+
+sum(m_intercept.only$residuals^2)
+sum(m_intercept.only$residuals^2) - sum(m_Trt.only$residuals^2)
+sum(m_Trt.only$residuals^2) - sum(m_Trt.Day$residuals^2)
+sum(m_Trt.Day$residuals^2) - sum(m_Trt.Day.TxD$residuals^2)
+sum(m_Trt.Day.TxD$residuals^2)
+```
+
+```{r}
+anova(m4)
+```
+
+## Type II 
+
+```{r}
+m_intercept.only <- lm(Serum_haptoglobin_mg.dL ~ 1, data = df_pigs)
+m_Day.only <- lm(Serum_haptoglobin_mg.dL ~ factor(Day), data = df_pigs)
+m_Trt.only <- lm(Serum_haptoglobin_mg.dL ~ Trt , data = df_pigs)
+m_Trt.Day <- lm(Serum_haptoglobin_mg.dL ~ Trt + factor(Day), data = df_pigs)
+m_Trt.Day.TxD <- lm(Serum_haptoglobin_mg.dL ~ Trt*factor(Day), data = df_pigs)
+
+sum(m_intercept.only$residuals^2)
+sum(m_Day.only$residuals^2) - sum(m_Trt.Day$residuals^2)
+sum(m_Trt.only$residuals^2) - sum(m_Trt.Day$residuals^2)
+sum(m_Trt.Day$residuals^2) - sum(m_Trt.Day.TxD$residuals^2)
+sum(m_Trt.Day.TxD$residuals^2)
+```
+
+
+```{r}
+car::Anova(m5, type = 2)
+```
+
+## Type III 
+
+```{r}
+options(contrasts = c("contr.sum", "contr.poly"))
+
+m_intercept.only <- lm(Serum_haptoglobin_mg.dL ~ 1, data = df_pigs)
+
+m_Day.only <- lm(Serum_haptoglobin_mg.dL ~  factor(Day), data = df_pigs)
+m_Trt.TxD <- lm(Serum_haptoglobin_mg.dL ~  Trt + Trt:factor(Day), data = df_pigs)
+
+m_Trt.only <- lm(Serum_haptoglobin_mg.dL ~  Trt, data = df_pigs)
+m_Day.TxD <- lm(Serum_haptoglobin_mg.dL ~  Day + Trt:factor(Day), data = df_pigs)
+
+m_Trt.Day <- lm(Serum_haptoglobin_mg.dL ~  Trt + factor(Day), data = df_pigs)
+m_Trt.Day.TxD <- lm(Serum_haptoglobin_mg.dL ~   Trt*factor(Day), data = df_pigs)
+
+
+sum(m_intercept.only$residuals^2) - sum(m_Trt.only$residuals^2)
+sum(m_intercept.only$residuals^2) - sum(m_Day.only$residuals^2)
+sum(m_Day.only$residuals^2) - sum(m_Trt.TxD$residuals^2)
+sum(m_Trt.Day$residuals^2) - sum(m_Trt.Day.TxD$residuals^2) # TxD
+sum(m_Trt.Day.TxD$residuals^2) # residuals
+```
+
+```{r}
+car::Anova(m_Trt.Day.TxD, type =3)
+```
+
+```{r}
+sum(m_intercept.only$residuals^2)
+
+sum(m_Trt.TxD$residuals^2) - sum(m_Day.only$residuals^2)
+sum(m_intercept.only$residuals^2) - sum(m_Day.TxD$residuals^2)
+
+sum(m_Trt.Day$residuals^2) - sum(m_Trt.TxD$residuals^2)
+sum(m_Trt.only$residuals^2) - sum(m_Day.TxD$residuals^2)
+
+
+
+sum(m_Trt.Day.TxD$residuals^2) -sum(m_Trt.TxD$residuals^2)
+sum(m_Trt.Day.TxD$residuals^2) -sum(m_Day.TxD$residuals^2)
+
+
+sum((predict(m_Trt.TxD)- predict(m_intercept.only))^2) - sum((predict(m_Day.only)- predict(m_intercept.only))^2)
+
+sum((predict(m_Day.TxD)- predict(m_intercept.only))^2) - sum((predict(m_Trt.only)- predict(m_intercept.only))^2)
+
+sum(m_Trt.only$residuals^2) - sum(m_Day.TxD$residuals^2) - sum(m_Trt.Day.TxD$residuals^2)
+
+sum(m_Day.only$residuals^2) - sum(m_Trt.TxD$residuals^2) - sum(m_Trt.Day.TxD$residuals^2)
+
+```
+
+```{r}
+car::Anova(m_Trt.Day.TxD, type =3)
+```
+
