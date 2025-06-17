@@ -1,0 +1,22 @@
+---
+title: "Day 7"
+author: "J Lacasa"
+date: "2025-06-17"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+library(emmeans)
+```
+
+```{r}
+df_pigs <- read.csv("../data/blood_study_pigs.csv")
+
+
+```
+

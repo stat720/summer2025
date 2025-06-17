@@ -124,3 +124,13 @@ tomorrow-1
 the-treatment-structure-ii
 announcements-2
 setting-the-stage-expected-marginal-means
+tab:unnamed-chunk-1
+tab:unnamed-chunk-2
+treatment-structure-estimated-marginal-means
+estimated-effects
+setting-the-stage-estimated-marginal-means-aka-least-squares-means
+software-implementation
+what-you-ask-of-a-designed-experiment
+anova
+discussion
+tomorrow-2

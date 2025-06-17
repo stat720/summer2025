@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 6 The treatment structure | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 6 The treatment structure | STAT 720 - Design of Experiments" />
+  <title>Day 7 Treatment structure, estimated marginal means | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 7 Treatment structure, estimated marginal means | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 6 The treatment structure | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 7 Treatment structure, estimated marginal means | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 6 The treatment structure | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 7 Treatment structure, estimated marginal means | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="review-organizing-data-and-other-helpful-tips.html"/>
-<link rel="next" href="what-you-ask-of-a-designed-experiment.html"/>
+<link rel="prev" href="the-treatment-structure.html"/>
+<link rel="next" href="semester-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,70 +53,6 @@
 <script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
 
 
-<style type="text/css">
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-    color: #aaaaaa;
-  }
-pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
-code span.al { color: #ff0000; font-weight: bold; } /* Alert */
-code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
-code span.at { color: #7d9029; } /* Attribute */
-code span.bn { color: #40a070; } /* BaseN */
-code span.bu { color: #008000; } /* BuiltIn */
-code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
-code span.ch { color: #4070a0; } /* Char */
-code span.cn { color: #880000; } /* Constant */
-code span.co { color: #60a0b0; font-style: italic; } /* Comment */
-code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
-code span.do { color: #ba2121; font-style: italic; } /* Documentation */
-code span.dt { color: #902000; } /* DataType */
-code span.dv { color: #40a070; } /* DecVal */
-code span.er { color: #ff0000; font-weight: bold; } /* Error */
-code span.ex { } /* Extension */
-code span.fl { color: #40a070; } /* Float */
-code span.fu { color: #06287e; } /* Function */
-code span.im { color: #008000; font-weight: bold; } /* Import */
-code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
-code span.kw { color: #007020; font-weight: bold; } /* Keyword */
-code span.op { color: #666666; } /* Operator */
-code span.ot { color: #007020; } /* Other */
-code span.pp { color: #bc7a00; } /* Preprocessor */
-code span.sc { color: #4070a0; } /* SpecialChar */
-code span.ss { color: #bb6688; } /* SpecialString */
-code span.st { color: #4070a0; } /* String */
-code span.va { color: #19177c; } /* Variable */
-code span.vs { color: #4070a0; } /* VerbatimString */
-code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
-</style>
 
 <style type="text/css">
   
@@ -219,17 +155,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="6.4" data-path="the-treatment-structure.html"><a href="the-treatment-structure.html#where-is-the-treatment-structure-connected-to-the-statistical-model"><i class="fa fa-check"></i><b>6.4</b> Where is the treatment structure connected to the statistical model?</a></li>
 <li class="chapter" data-level="6.5" data-path="the-treatment-structure.html"><a href="the-treatment-structure.html#tomorrow-1"><i class="fa fa-check"></i><b>6.5</b> Tomorrow:</a></li>
 </ul></li>
-<li class="chapter" data-level="7" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html"><i class="fa fa-check"></i><b>7</b> What you ask of a designed experiment</a>
+<li class="chapter" data-level="7" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html"><i class="fa fa-check"></i><b>7</b> Treatment structure, estimated marginal means</a>
 <ul>
-<li class="chapter" data-level="7.1" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#announcements-2"><i class="fa fa-check"></i><b>7.1</b> Announcements</a></li>
-<li class="chapter" data-level="7.2" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#review-4"><i class="fa fa-check"></i><b>7.2</b> Review</a></li>
-<li class="chapter" data-level="7.3" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#anova"><i class="fa fa-check"></i><b>7.3</b> ANOVA</a></li>
-<li class="chapter" data-level="7.4" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#setting-the-stage-estimated-marginal-means-aka-least-squares-means"><i class="fa fa-check"></i><b>7.4</b> Setting the stage: Estimated marginal means aka least squares means</a>
-<ul>
-<li class="chapter" data-level="7.4.1" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#example-1"><i class="fa fa-check"></i><b>7.4.1</b> Example:</a></li>
-<li class="chapter" data-level="7.4.2" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#discussion"><i class="fa fa-check"></i><b>7.4.2</b> Discussion</a></li>
-</ul></li>
-<li class="chapter" data-level="7.5" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#tomorrow-2"><i class="fa fa-check"></i><b>7.5</b> Tomorrow</a></li>
+<li class="chapter" data-level="7.1" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html#announcements-2"><i class="fa fa-check"></i><b>7.1</b> Announcements</a></li>
+<li class="chapter" data-level="7.2" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html#review-4"><i class="fa fa-check"></i><b>7.2</b> Review</a></li>
+<li class="chapter" data-level="7.3" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html#estimated-effects"><i class="fa fa-check"></i><b>7.3</b> Estimated effects</a></li>
+<li class="chapter" data-level="7.4" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html#setting-the-stage-estimated-marginal-means-aka-least-squares-means"><i class="fa fa-check"></i><b>7.4</b> Setting the stage: Estimated marginal means aka least squares means</a></li>
+<li class="chapter" data-level="7.5" data-path="treatment-structure-estimated-marginal-means.html"><a href="treatment-structure-estimated-marginal-means.html#software-implementation"><i class="fa fa-check"></i><b>7.5</b> Software implementation</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>8</b> Semester Project</a>
 <ul>
@@ -261,11 +193,11 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="the-treatment-structure" class="section level1 hasAnchor" number="6">
-<h1><span class="header-section-number">Day 6</span> The treatment structure<a href="the-treatment-structure.html#the-treatment-structure" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 16th, 2025</p>
-<div id="announcements-1" class="section level2 hasAnchor" number="6.1">
-<h2><span class="header-section-number">6.1</span> Announcements<a href="the-treatment-structure.html#announcements-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="treatment-structure-estimated-marginal-means" class="section level1 hasAnchor" number="7">
+<h1><span class="header-section-number">Day 7</span> Treatment structure, estimated marginal means<a href="treatment-structure-estimated-marginal-means.html#treatment-structure-estimated-marginal-means" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>June 17th, 2025</p>
+<div id="announcements-2" class="section level2 hasAnchor" number="7.1">
+<h2><span class="header-section-number">7.1</span> Announcements<a href="treatment-structure-estimated-marginal-means.html#announcements-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Homework due this Friday<br />
 </li>
@@ -274,96 +206,75 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Next week will be on Zoom</li>
 </ul>
 </div>
-<div id="review-3" class="section level2 hasAnchor" number="6.2">
-<h2><span class="header-section-number">6.2</span> Review<a href="the-treatment-structure.html#review-3" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>The sources of variability in an experiment:
-<ul>
-<li>Treatment</li>
-<li>Logistics, design, topographical</li>
-</ul></li>
-</ul>
+<div id="review-4" class="section level2 hasAnchor" number="7.2">
+<h2><span class="header-section-number">7.2</span> Review<a href="treatment-structure-estimated-marginal-means.html#review-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Pre-selected treatments are usually assumed to affect the expected value.
+Today we’ll focus on those means of interest.</p>
 </div>
-<div id="treatment-structure" class="section level2 hasAnchor" number="6.3">
-<h2><span class="header-section-number">6.3</span> Treatment structure<a href="the-treatment-structure.html#treatment-structure" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>The treatment structure in an experiment is directly connected to the research question, i.e. what the researchers want to study.</p>
-<div id="types-of-treatment-structures" class="section level3 hasAnchor" number="6.3.1">
-<h3><span class="header-section-number">6.3.1</span> Types of treatment structures<a href="the-treatment-structure.html#types-of-treatment-structures" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>One-way treatment structure: a set of <span class="math inline">\(t\)</span> treatments or populations where there is no assumed structure among the treatments.
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-74"></span>
-<img src="../figures/trtdesigns_oneway.PNG" alt="Schematic description of an experiment with a one-way treatment structure" width="100%" />
-<p class="caption">
-Figure 6.1: Schematic description of an experiment with a one-way treatment structure
-</p>
-</div></li>
-<li>Two-way treatment structure: a set of treatments constructed by combining the levels or possibilities of two factors. Two-way factorial treatment structure.
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-75"></span>
-<img src="../figures/trtdesigns_twoway.PNG" alt="Schematic description of an experiment with a two-way treatment structure" width="100%" />
-<p class="caption">
-Figure 6.2: Schematic description of an experiment with a two-way treatment structure
-</p>
-</div></li>
-<li>Factorial arrangement treatment structure: a set of treatments constructed by combining the levels or possibilities of two or more different factors.</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-76"></span>
-<img src="../figures/trtdesigns_threeway.PNG" alt="Schematic description of an experiment with a three-way treatment structure" width="100%" />
-<p class="caption">
-Figure 6.3: Schematic description of an experiment with a three-way treatment structure
-</p>
+<div id="estimated-effects" class="section level2 hasAnchor" number="7.3">
+<h2><span class="header-section-number">7.3</span> Estimated effects<a href="treatment-structure-estimated-marginal-means.html#estimated-effects" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<table>
+<caption><span id="tab:unnamed-chunk-1">Table 7.1: </span>Treatment ANOVA for a one-way treatment structure</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Treatment</td>
+<td align="left">t-1</td>
+</tr>
+<tr class="even">
+<td align="left">Parallels</td>
+<td align="left">N-t</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1</td>
+</tr>
+</tbody>
+</table>
+<table>
+<caption><span id="tab:unnamed-chunk-2">Table 7.2: </span>Treatment ANOVA for a two-way treatment structure</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Factor A</td>
+<td align="left">a-1</td>
+</tr>
+<tr class="even">
+<td align="left">Factor B</td>
+<td align="left">b-1</td>
+</tr>
+<tr class="odd">
+<td align="left">A x B</td>
+<td align="left">(a-1)(b-1)</td>
+</tr>
+<tr class="even">
+<td align="left">Parallels</td>
+<td align="left">N-(ab)</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1</td>
+</tr>
+</tbody>
+</table>
 </div>
-<ul>
-<li>Fractional factorial arrangement treatment structure: only a part, or fraction, of the possible treatment combinations in a factorial arrangement treatment structure.</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-77"></span>
-<img src="../figures/trtdesigns_twowayfract.PNG" alt="Schematic description of an experiment with a two-way fractional treatment structure" width="100%" />
-<p class="caption">
-Figure 6.4: Schematic description of an experiment with a two-way fractional treatment structure
-</p>
+<div id="setting-the-stage-estimated-marginal-means-aka-least-squares-means" class="section level2 hasAnchor" number="7.4">
+<h2><span class="header-section-number">7.4</span> Setting the stage: Estimated marginal means aka least squares means<a href="treatment-structure-estimated-marginal-means.html#setting-the-stage-estimated-marginal-means-aka-least-squares-means" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Estimated marginal means are the expected mean for a given level of a factor, averaging over the other factors in the model.
+In <code>R</code>, the estimated marginal means are famously handled with the <code>emmeans</code> package.</p>
 </div>
-<ul>
-<li>Factorial arrangement treatment structure with one or more controls.</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-78"></span>
-<img src="../figures/trtdesigns_twoway_control.PNG" alt="Schematic description of an experiment with a two-way treatment structure with two controls" width="100%" />
-<p class="caption">
-Figure 6.5: Schematic description of an experiment with a two-way treatment structure with two controls
-</p>
-</div>
-<ul>
-<li>Examples on the whiteboard</li>
-</ul>
-</div>
-</div>
-<div id="where-is-the-treatment-structure-connected-to-the-statistical-model" class="section level2 hasAnchor" number="6.4">
-<h2><span class="header-section-number">6.4</span> Where is the treatment structure connected to the statistical model?<a href="the-treatment-structure.html#where-is-the-treatment-structure-connected-to-the-statistical-model" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Remember: the general advice is to divide the sources of variation into treatment and design (i.e., topographical).
-Normally, the treatments affect the expected value and the experiment design has created groups of data that were generated together.
-Those groups are groups of <em>similar</em> data and that’s why we say that they are correlated.
-For now, we’ll leave said correlation in the residual variance-covariance matrix <span class="math inline">\(\mathbf{R}\)</span>.</p>
-<ul>
-<li>One-way treatment structure</li>
-</ul>
-<p><span class="math display">\[\mathbf{y} \sim N(\boldsymbol{\mu}, \mathbf{R}), \\ \mu_{j} = \mu + \tau_j \]</span></p>
-<ul>
-<li>Two-way treatment structure</li>
-</ul>
-<p><span class="math display">\[\mathbf{y} \sim N(\boldsymbol{\mu}, \mathbf{R}), \\ \mu_{jk} = \mu + \tau_j + \rho_k +(\tau \rho)_{jk}\]</span></p>
-<ul>
-<li>Factorial treatment structure</li>
-</ul>
-<p><span class="math display">\[\mathbf{y} \sim N(\boldsymbol{\mu}, \mathbf{R}), \\ \mu_{jkl} = \mu + \tau_j + \rho_k + \gamma_l +(\tau \rho)_{jk}+(\tau \gamma)_{jl} + ( \rho \gamma)_{kl} + (\tau \rho \gamma)_{jkl}\]</span></p>
-<ul>
-<li>Fractional factorial treatment structure, factorial treatment structure with controls
-Some version of:</li>
-</ul>
-<p><span class="math display">\[\mathbf{y} \sim N(\boldsymbol{\mu}, \mathbf{R}), \\ \mu_{jk} = \mu + \tau_j + \rho_k +(\tau \rho)_{jk}\]</span></p>
-</div>
-<div id="tomorrow-1" class="section level2 hasAnchor" number="6.5">
-<h2><span class="header-section-number">6.5</span> Tomorrow:<a href="the-treatment-structure.html#tomorrow-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>All this is in Chapter 4 in Milliken and Johnson.</li>
-</ul>
+<div id="software-implementation" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Software implementation<a href="treatment-structure-estimated-marginal-means.html#software-implementation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -372,8 +283,8 @@ Some version of:</li>
           </div>
         </div>
       </div>
-<a href="review-organizing-data-and-other-helpful-tips.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="what-you-ask-of-a-designed-experiment.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="the-treatment-structure.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semester-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -404,7 +315,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/06-trt_design.Rmd",
+    "link": "https://github.com/stat720/book2025/edit/main/07-trt_design.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -412,7 +323,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/06-trt_design.Rmd",
+    "link": "https://github.com/stat720/book2025/blob/main/07-trt_design.Rmd",
     "text": null
   },
   "download": null,
@@ -427,20 +338,6 @@ gitbook.start({
 });
 </script>
 
-<!-- dynamically load mathjax for compatibility with self-contained -->
-<script>
-  (function () {
-    var script = document.createElement("script");
-    script.type = "text/javascript";
-    var src = "true";
-    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
-    if (location.protocol !== "file:")
-      if (/^https?:/.test(src))
-        src = src.replace(/^https?:/, '');
-    script.src = src;
-    document.getElementsByTagName("head")[0].appendChild(script);
-  })();
-</script>
 </body>
 
 </html>

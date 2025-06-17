@@ -9,8 +9,8 @@ June 16
   : Chapter 4 in Milliken and Johnson. 
 
 June 17
-: Treatment structure
-  : [html](#)
+: Treatment structure II
+  : [html](https://stat720.github.io/summer2025/notes/what-you-ask-of-a-designed-experiment.html)
 : [](#)
   : Chapter 4 in Milliken and Johnson. 
 
