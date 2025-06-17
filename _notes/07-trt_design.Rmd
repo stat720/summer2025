@@ -42,7 +42,6 @@ knitr::kable(t_trt, caption = "Treatment ANOVA for a three-way factorial treatme
 ```
 
 
-
 ## Setting the stage: Estimated marginal means aka least squares means 
 
 Sometimes, model coefficients or effects are hard to interpret. 
