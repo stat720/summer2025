@@ -41,6 +41,13 @@ t_trt <- data.frame(Source = c("Factor A", "Factor B", "Factor C", "A x B", "A x
 knitr::kable(t_trt, caption = "Treatment ANOVA for a three-way factorial treatment structure")
 ```
 
+### In case you were wondering: ANOVA and types of sums of squares
+
+- Type I SS: ordered 
+- Type II SS: conditional on main effects 
+- Type III SS: conditional on all effects  
+- From SS to test F value, to hypothesis test: 
+  - $F = \frac{SS_{t}/df_t}{SS_{e}/df_e}$
 
 ## Setting the stage: Estimated marginal means aka least squares means 
 

@@ -159,14 +159,16 @@
 <ul>
 <li class="chapter" data-level="7.1" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#announcements-2"><i class="fa fa-check"></i><b>7.1</b> Announcements</a></li>
 <li class="chapter" data-level="7.2" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#review-4"><i class="fa fa-check"></i><b>7.2</b> Review</a></li>
-<li class="chapter" data-level="7.3" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#anova"><i class="fa fa-check"></i><b>7.3</b> ANOVA</a></li>
+<li class="chapter" data-level="7.3" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#anova"><i class="fa fa-check"></i><b>7.3</b> ANOVA</a>
+<ul>
+<li class="chapter" data-level="7.3.1" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#in-case-you-were-wondering-anova-and-types-of-sums-of-squares"><i class="fa fa-check"></i><b>7.3.1</b> In case you were wondering: ANOVA and types of sums of squares</a></li>
+</ul></li>
 <li class="chapter" data-level="7.4" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#setting-the-stage-estimated-marginal-means-aka-least-squares-means"><i class="fa fa-check"></i><b>7.4</b> Setting the stage: Estimated marginal means aka least squares means</a>
 <ul>
 <li class="chapter" data-level="7.4.1" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#example-1"><i class="fa fa-check"></i><b>7.4.1</b> Example:</a></li>
 <li class="chapter" data-level="7.4.2" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#discussion"><i class="fa fa-check"></i><b>7.4.2</b> Discussion</a></li>
 </ul></li>
-<li class="chapter" data-level="7.5" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#software-implementation"><i class="fa fa-check"></i><b>7.5</b> Software implementation</a></li>
-<li class="chapter" data-level="7.6" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#tomorrow-2"><i class="fa fa-check"></i><b>7.6</b> Tomorrow</a></li>
+<li class="chapter" data-level="7.5" data-path="what-you-ask-of-a-designed-experiment.html"><a href="what-you-ask-of-a-designed-experiment.html#tomorrow-2"><i class="fa fa-check"></i><b>7.5</b> Tomorrow</a></li>
 </ul></li>
 <li class="chapter" data-level="8" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>8</b> Semester Project</a>
 <ul>
@@ -325,6 +327,19 @@ Figure 7.1: Mindmap of the analysis of a designed experiment, from the inception
 </tr>
 </tbody>
 </table>
+<div id="in-case-you-were-wondering-anova-and-types-of-sums-of-squares" class="section level3 hasAnchor" number="7.3.1">
+<h3><span class="header-section-number">7.3.1</span> In case you were wondering: ANOVA and types of sums of squares<a href="what-you-ask-of-a-designed-experiment.html#in-case-you-were-wondering-anova-and-types-of-sums-of-squares" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Type I SS: ordered</li>
+<li>Type II SS: conditional on main effects</li>
+<li>Type III SS: conditional on all effects<br />
+</li>
+<li>From SS to test F value, to hypothesis test:
+<ul>
+<li><span class="math inline">\(F = \frac{SS_{t}/df_t}{SS_{e}/df_e}\)</span></li>
+</ul></li>
+</ul>
+</div>
 </div>
 <div id="setting-the-stage-estimated-marginal-means-aka-least-squares-means" class="section level2 hasAnchor" number="7.4">
 <h2><span class="header-section-number">7.4</span> Setting the stage: Estimated marginal means aka least squares means<a href="what-you-ask-of-a-designed-experiment.html#setting-the-stage-estimated-marginal-means-aka-least-squares-means" class="anchor-section" aria-label="Anchor link to header"></a></h2>
@@ -334,6 +349,11 @@ Estimated marginal means are the expected mean for a given level of a factor, av
 In <code>R</code>, the estimated marginal means are famously handled with the <code>emmeans</code> package.</p>
 <div id="example-1" class="section level3 hasAnchor" number="7.4.1">
 <h3><span class="header-section-number">7.4.1</span> Example:<a href="what-you-ask-of-a-designed-experiment.html#example-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Download the <a href="../scripts/06172025_trt.Rmd">R script</a> to follow along!</p>
+<p>More about estimated marginal means:</p>
+<ul>
+<li><code>emmeans</code> website [<a href="https://rvlenth.github.io/emmeans/">link</a>]</li>
+</ul>
 </div>
 <div id="discussion" class="section level3 hasAnchor" number="7.4.2">
 <h3><span class="header-section-number">7.4.2</span> Discussion<a href="what-you-ask-of-a-designed-experiment.html#discussion" class="anchor-section" aria-label="Anchor link to header"></a></h3>
@@ -343,17 +363,12 @@ In <code>R</code>, the estimated marginal means are famously handled with the <c
 </ul>
 </div>
 </div>
-<div id="software-implementation" class="section level2 hasAnchor" number="7.5">
-<h2><span class="header-section-number">7.5</span> Software implementation<a href="what-you-ask-of-a-designed-experiment.html#software-implementation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Download the <a href="">R script</a> to follow along!</p>
-<p>References:</p>
+<div id="tomorrow-2" class="section level2 hasAnchor" number="7.5">
+<h2><span class="header-section-number">7.5</span> Tomorrow<a href="what-you-ask-of-a-designed-experiment.html#tomorrow-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><code>emmeans</code> website [<a href="https://rvlenth.github.io/emmeans/">link</a>]</li>
-<li></li>
+<li>More hands-on practice.</li>
+<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScxVkuFFT4aB_LEpI_yl-SYSubvgqWJlN2fYkFHN3SUP8sOnQ/viewform?usp=dialog">Your moment to ask the questions about least square means you’ve always wanted to ask.</a></li>
 </ul>
-</div>
-<div id="tomorrow-2" class="section level2 hasAnchor" number="7.6">
-<h2><span class="header-section-number">7.6</span> Tomorrow<a href="what-you-ask-of-a-designed-experiment.html#tomorrow-2" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 
 </div>
 </div>
@@ -417,6 +432,20 @@ gitbook.start({
 });
 </script>
 
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
 </body>
 
 </html>

@@ -134,3 +134,4 @@ what-you-ask-of-a-designed-experiment
 anova
 discussion
 tomorrow-2
+in-case-you-were-wondering-anova-and-types-of-sums-of-squares
