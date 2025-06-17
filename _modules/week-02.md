@@ -16,7 +16,7 @@ June 17
 
 June 18
 : Applied examples  
-  : [html](#)
+  : [html](https://stat720.github.io/summer2025/notes/applied-examples.html)
 
 June 19
 : Juneteenth (Observed Holiday) 
