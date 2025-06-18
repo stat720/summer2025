@@ -46,7 +46,7 @@ car::Anova(m_Trt.Day.TxD, type = 2)
 
 ## Applied example for today 
 
-[R script](../scripts/06182025.Rmd)
+[R script](../scripts/06182025_trt.Rmd)
 
 ## Tomorrow  
 
