@@ -19,7 +19,7 @@ June 18
   : [html](https://stat720.github.io/summer2025/notes/applied-examples.html)
 
 June 19
-: Juneteenth (Observed Holiday) 
+: Juneteenth (Observed Holiday)  
 
 June 20
 : Kahoot!
