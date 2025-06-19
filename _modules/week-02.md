@@ -23,6 +23,8 @@ June 19
 
 June 20
 : Kahoot!
+  : [html ](https://stat720.github.io/summer2025/notes/review.html)
   : **HW 1 due**{: .label .label-red }
   : **Project proposal**{: .label .label-red }
   : **HW 2**{: .label .label-green }
+  
