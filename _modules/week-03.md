@@ -4,7 +4,7 @@ title: Design Structures (a week of Zoom classes)
 
 June 23 
 : Applied linear mixed models  
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/applied-linear-mixed-models-i.html)
 
 June 24 
 : Applied linear mixed models  
