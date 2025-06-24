@@ -19,4 +19,5 @@ June 26
   : [](#)
 
 June 27
-: TBD
+: Hierarchical experiment designs: split-plot & strip-plots -- Applied 
+  : [](#)
