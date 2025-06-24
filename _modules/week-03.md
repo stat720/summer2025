@@ -8,7 +8,7 @@ June 23
 
 June 24 
 : Applied linear mixed models  
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/applied-linear-mixed-models-ii.html)
 
 June 25 
 : Hierarchical experiment designs: split-plot & strip-plot 
