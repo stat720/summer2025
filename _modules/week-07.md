@@ -1,4 +1,4 @@
 ---
-title: TBD 
+title: Topic TBD by class 
 ---
 
