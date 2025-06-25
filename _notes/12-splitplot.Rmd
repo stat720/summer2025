@@ -18,6 +18,13 @@ knitr::include_graphics("../figures/pigs_splitplot.PNG")
 - Sometimes, these differences in the sizes of EUs are not that easy to notice.  
 - More details in Analysis of Messy Data - Ch5. 
 
+### More pictures:  
+![Example 1 - RCBD](https://www.agrobit.ag/wp-content/uploads/2023/06/2_caso-studio-trial-plots-cover-800x533.jpg)
+
+![Example 2 - RCBD](https://www.researchgate.net/publication/309748939/figure/fig4/AS:466592510287876@1488255731678/UAV-image-of-the-field-trial-Different-plot-designs-including-one-two-three-and.png)
+
+![Example 3](https://www.pnw.coop/images/651/images/strip4.jpg)
+
 ## R demo 
 
 [Follow along with this R script!](../scripts/06252025_splitplot1.Rmd)
