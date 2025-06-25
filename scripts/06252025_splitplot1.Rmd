@@ -42,6 +42,8 @@ df %>%
 model1 <- glmmTMB(yield ~ 1 + fung*gen + (1|block/fung), data = df)
 
 summary(model1)
+
+car::Anova(model1)
 ```
 
 ```{r}

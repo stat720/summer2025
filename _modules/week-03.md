@@ -12,7 +12,7 @@ June 24
 
 June 25 
 : Hierarchical experiment designs: split-plot  
-  : [html](https://stat720.github.io/summer2025/notes/practice-hierarchical-multilevel-designs.html)
+  : [html](https://stat720.github.io/summer2025/notes/practice-hierarchical-multilevel-designs.html) | [in-class R code](../scripts/06252025_splitplot_inclass.Rmd)
 
 June 26 
 : Hierarchical experiment designs: split-plot 
