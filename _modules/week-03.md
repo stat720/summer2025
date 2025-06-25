@@ -11,11 +11,11 @@ June 24
   : [html](https://stat720.github.io/summer2025/notes/applied-linear-mixed-models-ii.html)
 
 June 25 
-: Hierarchical experiment designs: split-plot & strip-plot 
-  : [](#)
+: Hierarchical experiment designs: split-plot  
+  : [html](https://stat720.github.io/summer2025/notes/practice-hierarchical-designs.html)
 
 June 26 
-: Hierarchical experiment designs: split-plot & strip-plots -- Applied 
+: Hierarchical experiment designs: split-plot 
   : [](#)
 
 June 27
