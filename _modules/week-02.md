@@ -25,5 +25,5 @@ June 20
 : Kahoot!
   : [html ](https://stat720.github.io/summer2025/notes/review.html)
   : **HW 1 due**{: .label .label-red }
- = = %>% %>%   : **HW 2**{: .label .label-green }
+  : **HW 2**{: .label .label-green }
   
