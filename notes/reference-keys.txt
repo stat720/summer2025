@@ -110,6 +110,12 @@ remember-our-example
 building-the-anova-skeleton-using-design-aka-topographical-and-treatment-elements
 r-demo-1
 tomorrow-7
+what-goes-in-the-materials-and-methods-sections-of-papers
+what-is-the-purpose-of-a-mm-section
+review-treatment-structure-design-structure.-why-are-they-important
+treatment-structure-1
+design-structure
+monday
 semester-project
 learning-objectives
 partial-deadlines

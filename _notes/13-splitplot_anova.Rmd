@@ -64,14 +64,14 @@ ggarrange(p_blocks, p_wholeplot, p_splitplot, ncol = 1, nrow = 3)
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 t_topo <- data.frame(Source = c("Block", " ", "Fungicide(Block)","","","Gen(Fung x Block)", "Total"),
-                     df = c("b-1", "-", "(f-1)*b", "", "", "(g-1)*f*b", "N-1"))
+                     df = c("b-1", "-", "(f-1)*b", "-", "-", "(g-1)*f*b", "N-1"))
 
-t_trt <- data.frame(Source = c(" ", "Fungicide", "", "Genotype", "Fung x Gen", "Parallels", "Total"),
+t_trt <- data.frame(Source = c("-", "Fungicide", "-", "Genotype", "Fung x Gen", "Parallels", "Total"),
                     df = c("-", "f-1", "", "g-1", "(f-1)(g-1)", "N-(f*g)", "N-1"))
 
-t_comb <- data.frame(Source = c("Block", "Fungicide", "Fungicide(Block)", "Genotype", "Fung x Gen", "Pens(Block x Trt)\naka error",
-                                "Total"),
-                    df = c("b-1", "t-1", "(f-1)*b - (t-1)",  "g-1", "(f-1)(g-1)", "(g-1)*f*b - (g-1 + (f-1)(g-1))", "N-1"))
+t_comb <- data.frame(Source = c("Block", "Fungicide", "Fungicide(Block)", "Genotype",
+                                "Fung x Gen", "Pens(Block x Trt) error", "Total"),
+                    df = c("b-1", "t-1", "(f-1)*b - (t-1)",  "g-1", "(f-1)(g-1)", "(g-1)* f * b - (g-1 + (f-1)(g-1))", "N-1"))
 
 knitr::kables(
   list(
