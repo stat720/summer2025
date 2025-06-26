@@ -85,7 +85,7 @@ knitr::kables(
 
 ## R demo 
 
-[Follow along with this R script!](../scripts/06252025_splitplot2.Rmd)
+[Follow along with this R script!](../scripts/06262025_splitplot2.Rmd)
 
 ## Tomorrow  
 

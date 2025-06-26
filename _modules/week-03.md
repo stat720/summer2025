@@ -16,8 +16,8 @@ June 25
 
 June 26 
 : Hierarchical experiment designs: split-plot 
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/more-practice-hierarchical-multilevel-designs.html) | [in-class R code](#)
 
 June 27
-: Hierarchical experiment designs: split-plot & strip-plots -- Applied 
+: Materials and Methods 
   : [](#)
