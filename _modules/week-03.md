@@ -20,4 +20,4 @@ June 26
 
 June 27
 : Materials and Methods 
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/what-goes-in-the-materials-and-methods-sections-of-papers.html)
