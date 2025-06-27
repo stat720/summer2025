@@ -21,6 +21,9 @@ fig:unnamed-chunk-22
 fig:unnamed-chunk-23
 fig:unnamed-chunk-24
 tab:unnamed-chunk-26
+fig:unnamed-chunk-28
+fig:unnamed-chunk-29
+fig:unnamed-chunk-30
 welcome-to-stat-720
 about-this-course
 logistics
@@ -112,9 +115,8 @@ r-demo-1
 tomorrow-7
 what-goes-in-the-materials-and-methods-sections-of-papers
 what-is-the-purpose-of-a-mm-section
-review-treatment-structure-design-structure.-why-are-they-important
-treatment-structure-1
-design-structure
+fungicide-x-barley-genotypes-review
+some-examples
 monday
 semester-project
 learning-objectives
