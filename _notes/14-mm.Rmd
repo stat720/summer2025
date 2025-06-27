@@ -49,13 +49,17 @@ ggarrange(p_blocks, p_wholeplot, p_splitplot, ncol = 1, nrow = 3)
 
 ## Some examples  
 
-- Treatment Structure  
+And remember: 
+
+- **Treatment Structure**  
   - Defines the treatment mean 
   - Deterministic part of the model 
 
-- Design Structure  
+- **Design Structure**  
   - Defines the dependence patterns in the data 
   - Stochastic (random) part of the model  
+  
+Test: can you make a sketch of the data generating process?
 
 ```{r message=FALSE, echo=FALSE, warning=FALSE, fig.cap="M&M example 1 - Study objective: To evaluate the effects of second iron injection and dietary iron levels on growth performance, hematological parameters, serum and liver mineral content, fecal score, short-chain fatty acids, and the microbiome of pigs.", out.width = '50%'}
 knitr::include_graphics("../figures/johnson_etal.jpg")
