@@ -5,16 +5,15 @@ Today, tomorrow and Wednesday we'll do a hands-on demo on designing an experimen
 
 ## Background  
 
-Just like banana bread, banana muffins are different to other types of muffins because their dough includes bananas, which sometimes makes it challenging to get a fluffy dough. 
-If you don't manage your oven temperature and amount of bananas properly, you might end up with a dough that is too heavy and does not rise properly. 
-We'll start with our go-to banana recipe and fine-tune the best baking temperature. 
+Just like banana bread, banana muffins are different to other types of muffins because their dough includes bananas, which sometimes makes it challenging to get a fluffy crumb.  
+If you don't manage your oven temperature and amount of bananas properly, you might end up with a dough that is too heavy, does not rise properly, and ends up like the picture below. 
+We'll start with our go-to banana recipe and fine-tune the best baking temperature to get fluffy muffins. 
+Check out the recipe [here](https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html). 
 
 ![Banana bread goes wrong](../figures/banana_bread.jpg){width=50%}
 
 
-**Baseline recipe for banana muffins:**  
-
-Check out the recipe [here](https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html)
+### Baseline recipe for banana muffins:  
 
 **Dry ingredients:**  
 
@@ -46,8 +45,7 @@ What is the best temperature to bake the muffins? Let's assume that we prefer hi
 
 ### Proposed design experiment: RCBD 
 
-- Assuming we spread out all the work into multiple days, we can assume cooking day as the block. 
-
+Assuming we spread out all the work into multiple days, we can assume cooking day as the block. 
 Then, the model to describe variations in the muffin height can be written as 
 
 $$y_{ik} = \mu + b_k + T_i + \varepsilon_{ik},$$

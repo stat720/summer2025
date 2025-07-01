@@ -115,6 +115,7 @@ tomorrow-7
 review-6
 review-rcbd-and-split-plot
 background
+baseline-recipe-for-banana-muffins
 study-research-question
 proposed-design-experiment-rcbd
 treatment-means-and-confidence-intervals

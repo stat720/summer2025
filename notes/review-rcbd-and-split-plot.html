@@ -285,7 +285,10 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="14" data-path="review-6.html"><a href="review-6.html"><i class="fa fa-check"></i><b>14</b> Review</a></li>
 <li class="chapter" data-level="15" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html"><i class="fa fa-check"></i><b>15</b> Review: RCBD and split-plot</a>
 <ul>
-<li class="chapter" data-level="15.1" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html#background"><i class="fa fa-check"></i><b>15.1</b> Background</a></li>
+<li class="chapter" data-level="15.1" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html#background"><i class="fa fa-check"></i><b>15.1</b> Background</a>
+<ul>
+<li class="chapter" data-level="15.1.1" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html#baseline-recipe-for-banana-muffins"><i class="fa fa-check"></i><b>15.1.1</b> Baseline recipe for banana muffins:</a></li>
+</ul></li>
 <li class="chapter" data-level="15.2" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html#study-research-question"><i class="fa fa-check"></i><b>15.2</b> Study / Research question</a>
 <ul>
 <li class="chapter" data-level="15.2.1" data-path="review-rcbd-and-split-plot.html"><a href="review-rcbd-and-split-plot.html#proposed-design-experiment-rcbd"><i class="fa fa-check"></i><b>15.2.1</b> Proposed design experiment: RCBD</a></li>
@@ -338,15 +341,16 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>Today, tomorrow and Wednesday we’ll do a hands-on demo on designing an experiment.</p>
 <div id="background" class="section level2 hasAnchor" number="15.1">
 <h2><span class="header-section-number">15.1</span> Background<a href="review-rcbd-and-split-plot.html#background" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Just like banana bread, banana muffins are different to other types of muffins because their dough includes bananas, which sometimes makes it challenging to get a fluffy dough.
-If you don’t manage your oven temperature and amount of bananas properly, you might end up with a dough that is too heavy and does not rise properly.
-We’ll start with our go-to banana recipe and fine-tune the best baking temperature.</p>
+<p>Just like banana bread, banana muffins are different to other types of muffins because their dough includes bananas, which sometimes makes it challenging to get a fluffy crumb.<br />
+If you don’t manage your oven temperature and amount of bananas properly, you might end up with a dough that is too heavy, does not rise properly, and ends up like the picture below.
+We’ll start with our go-to banana recipe and fine-tune the best baking temperature to get fluffy muffins.
+Check out the recipe <a href="https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html">here</a>.</p>
 <div class="float">
 <img src="../figures/banana_bread.jpg" style="width:50.0%" alt="Banana bread goes wrong" />
 <div class="figcaption">Banana bread goes wrong</div>
 </div>
-<p><strong>Baseline recipe for banana muffins:</strong></p>
-<p>Check out the recipe <a href="https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html">here</a></p>
+<div id="baseline-recipe-for-banana-muffins" class="section level3 hasAnchor" number="15.1.1">
+<h3><span class="header-section-number">15.1.1</span> Baseline recipe for banana muffins:<a href="review-rcbd-and-split-plot.html#baseline-recipe-for-banana-muffins" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p><strong>Dry ingredients:</strong></p>
 <ul>
 <li>1 1/2 cups all-purpose flour (7 1/2 ounces)</li>
@@ -368,6 +372,7 @@ We’ll start with our go-to banana recipe and fine-tune the best baking tempera
 <li>1 teaspoon pure vanilla extract</li>
 </ul>
 </div>
+</div>
 <div id="study-research-question" class="section level2 hasAnchor" number="15.2">
 <h2><span class="header-section-number">15.2</span> Study / Research question<a href="review-rcbd-and-split-plot.html#study-research-question" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>What is the best temperature to bake the muffins? Let’s assume that we prefer higher muffins: what temperature will produce higher muffins?</p>
@@ -378,10 +383,8 @@ We’ll start with our go-to banana recipe and fine-tune the best baking tempera
 </ul>
 <div id="proposed-design-experiment-rcbd" class="section level3 hasAnchor" number="15.2.1">
 <h3><span class="header-section-number">15.2.1</span> Proposed design experiment: RCBD<a href="review-rcbd-and-split-plot.html#proposed-design-experiment-rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Assuming we spread out all the work into multiple days, we can assume cooking day as the block.</li>
-</ul>
-<p>Then, the model to describe variations in the muffin height can be written as</p>
+<p>Assuming we spread out all the work into multiple days, we can assume cooking day as the block.
+Then, the model to describe variations in the muffin height can be written as</p>
 <p><span class="math display">\[y_{ik} = \mu + b_k + T_i + \varepsilon_{ik},\]</span>
 <span class="math display">\[b_k \sim N(0, \sigma_b^2), \\ \varepsilon_{ik} \sim N(0, \sigma_{\varepsilon}^2),\]</span>
 where <span class="math inline">\(y_{ik}\)</span> is the observed height for the muffin baked under the <span class="math inline">\(i\)</span>th treatment on day <span class="math inline">\(k\)</span>, <span class="math inline">\(\mu\)</span> is the overall muffin height, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th temperature on muffin height, <span class="math inline">\(b_k\)</span> is the day (block) effect, that arises from a normal distribution with variance <span class="math inline">\(\sigma^2_b\)</span>, and <span class="math inline">\(\varepsilon_{ik}\)</span> is the residual for the muffin baked under the <span class="math inline">\(i\)</span>th treatment on day <span class="math inline">\(k\)</span>.</p>
