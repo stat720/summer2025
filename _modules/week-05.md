@@ -8,9 +8,7 @@ July 7
 
 July 8 
 : Power analysis I 
-  : **HW 3 due**{: .label .label-red }
   : **HW 4**{: .label .label-green }
-  : [html](#)
 
 July 9 
 : Power analysis II 
@@ -22,4 +20,4 @@ July 10
 
 July 11
 : Kahoot! 
-  : [](#)
+  : **HW 3 due**{: .label .label-red }
