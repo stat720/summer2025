@@ -17,10 +17,13 @@ Write a page-long project proposal that states your research problem and the obj
 ### Written report - Due Friday July 25 at 2pm CT
 Submit a manuscript including:
 
-- Introduction 
-- Methods, including a clear and complete description of the statistical model and code 
+- Introduction (background \& justification of the problem) 
+- Methods, including: 
+  - A complete ANOVA table describing the degrees of freedom associated to mean comparisons, 
+  - A clear and complete description of the statistical model,
+  - R code that would be implemented to fit that model,
 - Expected results 
-- Discussion of strengths and weaknesses
+- Discussion of strengths and weaknesses of the experiment design (e.g., compare an RCBD with a split-plot design)
 
 ### Oral presentation - Somewhere between July 21 - August 1 
 Prepare a 15 minute presentation of the core aspects of your project. 
