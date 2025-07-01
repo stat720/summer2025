@@ -6,8 +6,25 @@ July 1st, 2025
 Yesterday, we designed an experiment with an RCBD to figure out the best temperature to bake the muffins?  
 Check out the original recipe [here](https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html).
 
-```{r}
+Yesterday we agreed on the following design: 
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "Total"),
+                       df = c("r-1 = 3-1 = 2", "-", "(t-1)r = (3-1)*3 = 6", "N-1 = 8"))
 
+t_trt <- data.frame(Source = c(" ", "Temperature", "Parallels", "Total"),
+                    df = c("-", "t-1 = 3-1 = 2", "N-t = 9-3 = 6", "N-1 = 8"))
+
+t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
+                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)r - (t-1) = 2*3 - 2 = 4", "N-1 = 8"))
+
+knitr::kables(
+  list(
+    knitr::kable(t_design, caption = "Design or Topographical Sources of Variability"),
+    knitr::kable(t_trt, caption = "Treatment Sources of Variability"),
+    knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
+  ),
+  caption = ''
+)
 ```
 
 **Dry ingredients:**  
@@ -41,7 +58,32 @@ How much banana?
 - 1 1/2 cups (12.75 oz, or 361 gr.)
 - 2 cups (17 oz, or 482 gr.) 
 
-### Proposed design experiment: RCBD 
+## What is the best design? 
+
+### Option A: another RCBD  
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+t_design <- data.frame(Source = c("Day (block)", "", "", "", "Error(oven)", "Total"),
+                       df = c("r-1 = 3-1 = 2", "-", "-", "-", "(tb-1)*r = (6-1)*3 = 15", "N-1 = 17"))
+
+t_trt <- data.frame(Source = c(" ", "Temperature", "Banana", "TxB", "Parallels", "Total"),
+                    df = c("-", "t-1 = 3-1 = 2", "b-1 = 2-1 = 1", "(t-1)*(b-1) = 2", "N-tb = 18 - (3*2) = 12", "N-1 = 17"))
+
+t_rcbd <- data.frame(Source = c("Day", "Temperature", "Banana", "TxB", "Error(oven)", "Total"),
+                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "b-1 = 2-1 = 1", "(t-1)*(b-1) = 2",
+                           "(tb-1)*r - (t-1) - (b-1) - (t-1)*(b-1) = 15 - 2 -1 -2 = 7", "N-1 = 17"))
+
+knitr::kables(
+  list(
+    knitr::kable(t_design, caption = "Design or Topographical Sources of Variability"),
+    knitr::kable(t_trt, caption = "Treatment Sources of Variability"),
+    knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
+  ),
+  caption = ''
+)
+```
+
+### Option B: split-plot design
 
 - Cooking day as blocks 
 - Oven as mini-blocks for banana quantity 
@@ -52,19 +94,32 @@ $$b_k \sim N(0, \sigma_b^2) \\ \varepsilon_{ik} \sim N(0, \sigma_{\varepsilon}^2
 ANOVA table for this split-plot design 
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-t_splitplot <- data.frame(Source = c("Day (block)", "Temperature", "Wholeplot|Error(oven)|Oven(Day)", 
-                                     "Banana", "Temp x Banana", 
-                                     "Error | Loaf(Oven x Day)", "Total"),
-                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", 
-                           "(t-1)r - (t-1) = 2*3 - 2 = 4",
-                           "b-1 = 2-1 = 1",
-                           "(t-1) (b-1) = 2*1 = 2",
-                           "(b-1)tr - (b-1) - (t-1) (b-1)= (1 * 3 * 3) - 1 - 2 = 6",
-                           "N-1 = 17"))
-knitr::kable(t_splitplot, caption = "Treatment ANOVA for a two-way treatment structure in a split-plot")
+t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", 
+                                  "", "", "Error(oven x day)", "Total"),
+                       df = c("r-1 = 3-1 = 2", "-", "(t-1)*r = (3-1)*3 = 6",
+                              "-", "-", "(b-1)* t * r = (2-1) * 3 * 3 = 9", "N-1 = 17"))
+
+t_trt <- data.frame(Source = c(" ", "Temperature", "", 
+                               "Banana", "TxB", "Parallels", "Total"),
+                    df = c("-", "t-1 = 3-1 = 2", "-",
+                           "b-1 = 2-1 = 1", "(t-1)*(b-1) = 2", "N-tb = 18 - (3*2) = 12", "N-1 = 17"))
+
+t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)",
+                                "Banana", "TxB", "Error(oven x day)", "Total"),
+                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "6 -2 = 4",
+                           "b-1 = 2-1 = 1", "(t-1)*(b-1) = 2", "(b-1)* t * r - (b-1) - (t-1)*(b-1) = 15 - 2 -1 -2 = 10", "N-1 = 17"))
+
+knitr::kables(
+  list(
+    knitr::kable(t_design, caption = "Design or Topographical Sources of Variability"),
+    knitr::kable(t_trt, caption = "Treatment Sources of Variability"),
+    knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
+  ),
+  caption = ''
+)
 ```
 
-### Treatment means and confidence intervals  
+## Treatment means and confidence intervals  
 
 The treatment mean for the $i$th temperature and $j$th banana level is $\mu_{ij} = \mu + T_i + B_j +(TB)_{ij}$. 
 That mean won't change under different design structures. 
@@ -72,14 +127,28 @@ What *might* change is the confidence interval around that mean.
 
 - First, recall the formula for a CI: $\theta \pm t_{df, \frac{\alpha}{2}} \cdot se(\hat{\theta})$
 
-- For example, the CI for the differences between means for 300F and 400F $\mu_{1 \cdot} - \mu_{2 \cdot}$ is $(\mu_{1 \cdot} - \mu_{2 \cdot}) \pm 1.96 \cdot se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}})$ 
+```{r}
+#get test t
+qt(p = .975, df = 4) # df are df error(oven)
+```
+
+- For example, the CI for the differences between means for 300F and 400F $\mu_{1 \cdot} - \mu_{2 \cdot}$ is $(\mu_{1 \cdot} - \mu_{2 \cdot}) \pm 2.78 \cdot se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}})$ 
 - $se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}}) = \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b  \cdot \sigma^2_w)}{b \cdot r}}$
 
-$$\mu_i \pm 1.96 \cdot \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b \cdot \sigma^2_w)}{b \cdot r}}$$
+$$\mu_i \pm 2.78 \cdot \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b \cdot \sigma^2_w)}{b \cdot r}}$$
 
-- The CI for the differences between means for normal and high banana $\mu_{\cdot 1} - \mu_{\cdot 2}$ is $(\mu_{\cdot 1} - \mu_{\cdot 2}) \pm 1.96 \cdot se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}})$ 
+
+```{r}
+#get test t
+qt(p = .975, df = 7) # df are df error(oven)
+```
+
+- The CI for the differences between means for normal and high banana $\mu_{\cdot 1} - \mu_{\cdot 2}$ is $(\mu_{\cdot 1} - \mu_{\cdot 2}) \pm 2.36 \cdot se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}})$ 
 - $se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}}) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{t \cdot r}}$
 
-$$\mu_i \pm 1.96 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$$
+$$\mu_i \pm 2.78 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$$
 
+## Tomorrow: 
+
+- Measure heights  
 

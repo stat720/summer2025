@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>Day 16 Review: Applied split-plot | STAT 720 - Design of Experiments</title>
   <meta name="description" content="Day 16 Review: Applied split-plot | STAT 720 - Design of Experiments" />
-  <meta name="generator" content="bookdown 0.42 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
   <meta property="og:title" content="Day 16 Review: Applied split-plot | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
@@ -301,9 +301,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="16.1" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#background-1"><i class="fa fa-check"></i><b>16.1</b> Background</a>
 <ul>
 <li class="chapter" data-level="16.1.1" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#research-question"><i class="fa fa-check"></i><b>16.1.1</b> Research question</a></li>
-<li class="chapter" data-level="16.1.2" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#proposed-design-experiment-rcbd-1"><i class="fa fa-check"></i><b>16.1.2</b> Proposed design experiment: RCBD</a></li>
-<li class="chapter" data-level="16.1.3" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#treatment-means-and-confidence-intervals-1"><i class="fa fa-check"></i><b>16.1.3</b> Treatment means and confidence intervals</a></li>
 </ul></li>
+<li class="chapter" data-level="16.2" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#what-is-the-best-design"><i class="fa fa-check"></i><b>16.2</b> What is the best design?</a>
+<ul>
+<li class="chapter" data-level="16.2.1" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#option-a-another-rcbd"><i class="fa fa-check"></i><b>16.2.1</b> Option A: another RCBD</a></li>
+<li class="chapter" data-level="16.2.2" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#option-b-split-plot-design"><i class="fa fa-check"></i><b>16.2.2</b> Option B: split-plot design</a></li>
+</ul></li>
+<li class="chapter" data-level="16.3" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#treatment-means-and-confidence-intervals-1"><i class="fa fa-check"></i><b>16.3</b> Treatment means and confidence intervals</a></li>
+<li class="chapter" data-level="16.4" data-path="review-applied-split-plot.html"><a href="review-applied-split-plot.html#tomorrow-9"><i class="fa fa-check"></i><b>16.4</b> Tomorrow:</a></li>
 </ul></li>
 <li class="chapter" data-level="17" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>17</b> Semester Project</a>
 <ul>
@@ -342,6 +347,103 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">16.1</span> Background<a href="review-applied-split-plot.html#background-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>Yesterday, we designed an experiment with an RCBD to figure out the best temperature to bake the muffins?<br />
 Check out the original recipe <a href="https://www.ouichefnetwork.com/2016/06/a-life-changing-banana-nut-muffin.html">here</a>.</p>
+<p>Yesterday we agreed on the following design:</p>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-44">Table 16.1: </span>
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 16.1: </span>Design or Topographical Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day (block)</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)r = (3-1)*3 = 6</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 8</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 16.1: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Parallels</td>
+<td align="left">N-t = 9-3 = 6</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 8</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 16.1: </span>Combined Table of the Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)r - (t-1) = 2*3 - 2 = 4</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 8</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 <p><strong>Dry ingredients:</strong></p>
 <ul>
 <li>1 1/2 cups all-purpose flour (7 1/2 ounces)</li>
@@ -372,21 +474,20 @@ Check out the original recipe <a href="https://www.ouichefnetwork.com/2016/06/a-
 - 1 1/2 cups (12.75 oz, or 361 gr.)
 - 2 cups (17 oz, or 482 gr.)</p>
 </div>
-<div id="proposed-design-experiment-rcbd-1" class="section level3 hasAnchor" number="16.1.2">
-<h3><span class="header-section-number">16.1.2</span> Proposed design experiment: RCBD<a href="review-applied-split-plot.html#proposed-design-experiment-rcbd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Cooking day as blocks</li>
-<li>Oven as mini-blocks for banana quantity</li>
-</ul>
-<p><span class="math display">\[y_{ik} = \mu + T_i + b_k + \varepsilon_{ik}\]</span>
-<span class="math display">\[b_k \sim N(0, \sigma_b^2) \\ \varepsilon_{ik} \sim N(0, \sigma_{\varepsilon}^2)\]</span></p>
-<p>ANOVA table for this split-plot design</p>
+</div>
+<div id="what-is-the-best-design" class="section level2 hasAnchor" number="16.2">
+<h2><span class="header-section-number">16.2</span> What is the best design?<a href="review-applied-split-plot.html#what-is-the-best-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="option-a-another-rcbd" class="section level3 hasAnchor" number="16.2.1">
+<h3><span class="header-section-number">16.2.1</span> Option A: another RCBD<a href="review-applied-split-plot.html#option-a-another-rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-45">Table 16.2: </span>
+</caption>
+<tbody>
+<tr>
+<td>
 <table>
-<caption><span id="tab:unnamed-chunk-31">Table 16.1: </span>Treatment ANOVA for a two-way treatment structure in a split-plot</caption>
-<colgroup>
-<col width="43%" />
-<col width="56%" />
-</colgroup>
+<caption><span id="tab:unnamed-chunk-45">Table 16.2: </span>Design or Topographical Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -399,24 +500,158 @@ Check out the original recipe <a href="https://www.ouichefnetwork.com/2016/06/a-
 <td align="left">r-1 = 3-1 = 2</td>
 </tr>
 <tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(tb-1)<em>r = (6-1)</em>3 = 15</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-45">Table 16.2: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
 <td align="left">Temperature</td>
 <td align="left">t-1 = 3-1 = 2</td>
 </tr>
 <tr class="odd">
-<td align="left">Wholeplot|Error(oven)|Oven(Day)</td>
-<td align="left">(t-1)r - (t-1) = 2*3 - 2 = 4</td>
-</tr>
-<tr class="even">
 <td align="left">Banana</td>
 <td align="left">b-1 = 2-1 = 1</td>
 </tr>
+<tr class="even">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
 <tr class="odd">
-<td align="left">Temp x Banana</td>
-<td align="left">(t-1) (b-1) = 2*1 = 2</td>
+<td align="left">Parallels</td>
+<td align="left">N-tb = 18 - (3*2) = 12</td>
 </tr>
 <tr class="even">
-<td align="left">Error | Loaf(Oven x Day)</td>
-<td align="left">(b-1)tr - (b-1) - (t-1) (b-1)= (1 * 3 * 3) - 1 - 2 = 6</td>
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-45">Table 16.2: </span>Combined Table of the Sources of Variability</caption>
+<colgroup>
+<col width="17%" />
+<col width="82%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="even">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(tb-1)<em>r - (t-1) - (b-1) - (t-1)</em>(b-1) = 15 - 2 -1 -2 = 7</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="option-b-split-plot-design" class="section level3 hasAnchor" number="16.2.2">
+<h3><span class="header-section-number">16.2.2</span> Option B: split-plot design<a href="review-applied-split-plot.html#option-b-split-plot-design" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Cooking day as blocks</li>
+<li>Oven as mini-blocks for banana quantity</li>
+</ul>
+<p><span class="math display">\[y_{ik} = \mu + T_i + b_k + \varepsilon_{ik}\]</span>
+<span class="math display">\[b_k \sim N(0, \sigma_b^2) \\ \varepsilon_{ik} \sim N(0, \sigma_{\varepsilon}^2)\]</span></p>
+<p>ANOVA table for this split-plot design</p>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-46">Table 16.3: </span>
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-46">Table 16.3: </span>Design or Topographical Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day (block)</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)<em>r = (3-1)</em>3 = 6</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r = (2-1) * 3 * 3 = 9</td>
 </tr>
 <tr class="odd">
 <td align="left">Total</td>
@@ -424,25 +659,129 @@ Check out the original recipe <a href="https://www.ouichefnetwork.com/2016/06/a-
 </tr>
 </tbody>
 </table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-46">Table 16.3: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Parallels</td>
+<td align="left">N-tb = 18 - (3*2) = 12</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-46">Table 16.3: </span>Combined Table of the Sources of Variability</caption>
+<colgroup>
+<col width="24%" />
+<col width="75%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">6 -2 = 4</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r - (b-1) - (t-1)*(b-1) = 15 - 2 -1 -2 = 10</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div id="treatment-means-and-confidence-intervals-1" class="section level3 hasAnchor" number="16.1.3">
-<h3><span class="header-section-number">16.1.3</span> Treatment means and confidence intervals<a href="review-applied-split-plot.html#treatment-means-and-confidence-intervals-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="treatment-means-and-confidence-intervals-1" class="section level2 hasAnchor" number="16.3">
+<h2><span class="header-section-number">16.3</span> Treatment means and confidence intervals<a href="review-applied-split-plot.html#treatment-means-and-confidence-intervals-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The treatment mean for the <span class="math inline">\(i\)</span>th temperature and <span class="math inline">\(j\)</span>th banana level is <span class="math inline">\(\mu_{ij} = \mu + T_i + B_j +(TB)_{ij}\)</span>.
 That mean won’t change under different design structures.
 What <em>might</em> change is the confidence interval around that mean.</p>
 <ul>
-<li><p>First, recall the formula for a CI: <span class="math inline">\(\theta \pm t_{df, \frac{\alpha}{2}} \cdot se(\hat{\theta})\)</span></p></li>
-<li><p>For example, the CI for the differences between means for 300F and 400F <span class="math inline">\(\mu_{1 \cdot} - \mu_{2 \cdot}\)</span> is <span class="math inline">\((\mu_{1 \cdot} - \mu_{2 \cdot}) \pm 1.96 \cdot se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}})\)</span></p></li>
-<li><p><span class="math inline">\(se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}}) = \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b  \cdot \sigma^2_w)}{b \cdot r}}\)</span></p></li>
+<li>First, recall the formula for a CI: <span class="math inline">\(\theta \pm t_{df, \frac{\alpha}{2}} \cdot se(\hat{\theta})\)</span></li>
 </ul>
-<p><span class="math display">\[\mu_i \pm 1.96 \cdot \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b \cdot \sigma^2_w)}{b \cdot r}}\]</span></p>
+<div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="review-applied-split-plot.html#cb60-1" tabindex="-1"></a><span class="co">#get test t</span></span>
+<span id="cb60-2"><a href="review-applied-split-plot.html#cb60-2" tabindex="-1"></a><span class="fu">qt</span>(<span class="at">p =</span> .<span class="dv">975</span>, <span class="at">df =</span> <span class="dv">4</span>) <span class="co"># df are df error(oven)</span></span></code></pre></div>
+<pre><code>## [1] 2.776445</code></pre>
 <ul>
-<li>The CI for the differences between means for normal and high banana <span class="math inline">\(\mu_{\cdot 1} - \mu_{\cdot 2}\)</span> is <span class="math inline">\((\mu_{\cdot 1} - \mu_{\cdot 2}) \pm 1.96 \cdot se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}})\)</span></li>
+<li>For example, the CI for the differences between means for 300F and 400F <span class="math inline">\(\mu_{1 \cdot} - \mu_{2 \cdot}\)</span> is <span class="math inline">\((\mu_{1 \cdot} - \mu_{2 \cdot}) \pm 2.78 \cdot se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}})\)</span></li>
+<li><span class="math inline">\(se(\widehat{\mu_{1 \cdot} - \mu_{2 \cdot}}) = \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b  \cdot \sigma^2_w)}{b \cdot r}}\)</span></li>
+</ul>
+<p><span class="math display">\[\mu_i \pm 2.78 \cdot \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b \cdot \sigma^2_w)}{b \cdot r}}\]</span></p>
+<div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="review-applied-split-plot.html#cb62-1" tabindex="-1"></a><span class="co">#get test t</span></span>
+<span id="cb62-2"><a href="review-applied-split-plot.html#cb62-2" tabindex="-1"></a><span class="fu">qt</span>(<span class="at">p =</span> .<span class="dv">975</span>, <span class="at">df =</span> <span class="dv">7</span>) <span class="co"># df are df error(oven)</span></span></code></pre></div>
+<pre><code>## [1] 2.364624</code></pre>
+<ul>
+<li>The CI for the differences between means for normal and high banana <span class="math inline">\(\mu_{\cdot 1} - \mu_{\cdot 2}\)</span> is <span class="math inline">\((\mu_{\cdot 1} - \mu_{\cdot 2}) \pm 2.36 \cdot se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}})\)</span></li>
 <li><span class="math inline">\(se(\widehat{\mu_{\cdot 1} - \mu_{\cdot 2}}) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{t \cdot r}}\)</span></li>
 </ul>
-<p><span class="math display">\[\mu_i \pm 1.96 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}\]</span></p>
-
+<p><span class="math display">\[\mu_i \pm 2.78 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}\]</span></p>
 </div>
+<div id="tomorrow-9" class="section level2 hasAnchor" number="16.4">
+<h2><span class="header-section-number">16.4</span> Tomorrow:<a href="review-applied-split-plot.html#tomorrow-9" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Measure heights</li>
+</ul>
+
 </div>
 </div>
             </section>
