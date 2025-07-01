@@ -8,7 +8,7 @@ June 30
 
 July 1 
 : Practice - Designing an RCBD/split-plot design  
-  : [html](#)
+  : [html](https://stat720.github.io/summer2025/notes/review-rcbd-and-split-plot.html)
 
 July 2 
 : Practice - Designing a split-plot design  
