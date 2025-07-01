@@ -80,7 +80,7 @@ qt(p = .975, df = 4) # df are df error(oven)
 sqrt((2*sigma(m)^2) / 3)
 ```
 
-- For example, the CI for the differences between means at 400F - 300F $\mu_{400} - \mu_{300}$ is $(\mu_{400} -\mu_{300}) \pm 2.78 \cdot se(\widehat{\mu_{400} - \mu_{300}})$
+- For example, the CI for the differences between means at 400F - 300F $\mu_{400} - \mu_{300}$ is $(\widehat{\mu_{400} - \mu_{300}}) \pm 2.78 \cdot se(\widehat{\mu_{400} - \mu_{300}})$
 - $se(\widehat{\mu_{400} - \mu_{300}}) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$
 
 $$\mu_i \pm 2.78 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$$

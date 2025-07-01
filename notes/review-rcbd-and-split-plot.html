@@ -387,7 +387,7 @@ We’ll start with our go-to banana recipe and fine-tune the best baking tempera
 where <span class="math inline">\(y_{ik}\)</span> is the observed height for the muffin baked under the <span class="math inline">\(i\)</span>th treatment on day <span class="math inline">\(k\)</span>, <span class="math inline">\(\mu\)</span> is the overall muffin height, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th temperature on muffin height, <span class="math inline">\(b_k\)</span> is the day (block) effect, that arises from a normal distribution with variance <span class="math inline">\(\sigma^2_b\)</span>, and <span class="math inline">\(\varepsilon_{ik}\)</span> is the residual for the muffin baked under the <span class="math inline">\(i\)</span>th treatment on day <span class="math inline">\(k\)</span>.</p>
 <p>The final ANOVA table for this RCBD design is:</p>
 <table>
-<caption><span id="tab:unnamed-chunk-34">Table 15.1: </span>Treatment ANOVA for a one-way treatment structure in an RCBD</caption>
+<caption><span id="tab:unnamed-chunk-27">Table 15.1: </span>Treatment ANOVA for a one-way treatment structure in an RCBD</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -428,7 +428,7 @@ What <em>might</em> change is the confidence interval around that mean.
 <div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb61-1"><a href="review-rcbd-and-split-plot.html#cb61-1" tabindex="-1"></a><span class="co"># standard error</span></span>
 <span id="cb61-2"><a href="review-rcbd-and-split-plot.html#cb61-2" tabindex="-1"></a><span class="fu">sqrt</span>((<span class="dv">2</span><span class="sc">*</span><span class="fu">sigma</span>(m)<span class="sc">^</span><span class="dv">2</span>) <span class="sc">/</span> <span class="dv">3</span>)</span></code></pre></div>
 <ul>
-<li>For example, the CI for the differences between means at 400F - 300F <span class="math inline">\(\mu_{400} - \mu_{300}\)</span> is <span class="math inline">\((\mu_{400} -\mu_{300}) \pm 2.78 \cdot se(\widehat{\mu_{400} - \mu_{300}})\)</span></li>
+<li>For example, the CI for the differences between means at 400F - 300F <span class="math inline">\(\mu_{400} - \mu_{300}\)</span> is <span class="math inline">\((\widehat{\mu_{400} - \mu_{300}}) \pm 2.78 \cdot se(\widehat{\mu_{400} - \mu_{300}})\)</span></li>
 <li><span class="math inline">\(se(\widehat{\mu_{400} - \mu_{300}}) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}\)</span></li>
 </ul>
 <p><span class="math display">\[\mu_i \pm 2.78 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}\]</span></p>
