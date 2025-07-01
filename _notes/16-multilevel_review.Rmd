@@ -50,27 +50,40 @@ What is the best temperature to bake the muffins? Let's assume that we prefer hi
 
 Then, the model to describe variations in the muffin height can be written as 
 
-$$y_{ik} = \mu + T_i + b_k + \varepsilon_{ik},$$
+$$y_{ik} = \mu + b_k + T_i + \varepsilon_{ik},$$
 $$b_k \sim N(0, \sigma_b^2), \\ \varepsilon_{ik} \sim N(0, \sigma_{\varepsilon}^2),$$
 where $y_{ik}$ is the observed height for the muffin baked under the $i$th treatment on day $k$, $\mu$ is the overall muffin height, $T_i$ is the effect of the $i$th temperature on muffin height, $b_k$ is the day (block) effect, that arises from a normal distribution with variance $\sigma^2_b$, and $\varepsilon_{ik}$ is the residual for the muffin baked under the $i$th treatment on day $k$.   
 
 The final ANOVA table for this RCBD design is:
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
-t_rcbd <- data.frame(Source = c("Day", "Temperature", "Parallels", "Total"),
+t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
                     df = c("b-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)b - (t-1) = 2*3 - 2 = 4", "N-1 = 8"))
 knitr::kable(t_rcbd, caption = "Treatment ANOVA for a one-way treatment structure in an RCBD")
 ```
 
 ### Treatment means and confidence intervals  
 
-The treatment mean for the $i$th temperature is $\mu_i = \mu + T_i$. That mean won't change under different design structures. What *might* change is the confidence interval around that mean.  
+The treatment mean for the $i$th temperature is $\mu_i = \mu + T_i$. That mean won't change under different design structures. 
+What *might* change is the confidence interval around that mean.
+[For more information, see Chapter 24 in Milliken and Johnson's *Analysis of Messy Data*].
 
 - First, recall the formula for a CI: $\theta \pm t_{df, \frac{\alpha}{2}} \cdot se(\hat{\theta})$
-- For example, the CI for the differences between means at 400F - 300F $\mu_{400} - \mu_{300}$ is $(\mu_{400} -\mu_{300}) \pm 1.96 \cdot se(\widehat{\mu_{400} - \mu_{300}})$
+
+```{r}
+#get test t
+qt(p = .975, df = 4) # df are df error(oven)
+```
+
+```{r echo=TRUE, eval=FALSE}
+# standard error
+sqrt((2*sigma(m)^2) / 3)
+```
+
+- For example, the CI for the differences between means at 400F - 300F $\mu_{400} - \mu_{300}$ is $(\mu_{400} -\mu_{300}) \pm 2.78 \cdot se(\widehat{\mu_{400} - \mu_{300}})$
 - $se(\widehat{\mu_{400} - \mu_{300}}) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$
 
-$$\mu_i \pm 1.96 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$$
+$$\mu_i \pm 2.78 \cdot \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r}}$$
 
 
 ## Tomorrow: 
