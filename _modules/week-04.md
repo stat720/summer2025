@@ -4,10 +4,10 @@ title: Practice makes the master
 
 June 30 
 : Kahoot!   
-  : **HW 3**{: .label .label-green }
+  : [**HW 3**](https://stat720.github.io/summer2025/assignments/Assignment3_YourLastName.pdf){: .label .label-green }
 
 July 1 
-: Practice - Designing an RCBD   
+: Practice - Designing an RCBD/split-plot design  
   : [html](#)
 
 July 2 

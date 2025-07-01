@@ -172,3 +172,14 @@ review-treatment-structure-design-structure.-why-are-they-important
 treatment-structure-1
 design-structure
 monday
+review-rcbd-and-split-plot
+background
+proposed-design-experiment-rcbd
+review-applied-split-plot
+research-question
+treatment-means-and-confidence-intervals
+tomorrow-8
+background-1
+research-question-1
+proposed-design-experiment-rcbd-1
+treatment-means-and-confidence-intervals-1

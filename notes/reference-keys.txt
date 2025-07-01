@@ -21,6 +21,8 @@ fig:unnamed-chunk-22
 fig:unnamed-chunk-23
 fig:unnamed-chunk-24
 tab:unnamed-chunk-26
+tab:unnamed-chunk-27
+tab:unnamed-chunk-29
 welcome-to-stat-720
 about-this-course
 logistics
@@ -112,9 +114,16 @@ r-demo-1
 tomorrow-7
 review-6
 review-rcbd-and-split-plot
-review-7
+background
+study-research-question
+proposed-design-experiment-rcbd
+treatment-means-and-confidence-intervals
+tomorrow-8
 review-applied-split-plot
-review-8
+background-1
+research-question
+proposed-design-experiment-rcbd-1
+treatment-means-and-confidence-intervals-1
 semester-project
 learning-objectives
 partial-deadlines
