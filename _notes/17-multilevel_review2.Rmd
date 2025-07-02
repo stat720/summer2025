@@ -31,7 +31,7 @@ t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
 
 knitr::kables(
   list(
-    knitr::kable(t_design, caption = "Design or Topographical Sources of Variability"),
+    knitr::kable(t_design, caption = "Design Sources of Variability"),
     knitr::kable(t_trt, caption = "Treatment Sources of Variability"),
     knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
   ),
