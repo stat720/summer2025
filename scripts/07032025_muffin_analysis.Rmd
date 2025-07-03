@@ -1,0 +1,15 @@
+---
+title: "Muffin Data Analysis"
+author: "J Lacasa"
+date: "2025-07-03"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+url <- "https://raw.githubusercontent.com/stat720/summer2025/refs/heads/main/data/muffin_data.csv"
+```
+

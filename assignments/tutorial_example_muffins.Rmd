@@ -16,9 +16,31 @@ Banana muffins, much like banana bread, present a unique baking challenge due to
 
 ## Materials  
 
-The facility that is available to bake the muffins includes.
+The facility that is available to bake the muffins includes one oven with 2 racks. 
+
+## Statistical models 
 
 ## ANOVA table 
+
+```{r echo=FALSE}
+t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
+                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)r - (t-1) = 2*3 - 2 = 4", "N-1 = 8"))
+
+knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
+```
+
+## Optional: Data Analysis and Statistical Inference 
+
+
+
+## References  
+
+When appropriate. 
+
+
+## Appendix A. What Would Fisher Do ANOVA Tables 
+
+### Table S1. 
 
 ```{r echo=FALSE}
 t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "Total"),
@@ -27,13 +49,9 @@ t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "Total"),
 t_trt <- data.frame(Source = c(" ", "Temperature", "Parallels", "Total"),
                     df = c(" ", "t-1 = 3-1 = 2", "N-t = 9-3 = 6", "N-1 = 8"))
 
-t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
-                    df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)r - (t-1) = 2*3 - 2 = 4", "N-1 = 8"))
-
 knitr::kable(t_design, caption = "Design or Topographical Sources of Variability")
 knitr::kable(t_trt, caption = "Treatment Sources of Variability")
-knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
 ```
 
-## References  
+
 
