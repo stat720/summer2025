@@ -22,7 +22,7 @@ $$b_k \sim N(0, \sigma_b^2), \\w_{i(k)} \sim N(0, \sigma^2_w), \\ \varepsilon_{i
 
 What is the best temperature to bake the muffins? 
 
-- 300 °F
+- 250 °F
 - 400 °F
 - 500 °F
 
