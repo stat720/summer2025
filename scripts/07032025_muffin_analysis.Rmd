@@ -11,11 +11,54 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(tidyverse)
+# library(glmmTMB)
+library(lme4)
+library(emmeans)
 ```
 
 
 ```{r}
 url <- "https://raw.githubusercontent.com/stat720/summer2025/refs/heads/main/data/muffin_data.csv"
 muffins <- read.csv(url)
+muffins$oven_temp <- as.factor(muffins$oven_temp)
+```
+
+```{r}
+muffins %>% 
+  ggplot(aes(paste(oven_temp, recipe), height_cm))+
+  geom_boxplot()
+
+```
+
+```{r}
+muffins1 <- muffins %>% filter(subsample == 1)
+```
+
+```{r}
+muffins1 %>% 
+  ggplot(aes(paste(oven_temp, recipe), height_cm))+
+  geom_boxplot()
+
+```
+
+```{r}
+colnames(muffins1)
+str(muffins1)
+
+
+(model_nosubsampling <- 
+  lmer(height_cm ~ 1 + oven_temp*recipe + (1|rep), data = muffins1))
+```
+
+```{r}
+plot(model_nosubsampling)
+```
+
+
+```{r}
+car::Anova(model_nosubsampling)
+
+emmeans(model_nosubsampling, ~ recipe:oven_temp, 
+        contr = list(c(0, 0, 0, 0, 1, -1)))
 ```
 
