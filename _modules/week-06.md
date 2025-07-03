@@ -1,24 +1,24 @@
 ---
-title: Generalized Linear Mixed Models 
+title: Course Review 
 ---
 
 July 14
-: TBD   
+: RCBD Review   
   : **HW 5**{: .label .label-green }
   : [](#)
 
 July 15 
-: TBD   
+: Split-plot Review   
   : [](#)
 
 July 16 
-: TBD   
+: Strip-plot designs   
   : [](#)
 
 July 17 
-: TBD   
+: Crossover designs   
   : [](#)
 
 July 18
-: TBD   
+: Kahoot!   
   : **HW 4 due**{: .label .label-red }

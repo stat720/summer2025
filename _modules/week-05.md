@@ -3,19 +3,19 @@ title: More Practice/Power analysis
 ---
 
 July 7
-: Practice - find out the design   
+: Split plot analysis of the muffin example    
   : [](#)
 
 July 8 
-: Power analysis I 
+: Split plot analysis of the muffin example - now with repeated measures!    
   : **HW 4**{: .label .label-green }
 
 July 9 
-: Power analysis II 
+: Power analysis I 
   : [](#)
 
 July 10 
-: Power analysis III 
+: Power analysis II 
   : [](#)
 
 July 11
