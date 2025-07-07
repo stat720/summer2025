@@ -90,6 +90,16 @@ t_rcbd <- data.frame(Source = c("Day", "Temperature",
 knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
 ```
 
+#### Mock R code for this design 
+
+All mock R code in this report assumes the existence of a `data.frame` with the columns `oven_temp` as factor, `recipe` as factor, `rep` as factor, and `height_cm` as double. 
+
+```{r eval=FALSE, include=TRUE}
+library(lme4)
+m <- lmer(height_cm ~ 1 + oven_temp * recipe + (1|rep))
+```
+
+
 ### Split-plot design with temperature in the whole plot 
 
 In this design, each oven temperature treatment (i.e., 250, 400, 500) is repeated 3 times within a day, and the recipe treatment is repeated 9 times (i.e., once for each oven). 
@@ -132,6 +142,14 @@ t_splitplot <- data.frame(Source = c("Temperature", "Error(oven)",
                            "N-1 = 17"))
 
 knitr::kable(t_splitplot, caption = "Combined Table of the Sources of Variability")
+```
+
+
+#### Mock R code for this design 
+
+```{r eval=FALSE, include=TRUE}
+library(lme4)
+m <- lmer(height_cm ~ 1 + oven_temp * recipe + (1|rep/oven_temp))
 ```
 
 ### Split-plot design with recipe in the whole-plot   
@@ -179,6 +197,14 @@ t_splitplot <- data.frame(Source = c("Temperature", "Error(batter)",
 
 knitr::kable(t_splitplot, caption = "Combined Table of the Sources of Variability")
 ```
+
+#### Mock R code for this design 
+
+```{r eval=FALSE, include=TRUE}
+library(lme4)
+m <- lmer(height_cm ~ 1 + oven_temp * recipe + (1|rep/recipe))
+```
+
 
 ## Expected results  
 

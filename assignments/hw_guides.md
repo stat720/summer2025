@@ -17,8 +17,8 @@ The following guides are solved homeworks, indicating what was expected from eac
 | HW3       |             |             |             |
 | HW4       |             |             |             |
 |Project proposal | [pdf legume example](https://stat720.github.io/summer2025/assignments/proposal_example.pdf) |   [pdf muffins example](https://stat720.github.io/summer2025/assignments/proposal_example_muffins.pdf)    |             |
-|Project tutorial |             |    [pdf muffins tutorial example](https://stat720.github.io/summer2025/assignments/tutorial_example_muffins.pdf)    |             |
-|Project manuscript |             |             |             |
+|Project report |             |    [pdf muffins report example](https://stat720.github.io/summer2025/assignments/report_example_muffins.pdf)    |             |
+|Project R code |             |             |             |
 
 
 

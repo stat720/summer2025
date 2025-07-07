@@ -331,6 +331,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="18.3.1" data-path="analysis-and-inference-for-a-split-plot-design.html"><a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-a-crd"><i class="fa fa-check"></i><b>18.3.1</b> Split-plot in a CRD</a></li>
 <li class="chapter" data-level="18.3.2" data-path="analysis-and-inference-for-a-split-plot-design.html"><a href="analysis-and-inference-for-a-split-plot-design.html#other-possible-designs"><i class="fa fa-check"></i><b>18.3.2</b> Other possible designs</a></li>
 </ul></li>
+<li class="chapter" data-level="18.4" data-path="analysis-and-inference-for-a-split-plot-design.html"><a href="analysis-and-inference-for-a-split-plot-design.html#applied-analysis-in-r"><i class="fa fa-check"></i><b>18.4</b> Applied analysis in R</a></li>
 </ul></li>
 <li class="chapter" data-level="19" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>19</b> Semester Project</a>
 <ul>
@@ -338,7 +339,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="19.2" data-path="semester-project.html"><a href="semester-project.html#partial-deadlines"><i class="fa fa-check"></i><b>19.2</b> Partial deadlines</a>
 <ul>
 <li class="chapter" data-level="19.2.1" data-path="semester-project.html"><a href="semester-project.html#project-proposal---due-friday-june-20-at-2pm-ct"><i class="fa fa-check"></i><b>19.2.1</b> Project proposal - Due Friday June 20 at 2pm CT</a></li>
-<li class="chapter" data-level="19.2.2" data-path="semester-project.html"><a href="semester-project.html#written-report---due-friday-july-25-at-2pm-ct"><i class="fa fa-check"></i><b>19.2.2</b> Written report - Due Friday July 25 at 2pm CT</a></li>
+<li class="chapter" data-level="19.2.2" data-path="semester-project.html"><a href="semester-project.html#written-report---due-wednesday-july-23-at-2pm-ct-for-peer-review"><i class="fa fa-check"></i><b>19.2.2</b> Written report - Due Wednesday July 23 at 2pm CT for peer review</a></li>
 <li class="chapter" data-level="19.2.3" data-path="semester-project.html"><a href="semester-project.html#oral-presentation---somewhere-between-july-21---august-1"><i class="fa fa-check"></i><b>19.2.3</b> Oral presentation - Somewhere between July 21 - August 1</a></li>
 <li class="chapter" data-level="19.2.4" data-path="semester-project.html"><a href="semester-project.html#practical-reads"><i class="fa fa-check"></i><b>19.2.4</b> Practical reads</a></li>
 </ul></li>
@@ -369,6 +370,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">18.1</span> Announcements<a href="analysis-and-inference-for-a-split-plot-design.html#announcements-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
 <li>Homework 3 is due this Friday (July 11).</li>
+<li>Homework 2 grades will be posted this evening.</li>
+<li>Semester project:
+<ul>
+<li><a href="https://stat720.github.io/summer2025/assignments/tutorial_example_muffins.pdf">An example</a> is posted.</li>
+<li>Wednesday July 23: send project for peer review.</li>
+<li>Schedule for somewhere between July 21-August 1 (anywhere between 8am-5pm): 15 min presentation + 15 min Q&amp;A.</li>
+<li>Submit final version of your report by August 1. Include ANOVA, stat model, mock R code, discussion of strengths and weaknesses of the experiment design.</li>
+</ul></li>
 </ul>
 </div>
 <div id="review-of-our-experiment" class="section level2 hasAnchor" number="18.2">
@@ -378,7 +387,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Treatment structure: 3 <span class="math inline">\(\times\)</span> 2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana)</li>
 <li>Design structure: split-plot in an CRD, with temperature in the whole plot.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-42"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
 <img src="../figures/banana_experiment.jpg" alt="Muffin experiment" width="100%" />
 <p class="caption">
 Figure 18.1: Muffin experiment
@@ -394,13 +403,13 @@ The random effects will depend on the design structure.</p>
 <p><img src="../figures/muffin_splitplot1.PNG" width="60%" /></p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-44">Table 18.1: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-42">Table 18.1: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.1: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Design or Topographical Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -437,7 +446,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.1: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -474,7 +483,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.1: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Combined Table of the Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -519,13 +528,13 @@ The random effects will depend on the design structure.</p>
 <h4><span class="header-section-number">18.3.2.1</span> Split-plot in an RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-an-rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-45">Table 18.2: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-43">Table 18.2: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-45">Table 18.2: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Design or Topographical Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -566,7 +575,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-45">Table 18.2: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -607,7 +616,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-45">Table 18.2: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Combined Table of the Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -654,13 +663,13 @@ The random effects will depend on the design structure.</p>
 <h4><span class="header-section-number">18.3.2.2</span> RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-46">Table 18.3: </span>ANOVA with subsampling
+<span id="tab:unnamed-chunk-44">Table 18.3: </span>ANOVA with subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-46">Table 18.3: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Design or Topographical Sources of Variability</caption>
 <colgroup>
 <col width="38%" />
 <col width="61%" />
@@ -709,7 +718,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-46">Table 18.3: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -754,7 +763,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-46">Table 18.3: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Combined Table of the Sources of Variability</caption>
 <colgroup>
 <col width="35%" />
 <col width="64%" />
@@ -805,9 +814,13 @@ The random effects will depend on the design structure.</p>
 </tbody>
 </table>
 <p><img src="../figures/muffin_rcbd.PNG" width="60%" /></p>
+</div>
+</div>
+</div>
+<div id="applied-analysis-in-r" class="section level2 hasAnchor" number="18.4">
+<h2><span class="header-section-number">18.4</span> Applied analysis in R<a href="analysis-and-inference-for-a-split-plot-design.html#applied-analysis-in-r" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Get code from Thursday <a href="../scripts/07032025_muffin_analysis.Rmd">here</a>.</p>
 
-</div>
-</div>
 </div>
 </div>
             </section>
