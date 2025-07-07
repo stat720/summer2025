@@ -28,6 +28,10 @@ tab:unnamed-chunk-32
 tab:unnamed-chunk-35
 tab:unnamed-chunk-36
 fig:unnamed-chunk-37
+fig:unnamed-chunk-40
+tab:unnamed-chunk-42
+tab:unnamed-chunk-43
+tab:unnamed-chunk-44
 welcome-to-stat-720
 about-this-course
 logistics
@@ -141,6 +145,14 @@ research-question-1
 analyzing-the-data
 treatment-means-and-confidence-intervals-for-the-split-plot-design-1
 tomorrow-10
+analysis-and-inference-for-a-split-plot-design
+announcements-8
+review-of-our-experiment
+anova-tables
+split-plot-in-a-crd
+other-possible-designs
+split-plot-in-an-rcbd
+rcbd
 semester-project
 learning-objectives
 partial-deadlines

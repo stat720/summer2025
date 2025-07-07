@@ -2,26 +2,71 @@
 title: "Effect of Temperature and Banana quantity on Muffin Height"
 author: "J Lacasa"
 date: "2025-06-08"
-output: pdf_document
+output:
+  pdf_document:
+    toc: true
+    number_sections: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Background  
+# Background  
 
 Banana muffins, much like banana bread, present a unique baking challenge due to the inclusion of mashed bananas in the batter. While this ingredient contributes moisture and flavor, it can also result in a dense crumb if not balanced properly with other recipe components and baking conditions. In particular, oven temperature and banana quantity play a critical role in achieving a light, fluffy texture. This study begins with a standard banana muffin recipe and explores how adjusting the baking temperature affects the final crumb structure, with the goal of identifying optimal conditions for producing well-risen, tender muffins.
-**The objective of this study is to find the best combination of oven temperature and banana quantity to bake muffins.** 
+**The objective of this study is to find the best combination of oven temperature and banana quantity to bake muffins. The main priority, however, is to find differences between muffin recipe.** 
 
-## Materials  
+# Materials  
 
-The facility that is available to bake the muffins includes one oven with 2 racks. 
+## Treatment structure
 
-## Statistical models 
+The proposed treatment structure is a $3 \times 2$ factorial treatment structure. 
+The treatment factors will be oven temperature (250, 400, and 500 F) and muffin recipe (control and extra banana). 
+This treatment structure will define the same ANOVA table for the treatment sources of variability, regardless of the design (Table 1). 
 
-## ANOVA table 
+```{r echo=FALSE}
+t_trt <- data.frame(Source = c("Temperature", "Recipe", "Temp x Recipe", "Parallels", "Total"),
+                    df = c("t-1 = 3-1 = 2", "r-1 = 2-1 = 1", "(t-1)(r-1) = 2", "N-t", "N-1"))
 
+knitr::kable(t_trt, caption = "ANOVA table - Treatment Sources of Variability")
+```
+
+
+## Design structure 
+
+The facility that is available to bake the muffins includes one oven that will homogeneously bake one tray of muffins. 
+There are three different proposed approaches: a randomized complete block design, a split-plot design, and a strip-plot design. 
+For demonstration, we will consider designs with 3 repetitions. 
+
+### Randomized complete block design
+
+A block design consists of group of experimental units that are approximately similar among them. 
+In a randomized complete block design, each treatment appears the same number of times within a block. 
+In this case, I envision running a randomized complete block design by baking muffins on three different days. 
+I assume that day is the blocking factor and then, I will bake all treatments (i.e., all combinations of temperature and recipe) once each day.
+
+
+```{r echo=FALSE, fig.cap="", out.width = '60%'}
+knitr::include_graphics("../figures/muffin_rcbd.PNG")
+```
+
+Within a day, each treatment (i.e., C-250, C-400, C-500, B-250, B-400, B-500) is baked independently and one measurement is obtained from each treatment.
+The ANOVA table describing the treatment sources of variability is depicted in Table 2 and the final ANOVA table is depicted in Table 3. 
+Both tables may also be rewritten as the statistical model 
+
+$$y = \mu + T_i + R_j +TR_{ij} + b_k + \varepsilon_{ijk}, \\ b_j \sim N(0, \sigma^2_b), \\ \varepsilon_{ijk}  \sim N(0, \sigma^2_\varepsilon), $$
+where $y_{ijk}$ is the observed height for 
+
+
+```{r echo=FALSE}
+t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "Total"),
+                       df = c("r-1 = 3-1 = 2", " ", "(t-1)r = (3-1)*3 = 6", "N-1 = 8"))
+
+knitr::kable(t_design, caption = "Design or Topographical Sources of Variability for an RCBD")
+```
+
+ 
 ```{r echo=FALSE}
 t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
                     df = c("r-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)r - (t-1) = 2*3 - 2 = 4", "N-1 = 8"))
@@ -29,29 +74,70 @@ t_rcbd <- data.frame(Source = c("Day", "Temperature", "Error(oven)", "Total"),
 knitr::kable(t_rcbd, caption = "Combined Table of the Sources of Variability")
 ```
 
-## Optional: Data Analysis and Statistical Inference 
+### Split-plot design  
+
+Within a day, oven temperature treatment (i.e., 250, 400, 500) is repeated 3 times. 
+Within each oven, muffin batters for recipe C and B are prepared independently for each oven batch. 
+One measurement is obtained from each temperature$\times$recipe combination.
+The ANOVA table describing the treatment sources of variability is depicted in Table 2 and the final ANOVA table is depicted in Table 3.
+
+```{r echo=FALSE, fig.cap="", out.width = '60%'}
+knitr::include_graphics("../figures/muffin_splitplot1.PNG")
+```
+
+
+```{r echo=FALSE}
+t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "", "", "Error(oven x day)", "Total"),
+                       df = c("d-1 = 3-1 = 2", " ", "(t-1)d = (3-1)*3 = 6", "", "", "(r-1)t*d = 9", "N-1 = 17"))
+
+knitr::kable(t_design, caption = "Design or Topographical Sources of Variability for an split-plot design")
+```
+
+ 
+```{r echo=FALSE}
+t_splitplot <- data.frame(Source = c("Day", "Temperature", "Error(oven)",
+                                     "Recipe", "Temp x Recipe", "Error(oven x day)",
+                                     "Total"),
+                    df = c("d-1 = 3-1 = 2", "t-1 = 3-1 = 2", "(t-1)d - (t-1) = 2*3 - 2 = 4",
+                           "r-1 = 2-1 = 1", "(t-1)(r-1) = 2", "(r-1)tb - (r-1 + (t-1)(r-1))= 9 - 3 = 6", 
+                           "N-1 = 17"))
+
+knitr::kable(t_splitplot, caption = "Combined Table of the Sources of Variability")
+```
+
+### Split-plot design with recipe in the whole-plot   
 
 
 
-## References  
+```{r echo=FALSE, fig.cap="", out.width = '60%'}
+knitr::include_graphics("../figures/muffin_splitplot2.PNG")
+```
+
+
+## Expected results  
+
+The parameters of interest are  
+
+## Discussion of Designs  
+
+Overall, the design that shows greater power for any treatment is the RCBD. 
+However, this design is the most expensive (this design has the longest oven use hours), and most time-demanding (27 independent oven runs must be baked in this design). 
+These downsides to this design do not seem to be compensated by only a slight improvement in power ().
+
+Both the split-plot and the strip-plot designs can be considered appropriate designs because (i) they are not excessively demanding in terms of time/resources. Either one would be a good option.  However, the split-plot design will slightly favour detecting differences between .  
+
+One potential downside of this design is that the number of repetitions was selected arbitrarily. 
+See the section "Power analysis" for a more detailed description. 
+
+# Power analysis (optional)  
+
+The previous example took 3 repetitions assumed . Based on our in-class experiment 
+
+# References  
 
 When appropriate. 
 
 
-## Appendix A. What Would Fisher Do ANOVA Tables 
-
-### Table S1. 
-
-```{r echo=FALSE}
-t_design <- data.frame(Source = c("Day (block)", "", "Error(oven)", "Total"),
-                       df = c("r-1 = 3-1 = 2", " ", "(t-1)r = (3-1)*3 = 6", "N-1 = 8"))
-
-t_trt <- data.frame(Source = c(" ", "Temperature", "Parallels", "Total"),
-                    df = c(" ", "t-1 = 3-1 = 2", "N-t = 9-3 = 6", "N-1 = 8"))
-
-knitr::kable(t_design, caption = "Design or Topographical Sources of Variability")
-knitr::kable(t_trt, caption = "Treatment Sources of Variability")
-```
 
 
 

@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 9 Review | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 9 Review | STAT 720 - Design of Experiments" />
+  <title>Day 18 Analysis and inference for a split-plot design | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 18 Analysis and inference for a split-plot design | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 9 Review | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 18 Analysis and inference for a split-plot design | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 9 Review | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 18 Analysis and inference for a split-plot design | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="applied-examples.html"/>
-<link rel="next" href="applied-linear-mixed-models-i.html"/>
+<link rel="prev" href="analyzing-data-from-a-split-plot-design.html"/>
+<link rel="next" href="semester-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -362,29 +362,452 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="review-5" class="section level1 hasAnchor" number="9">
-<h1><span class="header-section-number">Day 9</span> Review<a href="review-5.html#review-5" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 20th, 2025</p>
-<div id="announcements-4" class="section level2 hasAnchor" number="9.1">
-<h2><span class="header-section-number">9.1</span> Announcements<a href="review-5.html#announcements-4" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="analysis-and-inference-for-a-split-plot-design" class="section level1 hasAnchor" number="18">
+<h1><span class="header-section-number">Day 18</span> Analysis and inference for a split-plot design<a href="analysis-and-inference-for-a-split-plot-design.html#analysis-and-inference-for-a-split-plot-design" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>July 7th, 2025</p>
+<div id="announcements-8" class="section level2 hasAnchor" number="18.1">
+<h2><span class="header-section-number">18.1</span> Announcements<a href="analysis-and-inference-for-a-split-plot-design.html#announcements-8" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Homework due today<br />
-</li>
-<li>New Homework posted today, due Wednesday, July 2nd.<br />
-</li>
-<li>Project proposal due today<br />
-</li>
-<li>Next week will be on Zoom<br />
-</li>
-<li><a href="https://docs.google.com/forms/d/e/1FAIpQLScxVkuFFT4aB_LEpI_yl-SYSubvgqWJlN2fYkFHN3SUP8sOnQ/viewform?usp=dialog">Your moment to ask the questions about mean estimation/multiple comparison you’ve always wanted to know but were too afraid to ask.</a> [<em>Note: I will try to include these in class, but many might be covered in STAT 870</em>]</li>
+<li>Homework 3 is due this Friday (July 11).</li>
 </ul>
 </div>
-<div id="next-week" class="section level2 hasAnchor" number="9.2">
-<h2><span class="header-section-number">9.2</span> Next week<a href="review-5.html#next-week" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="review-of-our-experiment" class="section level2 hasAnchor" number="18.2">
+<h2><span class="header-section-number">18.2</span> Review of our experiment<a href="analysis-and-inference-for-a-split-plot-design.html#review-of-our-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Zoom classes – we will use the link for the office hours</li>
+<li>Research question: can we include more banana than the original recipe? Will the optimum temperature change depending on that recipe?</li>
+<li>Treatment structure: 3$$2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana)</li>
+<li>Design structure: split-plot in an CRD, with temperature in the whole plot.</li>
 </ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
+<img src="../figures/banana_experiment.jpg" alt="Muffin experiment" width="100%" />
+<p class="caption">
+Figure 18.1: Muffin experiment
+</p>
+</div>
+<p>With that treatment structure, the statistical model will always begin with <span class="math inline">\(y_{ijk} = \mu + T_i + R_j +(TR)_{ij}\)</span>, followed by the random effects.
+The random effects will depend on the design structure.</p>
+</div>
+<div id="anova-tables" class="section level2 hasAnchor" number="18.3">
+<h2><span class="header-section-number">18.3</span> ANOVA tables<a href="analysis-and-inference-for-a-split-plot-design.html#anova-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="split-plot-in-a-crd" class="section level3 hasAnchor" number="18.3.1">
+<h3><span class="header-section-number">18.3.1</span> Split-plot in a CRD<a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-a-crd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><img src="../figures/muffin_splitplot1.PNG" width="60%" /></p>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-42">Table 18.1: </span>ANOVA without subsampling
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Design or Topographical Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)<em>r = (3-1)</em>3 = 6</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r = (2-1) * 3 * 3 = 9</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="even">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Parallels</td>
+<td align="left">N-tb = 18 - (3*2) = 12</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Combined Table of the Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)*r - (t-1)= 6 -2 = 4</td>
+</tr>
+<tr class="odd">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="even">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r - (b-1) - (t-1)*(b-1) = 9 - 1 -2 = 6</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="other-possible-designs" class="section level3 hasAnchor" number="18.3.2">
+<h3><span class="header-section-number">18.3.2</span> Other possible designs<a href="analysis-and-inference-for-a-split-plot-design.html#other-possible-designs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<div id="split-plot-in-an-rcbd" class="section level4 hasAnchor" number="18.3.2.1">
+<h4><span class="header-section-number">18.3.2.1</span> Split-plot in an RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-an-rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-43">Table 18.2: </span>ANOVA without subsampling
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Design or Topographical Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day (block)</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)<em>r = (3-1)</em>3 = 6</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r = (2-1) * 3 * 3 = 9</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Parallels</td>
+<td align="left">N-tb = 18 - (3*2) = 12</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Combined Table of the Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)*r - (t-1)= 6 -2 = 4</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r - (b-1) - (t-1)*(b-1) = 9 - 1 -2 = 6</td>
+</tr>
+<tr class="odd">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="rcbd" class="section level4 hasAnchor" number="18.3.2.2">
+<h4><span class="header-section-number">18.3.2.2</span> RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<table class="kable_wrapper">
+<caption>
+<span id="tab:unnamed-chunk-44">Table 18.3: </span>ANOVA with subsampling
+</caption>
+<tbody>
+<tr>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Design or Topographical Sources of Variability</caption>
+<colgroup>
+<col width="38%" />
+<col width="61%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day (block)</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)<em>r = (3-1)</em>3 = 6</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r = (2-1) * 3 * 3 = 9</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(recipe x oven x day)</td>
+<td align="left">(m-1) * b * t * r = (3-1) * 2 * 3 * 3 = 36</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 53</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Treatment Sources of Variability</caption>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">-</td>
+</tr>
+<tr class="odd">
+<td align="left">Parallels</td>
+<td align="left">N-tb = 54 - (3*2) = 48</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 17</td>
+</tr>
+</tbody>
+</table>
+</td>
+<td>
+<table>
+<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Combined Table of the Sources of Variability</caption>
+<colgroup>
+<col width="35%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Source</th>
+<th align="left">df</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Day</td>
+<td align="left">r-1 = 3-1 = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Temperature</td>
+<td align="left">t-1 = 3-1 = 2</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(oven)</td>
+<td align="left">(t-1)*r - (t-1)= 6 -2 = 4</td>
+</tr>
+<tr class="even">
+<td align="left">Banana</td>
+<td align="left">b-1 = 2-1 = 1</td>
+</tr>
+<tr class="odd">
+<td align="left">TxB</td>
+<td align="left">(t-1)*(b-1) = 2</td>
+</tr>
+<tr class="even">
+<td align="left">Error(oven x day)</td>
+<td align="left">(b-1)* t * r - (b-1) - (t-1)*(b-1) = 9 - 1 -2 = 6</td>
+</tr>
+<tr class="odd">
+<td align="left">Error(recipe x oven x day)</td>
+<td align="left">(m-1) * b * t * r - 0 = 36</td>
+</tr>
+<tr class="even">
+<td align="left">Total</td>
+<td align="left">N-1 = 53</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../figures/muffin_rcbd.PNG" width="60%" /></p>
 
+</div>
+</div>
 </div>
 </div>
             </section>
@@ -392,8 +815,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="applied-examples.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="applied-linear-mixed-models-i.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="analyzing-data-from-a-split-plot-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semester-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -424,7 +847,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/09-friday.Rmd",
+    "link": "https://github.com/stat720/book2025/edit/main/19-muffin_analysis_inference.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -432,7 +855,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/09-friday.Rmd",
+    "link": "https://github.com/stat720/book2025/blob/main/19-muffin_analysis_inference.Rmd",
     "text": null
   },
   "download": null,
