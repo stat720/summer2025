@@ -373,7 +373,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Homework 2 grades will be posted this evening.</li>
 <li>Semester project:
 <ul>
-<li><a href="https://stat720.github.io/summer2025/assignments/tutorial_example_muffins.pdf">An example</a> is posted.</li>
+<li><a href="https://stat720.github.io/summer2025/assignments/report_example_muffins.pdf">An example</a> is posted.</li>
 <li>Wednesday July 23: send project for peer review.</li>
 <li>Schedule for somewhere between July 21-August 1 (anywhere between 8am-5pm): 15 min presentation + 15 min Q&amp;A.</li>
 <li>Submit final version of your report by August 1. Include ANOVA, stat model, mock R code, discussion of strengths and weaknesses of the experiment design.</li>
@@ -387,7 +387,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Treatment structure: 3 <span class="math inline">\(\times\)</span> 2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana)</li>
 <li>Design structure: split-plot in an CRD, with temperature in the whole plot.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-40"></span>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-41"></span>
 <img src="../figures/banana_experiment.jpg" alt="Muffin experiment" width="100%" />
 <p class="caption">
 Figure 18.1: Muffin experiment
@@ -400,16 +400,16 @@ The random effects will depend on the design structure.</p>
 <h2><span class="header-section-number">18.3</span> ANOVA tables<a href="analysis-and-inference-for-a-split-plot-design.html#anova-tables" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <div id="split-plot-in-a-crd" class="section level3 hasAnchor" number="18.3.1">
 <h3><span class="header-section-number">18.3.1</span> Split-plot in a CRD<a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-a-crd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<p><img src="../figures/muffin_splitplot1.PNG" width="60%" /></p>
+<p><img src="../figures/muffin_splitplot1.PNG" width="60%" style="display: block; margin: auto;" /></p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-42">Table 18.1: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-43">Table 18.1: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.1: </span>Design or Topographical Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -446,7 +446,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.1: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -483,7 +483,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-42">Table 18.1: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-43">Table 18.1: </span>Combined Table of the Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -528,13 +528,13 @@ The random effects will depend on the design structure.</p>
 <h4><span class="header-section-number">18.3.2.1</span> Split-plot in an RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#split-plot-in-an-rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-43">Table 18.2: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-44">Table 18.2: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.2: </span>Design or Topographical Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -575,7 +575,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.2: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -616,7 +616,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-43">Table 18.2: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-44">Table 18.2: </span>Combined Table of the Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -663,13 +663,13 @@ The random effects will depend on the design structure.</p>
 <h4><span class="header-section-number">18.3.2.2</span> RCBD<a href="analysis-and-inference-for-a-split-plot-design.html#rcbd" class="anchor-section" aria-label="Anchor link to header"></a></h4>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-44">Table 18.3: </span>ANOVA with subsampling
+<span id="tab:unnamed-chunk-45">Table 18.3: </span>ANOVA with subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-45">Table 18.3: </span>Design or Topographical Sources of Variability</caption>
 <colgroup>
 <col width="38%" />
 <col width="61%" />
@@ -718,7 +718,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-45">Table 18.3: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -763,7 +763,7 @@ The random effects will depend on the design structure.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-44">Table 18.3: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-45">Table 18.3: </span>Combined Table of the Sources of Variability</caption>
 <colgroup>
 <col width="35%" />
 <col width="64%" />
@@ -813,7 +813,7 @@ The random effects will depend on the design structure.</p>
 </tr>
 </tbody>
 </table>
-<p><img src="../figures/muffin_rcbd.PNG" width="60%" /></p>
+<p><img src="../figures/muffin_rcbd.PNG" width="60%" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </div>
