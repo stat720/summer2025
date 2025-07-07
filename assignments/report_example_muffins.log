@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  7 JUL 2025 08:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (TeX Live 2025) (preloaded format=pdflatex 2025.7.1)  7 JUL 2025 08:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**tutorial_example_muffins.tex
-(./tutorial_example_muffins.tex
+**report_example_muffins.tex
+(./report_example_muffins.tex
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
 (c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/base/article.cls
@@ -394,8 +394,8 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count325
-) (./tutorial_example_muffins.aux)
-\openout1 = `tutorial_example_muffins.aux'.
+) (./report_example_muffins.aux)
+\openout1 = `report_example_muffins.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
 LaTeX Font Info:    ... okay on input line 82.
@@ -512,7 +512,7 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 84.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) (./tutorial_example_muffins.toc
+) (./report_example_muffins.toc
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 3.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -521,7 +521,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 3.
 )
 \tf@toc=\write3
-\openout3 = `tutorial_example_muffins.toc'.
+\openout3 = `report_example_muffins.toc'.
 
 
 
@@ -551,25 +551,27 @@ Package pdftex.def Info: ../figures/muffin_splitplot2.png  used on input line 33
 
 [5 <../figures/muffin_rcbd.PNG> <../figures/muffin_splitplot1.PNG>]
 
-[6 <../figures/muffin_splitplot2.PNG>] (./tutorial_example_muffins.aux)
+[6 <../figures/muffin_splitplot2.PNG>]
+
+[7] (./report_example_muffins.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 13489 strings out of 469922
- 214342 string characters out of 5483632
- 659535 words of memory out of 5000000
+ 13496 strings out of 469922
+ 214378 string characters out of 5483632
+ 659499 words of memory out of 5000000
  41431 multiletter control sequences out of 15000+600000
- 680911 words of font info for 123 fonts, out of 8000000 for 9000
+ 681160 words of font info for 126 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 83i,7n,93p,1021b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 83i,7n,93p,1019b,601s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr12.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr17.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/Users/lacasa/AppData/Roaming/TinyTeX/texmf-dist/fonts/type1/public/lm/lmsy10.pfb>
-Output written on tutorial_example_muffins.pdf (6 pages, 760296 bytes).
+Output written on report_example_muffins.pdf (7 pages, 761536 bytes).
 PDF statistics:
- 154 PDF objects out of 1000 (max. 8388607)
- 120 compressed objects within 2 object streams
- 29 named destinations out of 1000 (max. 500000)
+ 160 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 30 named destinations out of 1000 (max. 500000)
  28752 words of extra memory for PDF output out of 29859 (max. 10000000)
 
