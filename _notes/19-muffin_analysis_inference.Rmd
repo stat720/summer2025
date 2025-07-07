@@ -28,8 +28,8 @@ knitr::include_graphics("../figures/muffin_splitplot1.PNG")
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
 t_design <- data.frame(Source = c("", "Error(oven)", 
-                                  "", "", "Error(oven x day)", "Total"),
-                       df = c("-", "(t-1)*r = (3-1)*3 = 6",
+                                  "", "", "Error(oven)", "Total"),
+                       df = c("-", "t*r-1 = 9-1 = 8",
                               "-", "-", "(b-1)* t * r = (2-1) * 3 * 3 = 9",
                               "N-1 = 17"))
 
@@ -42,7 +42,7 @@ t_trt <- data.frame(Source = c("Temperature", "",
 t_rcbd <- data.frame(Source = c("Temperature", "Error(oven)",
                                 "Banana", "TxB", "Error(oven x day)", "Total"),
                     df = c("t-1 = 3-1 = 2",
-                           "(t-1)*r - (t-1)= 6 -2 = 4",
+                           "t*r-1  - (t-1)= 8 - 2 = 6",
                            "b-1 = 2-1 = 1", "(t-1)*(b-1) = 2", 
                            "(b-1)* t * r - (b-1) - (t-1)*(b-1) = 9 - 1 -2 = 6",
                            "N-1 = 17"))

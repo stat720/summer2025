@@ -62,3 +62,6 @@ emmeans(model_nosubsampling, ~ recipe:oven_temp,
         contr = list(c(0, 0, 0, 0, 1, -1)))
 ```
 
+
+
+
