@@ -8,7 +8,7 @@ July 7th, 2025
 ## Review of our experiment  
 
 - Research question: can we include more banana than the original recipe? Will the optimum temperature change depending on that recipe? 
-- Treatment structure: 3$\times$2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana) 
+- Treatment structure: 3 $\times$ 2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana) 
 - Design structure: split-plot in an CRD, with temperature in the whole plot. 
 
 ```{r echo=FALSE, fig.cap="Muffin experiment", out.width = '100%'}
