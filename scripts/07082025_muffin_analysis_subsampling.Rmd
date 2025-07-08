@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r  warning = FALSE}
 library(tidyverse)
-library(glmmTMB)
+library(lme4)
 library(emmeans)
 ```
 
@@ -32,19 +32,17 @@ muffins %>%
 
 ```{r}
 model_nosubsampling <- 
-  glmmTMB(height_cm ~ 1 + oven_temp*recipe + (1|rep), data = muffins)
+  lmer(height_cm ~ oven_temp*recipe + (1|rep), data = muffins)
 
 model_subsampling <- 
-  glmmTMB(height_cm ~ 1 + oven_temp*recipe + (1|rep/recipe), data = muffins)
+  lmer(height_cm ~ oven_temp*recipe + (1|rep/recipe), data = muffins)
 ```
 
 ```{r}
-plot(model_nosubsampling)
-```
-
-```{r}
-emmeans(model_subsampling, ~oven_temp,
-        contr = list(c(1, -1, 0)) )
+emmeans::emmeans(model_nosubsampling, ~recipe,
+        contr = list(c(1, -1)) )
+emmeans::emmeans(model_subsampling, ~recipe,
+        contr = list(c(1, -1)) )
 ```
 
 
