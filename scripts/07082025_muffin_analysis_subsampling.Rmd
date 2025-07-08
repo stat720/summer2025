@@ -35,7 +35,7 @@ model_nosubsampling <-
   glmmTMB(height_cm ~ 1 + oven_temp*recipe + (1|rep), data = muffins)
 
 model_subsampling <- 
-  glmmTMB(height_cm ~ 1 + oven_temp*recipe + (1|rep:oven_temp/recipe), data = muffins)
+  glmmTMB(height_cm ~ 1 + oven_temp*recipe + (1|rep/recipe), data = muffins)
 ```
 
 ```{r}
