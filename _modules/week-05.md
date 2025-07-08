@@ -7,8 +7,9 @@ July 7
   : [html](https://stat720.github.io/summer2025/notes/analysis-and-inference-for-a-split-plot-design.html) | [in-class R code](../scripts/07032025_muffin_analysis.Rmd)
 
 July 8 
-: Split plot analysis of the muffin example - now with repeated measures!    
-  : **HW 4**{: .label .label-green }
+: Split plot analysis of the muffin example - some repeated measures 
+  : [html](https://stat720.github.io/summer2025/notes/analysis-and-inference-for-a-split-plot-design---part-ii.html)
+  : [**HW 4**](https://stat720.github.io/summer2025/assignments/Assignment4_YourLastName.pdf){: .label .label-green }
 
 July 9 
 : Power analysis I 
