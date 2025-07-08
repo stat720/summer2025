@@ -4,6 +4,7 @@ July 8th, 2025
 ## Announcements
 
 - Homework 3 is due this Friday (July 11). 
+- Homework 4 is posted and due next Friday (July 18). 
 - Semester project: 
   - [An example](https://stat720.github.io/summer2025/assignments/report_example_muffins.pdf) is posted. 
   - Wednesday July 23: send project for peer review. 
@@ -20,8 +21,7 @@ July 8th, 2025
 knitr::include_graphics("../figures/banana_experiment.jpg")
 ```
 
-With that treatment structure, the statistical model will always begin with $y_{ijk} = \mu + T_i + R_j +(TR)_{ij}$, followed by the random effects. 
-The random effects will depend on the design structure. 
+With that treatment structure, the statistical model will always begin with $y_{ijk} = \mu + T_i + R_j +(TR)_{ij}$, followed by the effects coming from the design structure (random effects). 
 
 ## ANOVA tables  
 
@@ -65,7 +65,6 @@ knitr::kables(
 
 ### Other possible designs  
 
-
 #### Design above with subsampling  
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}
@@ -103,7 +102,7 @@ knitr::kables(
 )
 ```
 
-## Applied analysis in R
+## Applied analysis in R  
 
 Get code [here](../scripts/07082025_muffin_analysis_subsampling.Rmd). 
 
