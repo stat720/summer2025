@@ -13,7 +13,7 @@ July 8
 
 July 9 
 : Power analysis I 
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/power-analysis.html)
 
 July 10 
 : Power analysis II 
