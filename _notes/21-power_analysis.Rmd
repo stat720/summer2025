@@ -7,7 +7,7 @@ July 9th, 2025
 
 ## Review of everything so far  
 
-```{r echo=FALSE, fig.cap="Types of error", out.width = '100%'}
+```{r echo=FALSE, fig.cap="Mindmap", out.width = '100%'}
 knitr::include_graphics("../figures/mindmap2.jpg")
 ```
 

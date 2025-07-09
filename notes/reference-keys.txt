@@ -173,6 +173,8 @@ review-of-everything-so-far
 power-of-an-experiment
 power-calculations
 reminders
+power-analysis-ii
+announcements-11
 semester-project
 learning-objectives
 partial-deadlines

@@ -78,6 +78,9 @@ as.data.frame(marg_means_int) %>%
   ggplot(aes(paste(oven_temp, recipe), emmean))+
   geom_errorbar(aes(ymin = emmean - SE, ymax = emmean + SE), 
                 width = 0)+
+  theme_classic()+
+  labs(x = "Treatment", 
+       y = "Muffin Height (cm)")+
   geom_point()
 
 ```
