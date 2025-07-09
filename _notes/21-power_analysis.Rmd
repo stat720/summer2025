@@ -37,7 +37,8 @@ Very often, research teams consider 0.8 power as the minimum for an experiment.
 
 **To detect a difference** $\delta$: 
 $$n = \frac{2\hat{\sigma}^2}{\delta^2}[t_{\alpha/2, \nu} + t_{\beta, \nu}]^2,$$
-where:
+where: 
+
 - $n$ is the sample size, 
 - $\hat\sigma^2$ is the estimate of $\sigma^2$ based on $\nu$ degrees of freedom, 
 - $\alpha$ is the type I error rate, 
