@@ -35,6 +35,8 @@ tab:unnamed-chunk-44
 fig:unnamed-chunk-46
 tab:unnamed-chunk-48
 tab:unnamed-chunk-52
+fig:unnamed-chunk-53
+fig:unnamed-chunk-54
 welcome-to-stat-720
 about-this-course
 logistics
@@ -165,6 +167,12 @@ split-plot-in-a-crd-1
 implications-on-inference
 same-design-as-above-with-subsampling
 applied-analysis-in-r-1
+power-analysis
+announcements-10
+review-of-everything-so-far
+power-of-an-experiment
+power-calculations
+reminders
 semester-project
 learning-objectives
 partial-deadlines

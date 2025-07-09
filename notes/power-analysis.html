@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 5 Review, organizing data and other helpful tips | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 5 Review, organizing data and other helpful tips | STAT 720 - Design of Experiments" />
+  <title>Day 20 Power analysis | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 20 Power analysis | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 5 Review, organizing data and other helpful tips | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 20 Power analysis | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 5 Review, organizing data and other helpful tips | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 20 Power analysis | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html"/>
-<link rel="next" href="the-treatment-structure.html"/>
+<link rel="prev" href="analysis-and-inference-for-a-split-plot-design---part-ii.html"/>
+<link rel="next" href="semester-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -384,24 +384,66 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="review-organizing-data-and-other-helpful-tips" class="section level1 hasAnchor" number="5">
-<h1><span class="header-section-number">Day 5</span> Review, organizing data and other helpful tips<a href="review-organizing-data-and-other-helpful-tips.html#review-organizing-data-and-other-helpful-tips" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 13th, 2025</p>
-<div id="kahoot-as-review" class="section level2 hasAnchor" number="5.1">
-<h2><span class="header-section-number">5.1</span> Kahoot! as review<a href="review-organizing-data-and-other-helpful-tips.html#kahoot-as-review" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Code on the whiteboard</p>
-</div>
-<div id="organizing-data" class="section level2 hasAnchor" number="5.2">
-<h2><span class="header-section-number">5.2</span> Organizing data<a href="review-organizing-data-and-other-helpful-tips.html#organizing-data" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="power-analysis" class="section level1 hasAnchor" number="20">
+<h1><span class="header-section-number">Day 20</span> Power analysis<a href="power-analysis.html#power-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>July 9th, 2025</p>
+<div id="announcements-10" class="section level2 hasAnchor" number="20.1">
+<h2><span class="header-section-number">20.1</span> Announcements<a href="power-analysis.html#announcements-10" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Data Organization in Spreadsheets</a></li>
-<li>Excel sheet</li>
+<li>Today is <a href="https://en.wikipedia.org/wiki/Argentina_Independence_Day">Argentina’s independence day</a>!</li>
 </ul>
 </div>
-<div id="homework" class="section level2 hasAnchor" number="5.3">
-<h2><span class="header-section-number">5.3</span> Homework<a href="review-organizing-data-and-other-helpful-tips.html#homework" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="review-of-everything-so-far" class="section level2 hasAnchor" number="20.2">
+<h2><span class="header-section-number">20.2</span> Review of everything so far<a href="power-analysis.html#review-of-everything-so-far" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-53"></span>
+<img src="../figures/mindmap2.jpg" alt="Types of error" width="100%" />
+<p class="caption">
+Figure 20.1: Types of error
+</p>
+</div>
+</div>
+<div id="power-of-an-experiment" class="section level2 hasAnchor" number="20.3">
+<h2><span class="header-section-number">20.3</span> Power of an experiment<a href="power-analysis.html#power-of-an-experiment" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Let’s first review the different types of errors:</p>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-54"></span>
+<img src="../figures/error_types.jpg" alt="Types of error" width="100%" />
+<p class="caption">
+Figure 20.2: Types of error
+</p>
+</div>
+<p>We normally control <span class="math inline">\(\alpha\)</span>, the probability of doing an error of type I.
+TO describe our experiment’s ability to detect scientific discoveries, we consider power: the <span class="math inline">\(P(\text{reject } H_0 | H_0 \text{ false}) = 1- \beta\)</span>.
+Very often, research teams consider 0.8 power as the minimum for an experiment.</p>
+<div id="power-calculations" class="section level3 hasAnchor" number="20.3.1">
+<h3><span class="header-section-number">20.3.1</span> Power calculations<a href="power-analysis.html#power-calculations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><strong>t-test</strong></p>
 <ul>
-<li>Homework is posted and due in a week</li>
+<li>Used to evaluate differences between treatment effects or means.</li>
+<li>Example testing against zero: <span class="math inline">\(t^{\star} = \frac{\hat\theta - 0}{s.e.(\hat\theta)} = \frac{\hat\theta - 0}{s.d.(\hat\theta)/\sqrt{n}}\)</span></li>
+<li>Note the sensibility to sample size.</li>
+<li>Also, remember the <span class="math inline">\(s.e.(\hat\theta)\)</span> may differ depending on the design:
+<ul>
+<li><span class="math inline">\(s.e.(\hat\theta)\)</span> may depend on <span class="math inline">\(\sigma^2_\varepsilon\)</span> only (e.g., CRD, RCBD, mean comparisons between treatment levels of the treatment at the split-plot level), <span class="math inline">\(s.e.(\hat\theta) = \sqrt{\frac{2 (\sigma^2_{\varepsilon} + b \cdot \sigma^2_w)}{b \cdot r}}\)</span>.</li>
+<li><span class="math inline">\(s.e.(\hat\theta)\)</span> may depend on <span class="math inline">\(\sigma^2_\varepsilon\)</span> and <span class="math inline">\(\sigma^2_{whole \ plot}\)</span> (e.g., mean comparisons between treatment levels of the treatment at the whole-plot level), <span class="math inline">\(s.e.(\hat\theta) = \sqrt{\frac{2 \sigma^2_{\varepsilon}}{r t}}\)</span></li>
+</ul></li>
+</ul>
+<p><strong>To detect a difference</strong> <span class="math inline">\(\delta\)</span>:
+<span class="math display">\[n = \frac{2\hat{\sigma}^2}{\delta^2}[t_{\alpha/2, \nu} + t_{\beta, \nu}]^2,\]</span>
+where:
+- <span class="math inline">\(n\)</span> is the sample size,
+- <span class="math inline">\(\hat\sigma^2\)</span> is the estimate of <span class="math inline">\(\sigma^2\)</span> based on <span class="math inline">\(\nu\)</span> degrees of freedom,
+- <span class="math inline">\(\alpha\)</span> is the type I error rate,
+- <span class="math inline">\(\beta\)</span> is the type II error rate,
+- And note that: <span class="math inline">\(Var(\delta)=2\sigma^2/n\)</span>.</p>
+</div>
+</div>
+<div id="reminders" class="section level2 hasAnchor" number="20.4">
+<h2><span class="header-section-number">20.4</span> Reminders<a href="power-analysis.html#reminders" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>HW 3 due Friday<br />
+</li>
+<li>HW4 is posted</li>
+<li>Project proposal due dates: July 23, August 1st.</li>
 </ul>
 
 </div>
@@ -411,8 +453,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           </div>
         </div>
       </div>
-<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="the-treatment-structure.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="analysis-and-inference-for-a-split-plot-design---part-ii.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semester-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -443,7 +485,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/05-design4.Rmd",
+    "link": "https://github.com/stat720/book2025/edit/main/21-power_analysis.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -451,7 +493,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/05-design4.Rmd",
+    "link": "https://github.com/stat720/book2025/blob/main/21-power_analysis.Rmd",
     "text": null
   },
   "download": null,
