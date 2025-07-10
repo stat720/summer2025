@@ -210,8 +210,8 @@ hist(p_mu1._mu2.,
 ```
 
 ```{r}
-mean(p_mu.1_mu.2<0.05) # power for .4 difference at the whole plot
-mean(p_mu1._mu2.<0.05) # power for .4 difference at the whole plot
+mean(p_mu.1_mu.2<0.05) # power for .4 difference in recipe
+mean(p_mu1._mu2.<0.05) # power for .4 difference in temperature
 ```
 
 ### Split-plot - 2 reps 
@@ -261,7 +261,7 @@ hist(p_mu1._mu2.,
 ```
 
 ```{r}
-mean(p_mu.1_mu.2<0.05) # power for .4 difference at the whole plot
+mean(p_mu.1_mu.2<0.05) # power for .4 difference at the split plot
 mean(p_mu1._mu2.<0.05) # power for .4 difference at the whole plot
 ```
 
@@ -311,7 +311,7 @@ hist(p_mu1._mu2.,  xlab = TeX("$\\hat{\\mu}_{1 \\cdot} - \\hat{\\mu}_{2 \\cdot}$
 ```
 
 ```{r}
-mean(p_mu.1_mu.2<0.05) # power for .4 difference at the whole plot
+mean(p_mu.1_mu.2<0.05) # power for .4 difference at the split plot
 mean(p_mu1._mu2.<0.05) # power for .4 difference at the whole plot
 ```
 
@@ -370,7 +370,7 @@ hist(p_mu1._mu2.,
 ```
 
 ```{r}
-mean(p_mu.1_mu.2<0.05) # power for .4 difference at the whole plot
+mean(p_mu.1_mu.2<0.05) # power for .4 difference at the split plot
 mean(p_mu1._mu2.<0.05) # power for .4 difference at the whole plot
 ```
 
@@ -429,7 +429,7 @@ hist(p_mu1._mu2.,
 ```
 
 ```{r}
-mean(p_mu.1_mu.2<0.05) # power for .4 difference at the whole plot
+mean(p_mu.1_mu.2<0.05) # power for .4 difference at the split plot
 mean(p_mu1._mu2.<0.05) # power for .4 difference at the whole plot
 ```
 
