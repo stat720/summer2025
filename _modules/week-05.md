@@ -17,7 +17,7 @@ July 9
 
 July 10 
 : Power analysis II 
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/power-analysis-ii.html)
 
 July 11
 : Kahoot! 
