@@ -357,6 +357,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="21" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html"><i class="fa fa-check"></i><b>21</b> Power analysis II</a>
 <ul>
 <li class="chapter" data-level="21.1" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#announcements-11"><i class="fa fa-check"></i><b>21.1</b> Announcements</a></li>
+<li class="chapter" data-level="21.2" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#what-are-simulations"><i class="fa fa-check"></i><b>21.2</b> What are simulations?</a>
+<ul>
+<li class="chapter" data-level="21.2.1" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#simulation-demo"><i class="fa fa-check"></i><b>21.2.1</b> Simulation demo</a></li>
+</ul></li>
+<li class="chapter" data-level="21.3" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#power-analysis-demonstration"><i class="fa fa-check"></i><b>21.3</b> Power analysis demonstration</a>
+<ul>
+<li class="chapter" data-level="21.3.1" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#crd---2-reps"><i class="fa fa-check"></i><b>21.3.1</b> CRD - 2 reps</a></li>
+<li class="chapter" data-level="21.3.2" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#crd---3-reps"><i class="fa fa-check"></i><b>21.3.2</b> CRD - 3 reps</a></li>
+<li class="chapter" data-level="21.3.3" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#split-plot---2-reps"><i class="fa fa-check"></i><b>21.3.3</b> Split-plot - 2 reps</a></li>
+<li class="chapter" data-level="21.3.4" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#split-plot---3-reps"><i class="fa fa-check"></i><b>21.3.4</b> Split-plot - 3 reps</a></li>
+<li class="chapter" data-level="21.3.5" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#split-plot---2-reps-subsampling"><i class="fa fa-check"></i><b>21.3.5</b> Split-plot - 2 reps + subsampling</a></li>
+<li class="chapter" data-level="21.3.6" data-path="power-analysis-ii.html"><a href="power-analysis-ii.html#split-plot---3-reps-subsampling"><i class="fa fa-check"></i><b>21.3.6</b> Split-plot - 3 reps + subsampling</a></li>
+</ul></li>
 </ul></li>
 <li class="chapter" data-level="22" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>22</b> Semester Project</a>
 <ul>
@@ -412,7 +425,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Treatment structure: 3 <span class="math inline">\(\times\)</span> 2 factorial, with 3 levels for temperature (250, 400, 500) and 2 levels for recipe (Control, Extra Banana)</li>
 <li>Design structure: split-plot in an CRD, with temperature in the whole plot.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-46"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-76"></span>
 <img src="../figures/banana_experiment.jpg" alt="Muffin experiment" width="100%" />
 <p class="caption">
 Figure 19.1: Muffin experiment
@@ -427,13 +440,13 @@ Figure 19.1: Muffin experiment
 <p><img src="../figures/muffin_splitplot1.PNG" width="60%" /></p>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-48">Table 19.1: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-78">Table 19.1: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-48">Table 19.1: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-78">Table 19.1: </span>Design or Topographical Sources of Variability</caption>
 <colgroup>
 <col width="53%" />
 <col width="46%" />
@@ -474,7 +487,7 @@ Figure 19.1: Muffin experiment
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-48">Table 19.1: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-78">Table 19.1: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -511,7 +524,7 @@ Figure 19.1: Muffin experiment
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-48">Table 19.1: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-78">Table 19.1: </span>Combined Table of the Sources of Variability</caption>
 <colgroup>
 <col width="43%" />
 <col width="56%" />
@@ -648,13 +661,13 @@ What may change is the confidence interval around the mean difference.</p>
 <h3><span class="header-section-number">19.3.2</span> Same design as above, with subsampling<a href="analysis-and-inference-for-a-split-plot-design---part-ii.html#same-design-as-above-with-subsampling" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <table class="kable_wrapper">
 <caption>
-<span id="tab:unnamed-chunk-52">Table 19.2: </span>ANOVA without subsampling
+<span id="tab:unnamed-chunk-82">Table 19.2: </span>ANOVA without subsampling
 </caption>
 <tbody>
 <tr>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-52">Table 19.2: </span>Design or Topographical Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-82">Table 19.2: </span>Design or Topographical Sources of Variability</caption>
 <colgroup>
 <col width="57%" />
 <col width="42%" />
@@ -699,7 +712,7 @@ What may change is the confidence interval around the mean difference.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-52">Table 19.2: </span>Treatment Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-82">Table 19.2: </span>Treatment Sources of Variability</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -736,7 +749,7 @@ What may change is the confidence interval around the mean difference.</p>
 </td>
 <td>
 <table>
-<caption><span id="tab:unnamed-chunk-52">Table 19.2: </span>Combined Table of the Sources of Variability</caption>
+<caption><span id="tab:unnamed-chunk-82">Table 19.2: </span>Combined Table of the Sources of Variability</caption>
 <colgroup>
 <col width="52%" />
 <col width="47%" />

@@ -202,7 +202,7 @@ knitr::kable(t_splitplot, caption = "Combined Table of the Sources of Variabilit
 
 ```{r eval=FALSE, include=TRUE}
 library(lme4)
-m <- lmer(height_cm ~ 1 + oven_temp * recipe + (1|rep/recipe))
+m <- lmer(height_cm ~ 1 + oven_temp * recipe + (1|rep/recipe), data = df)
 ```
 
 
