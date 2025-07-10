@@ -414,7 +414,8 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h2><span class="header-section-number">21.2</span> What are simulations?<a href="power-analysis-ii.html#what-are-simulations" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>A lot the concepts we’re learning in STAT 720 are based on asymptotic properties, or what would happen, <em>generally speaking</em>.
 For example, a 95% confidence interval will include the true value only 95% of the times. That means that 5% of the times, it will not.
-Likewise, a hypothesis test with an <span class="math inline">\(\alpha=0.05\)</span> will incorrectly reject the null hypothesis 5% of the times.
+Likewise, a hypothesis test with an <span class="math inline">\(\alpha=0.05\)</span> will incorrectly reject the null hypothesis 5% <span class="math inline">\((=\alpha)\)</span> of the times.
+That hypothesis test will also have an associated <span class="math inline">\(\beta\)</span>, that will depend on factors like sample size and experiment design.<br />
 If we wish to study how a design would work, we should test it many many times and not just once.</p>
 <p>Simulation studies are helpful to evaluate how a method performs, generally speaking.</p>
 <div id="simulation-demo" class="section level3 hasAnchor" number="21.2.1">

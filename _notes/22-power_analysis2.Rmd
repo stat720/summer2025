@@ -9,7 +9,8 @@ July 10th, 2025
 
 A lot the concepts we're learning in STAT 720 are based on asymptotic properties, or what would happen, *generally speaking*. 
 For example, a 95% confidence interval will include the true value only 95% of the times. That means that 5% of the times, it will not. 
-Likewise, a hypothesis test with an $\alpha=0.05$ will incorrectly reject the null hypothesis 5% of the times. 
+Likewise, a hypothesis test with an $\alpha=0.05$ will incorrectly reject the null hypothesis 5% $(=\alpha)$ of the times. 
+That hypothesis test will also have an associated $\beta$, that will depend on factors like sample size and experiment design.  
 If we wish to study how a design would work, we should test it many many times and not just once. 
 
 Simulation studies are helpful to evaluate how a method performs, generally speaking. 
