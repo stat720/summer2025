@@ -184,6 +184,8 @@ split-plot---2-reps
 split-plot---3-reps
 split-plot---2-reps-subsampling
 split-plot---3-reps-subsampling
+power-analysis-ii-1
+announcements-12
 semester-project
 learning-objectives
 partial-deadlines
