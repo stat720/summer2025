@@ -4,8 +4,7 @@ title: Course Review
 
 July 14
 : RCBD Review   
-  : **HW 5**{: .label .label-green }
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/randomized-complete-block-designs.html)| [in-class R code](../scripts/07142025_rcbd.Rmd)
 
 July 15 
 : Split-plot Review   
