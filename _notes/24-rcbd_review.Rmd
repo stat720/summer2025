@@ -29,6 +29,8 @@ July 14th, 2025
 
 An experiment was run in South Australia to compare for 107 different wheat varieties, in a randomized complete block design with 3 blocks.
 
+Get R code [here](../scripts/07142025_rcbd.Rmd).
+
 ```{r eval=TRUE, echo=FALSE}
 t_rcbd <- data.frame(Source = c("Blocks", "Genotype", "Error", "Total"),
                           df = c("b-1 = 2", "g-1 = 106", "N-b-g+1 = 221", "N-1 = 329"))
