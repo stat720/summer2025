@@ -22,7 +22,7 @@ July 14th, 2025
   - Blocks as fixed: $\hat\mu \pm t \cdot \sqrt{\frac{\sigma_{\varepsilon}^2 }{b}}$
   - Blocks as random: $\hat\mu \pm t \cdot \sqrt{\frac{\sigma_{\varepsilon}^2 + \sigma^2_{b}}{b}}$ 
 - Confidence intervals of the means differences don't differ depending on the model:  
-  - Blocks as fixed/as random: $\hat\mu \pm t \cdot \sqrt{\frac{2 \sigma_{\varepsilon}^2 }{n}}$  
+  - Blocks as fixed/as random: $\hat\mu \pm t \cdot \sqrt{\frac{2 \sigma_{\varepsilon}^2 }{b}}$  
 - More on the differences between blocks as fixed vs random: [Dixon 2016](https://newprairiepress.org/cgi/viewcontent.cgi?article=1474&context=agstatconference). 
 
 ### Applied design and analysis of an RCBD   

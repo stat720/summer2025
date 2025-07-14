@@ -1,17 +1,17 @@
 ---
-title: Topic TBD by class 
+title: Crossover and  
 ---
 
 July 21
-: TBD   
+: Crossover designs I   
   : [](#)
 
 July 22 
-: TBD   
+: Crossover designs II   
   : [](#)
 
 July 23 
-: TBD   
+: Wrap-up   
   : [](#)
 
 July 24 

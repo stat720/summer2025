@@ -234,3 +234,14 @@ split-plot---3-reps-subsampling
 review-friday
 announcements-12
 written-report---due-wednesday-july-23-at-2pm-ct-for-peer-review
+randomized-complete-block-designs
+announcements-13
+randomized-complete-block-designs-1
+blocks---fixed-or-random
+applied-design-and-analysis-of-an-rcbd
+incomplete-block-designs
+applied-design-and-analysis-of-a-balanced-ibd
+split-plot-designs
+announcements-14
+split-plot-designs-1
+applied-case-split-plot-design

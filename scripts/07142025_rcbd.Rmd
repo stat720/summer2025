@@ -35,14 +35,57 @@ dat_wheat_rcbd %>%
 ```
 
 ```{r}
+# block as fixed
 m_block.as.fixed <- lm(yield ~ gen + rep, data = dat_wheat_rcbd)
 
+# block as random
 m_block.as.random <- lme4::lmer(yield ~ gen + (1|rep), data = dat_wheat_rcbd)
+```
 
+```{r}
+summary(m_block.as.fixed)
+```
+
+```{r}
+sigma(m_block.as.fixed)^2
+```
+
+```{r}
+summary(m_block.as.random)
+```
+
+
+```{r}
+sigma2.fixed <- sigma(m_block.as.fixed)^2
+sigma2.random <- sigma(m_block.as.random)^2
+sigma2_b.random <- as.data.frame(VarCorr(m_block.as.random))[1, 'vcov']
+b <- 3
+```
+
+```{r}
+# se mean for the fixed model
+sqrt(sigma2.fixed/b)
+```
+
+```{r}
+# se mean for the random model
+sqrt((sigma2.random+sigma2_b.random)/b)
+```
+
+
+```{r}
 emmeans(m_block.as.fixed, ~gen)[1:10,]
 emmeans(m_block.as.random, ~gen)[1:10,]
 
 emmeans(m_block.as.fixed, ~gen, contr = list(c(1, -1, rep(0, n_distinct(dat_wheat_rcbd$gen)-2))))$contr
 emmeans(m_block.as.random, ~gen, contr = list(c(1, -1, rep(0, n_distinct(dat_wheat_rcbd$gen)-2))))$contr
+```
+
+```{r}
+sqrt(2*sigma2.fixed/b)
+```
+```{r}
+sqrt(2*sigma2.random/b)
+
 ```
 
