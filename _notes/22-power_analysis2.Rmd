@@ -59,15 +59,13 @@ between(b1.truth, confint(m)[2,1], confint(m)[2,2])
 **3. Do that 1000 times**  
 The test above worked - the 95% CIs included the true values. Based on our knowledge though, we would expect some error rate. Let's check out what happens if we repeat this 1000 times:  
 
-```{r}
+```{r eval=FALSE, echo=FALSE}
 # set the number of simulations and create the space to store the estimates
 n_sims <- 1000
 b0.hat <- numeric(n_sims)
 b1.hat <- numeric(n_sims)
 b0.hat.calib<- numeric(n_sims)
 b1.hat.calib<- numeric(n_sims)
-
-n <- nrow(df_crd)
 
 set.seed(42)
 for (i in 1:n_sims){
@@ -86,7 +84,16 @@ for (i in 1:n_sims){
   b0.hat.calib[i] <- between(b0.truth, confint(m)[1,1], confint(m)[1,2])
   b1.hat.calib[i] <- between(b1.truth, confint(m)[2,1], confint(m)[2,2])
   }
+```
 
+```{r eval=TRUE, echo=FALSE}
+b0.hat <- read_rds("../../rds/poweranalysis2_b0hat.rds")
+b1.hat <- read_rds("../../rds/poweranalysis2_b1hat.rds")
+b0.hat.calib<- read_rds( "../../rds/poweranalysis2_b0hatcalib.rds")
+b1.hat.calib<- read_rds("../../rds/poweranalysis2_b0hatcalib.rds")
+```
+
+```{r}
 hist(b0.hat, xlab = TeX("$\\hat{\\beta}_0$"),
      main = TeX("Histogram of the different $\\hat{\\beta}_0$ estimated in the synthetic datasets"))
 hist(b1.hat, xlab = TeX("$\\hat{\\beta}_1$"),
@@ -97,7 +104,6 @@ paste0("In the 1000 simulated scenarios, the confidence interval included the tr
 paste0("In the 1000 simulated scenarios, the confidence interval included the true beta_1 ",
        100*mean(b1.hat.calib), "% of the times.", sep = "")
 ```
-
 
 
 ## Power analysis demonstration  
@@ -140,7 +146,10 @@ p_mu.1_mu.2 <- numeric(n_sims)
 p_mu1._mu2. <- numeric(n_sims)
 
 n <- nrow(df_crd)
+```
 
+
+```{r warning=FALSE, message=FALSE, echo=TRUE, eval=FALSE}
 set.seed(42)
 
 for (i in 1:n_sims){
@@ -150,7 +159,15 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_1.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_2.rds")
+```
+
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2,
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),
@@ -189,7 +206,10 @@ p_mu1._mu2. <- numeric(n_sims)
 n <- nrow(df_crd)
 
 set.seed(42)
+```
 
+
+```{r warning=FALSE, message=FALSE, eval=FALSE, echo=TRUE}
 for (i in 1:n_sims){
   df_temp <- df_crd %>% mutate(y = mu + rnorm(n, 0, sigma_epsilon))
   
@@ -197,7 +217,15 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_3.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_4.rds")
+```
+
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2, 
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),
@@ -238,7 +266,10 @@ n_wp <- n_distinct(df_splitplot$oven_temp) * n_distinct(df_splitplot$rep)
 
 p_mu.1_mu.2 <- numeric(n_sims)
 p_mu1._mu2. <- numeric(n_sims)
+```
 
+
+```{r warning=FALSE, message=FALSE, eval=FALSE, echo=TRUE}
 set.seed(42)
 
 for (i in 1:n_sims){
@@ -249,7 +280,14 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_5.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_6.rds")
+```
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2,
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),
@@ -290,7 +328,10 @@ n_wp <- n_distinct(df_splitplot$oven_temp) * n_distinct(df_splitplot$rep)
 
 p_mu.1_mu.2 <- numeric(n_sims)
 p_mu1._mu2. <- numeric(n_sims)
+```
 
+
+```{r warning=FALSE, message=FALSE, echo=TRUE, eval=FALSE}
 set.seed(42)
 
 for (i in 1:n_sims){
@@ -301,7 +342,15 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_7.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_8.rds")
+```
+
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2, 
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),
@@ -344,7 +393,10 @@ n_sp <- n_distinct(df_splitplot$oven_temp) * n_distinct(df_splitplot$rep) * n_di
 
 p_mu.1_mu.2 <- numeric(n_sims)
 p_mu1._mu2. <- numeric(n_sims)
+```
 
+
+```{r warning=FALSE, message=FALSE, eval=FALSE, echo=TRUE}
 set.seed(42)
 
 for (i in 1:n_sims){
@@ -358,7 +410,14 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_9.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_10.rds")
+```
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2, 
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),
@@ -403,7 +462,10 @@ n_sp <- n_distinct(df_splitplot$oven_temp) * n_distinct(df_splitplot$rep) * n_di
 
 p_mu.1_mu.2 <- numeric(n_sims)
 p_mu1._mu2. <- numeric(n_sims)
+```
 
+
+```{r warning=FALSE, message=FALSE, eval=FALSE, echo=TRUE}
 set.seed(3)
 
 for (i in 1:n_sims){
@@ -417,7 +479,14 @@ for (i in 1:n_sims){
   p_mu.1_mu.2[i] <- as.data.frame(emmeans(m, ~recipe, contr = list(c(1, -1)))$contrasts)$p.value
   p_mu1._mu2.[i] <- as.data.frame(emmeans(m, ~oven_temp, contr = list(c(1, -1, 0)))$contrasts)$p.value
 }
+```
 
+```{r eval=TRUE, echo=FALSE}
+p_mu.1_mu.2 <- read_rds("../../rds/recipe_diff_11.rds")
+p_mu1._mu2. <- read_rds("../../rds/recipe_diff_12.rds")
+```
+
+```{r warning=FALSE, message=FALSE}
 hist(p_mu.1_mu.2, 
      xlim = c(0, 1),
      xlab = TeX("$\\hat{\\mu}_{\\cdot 1} - \\hat{\\mu}_{\\cdot 2}$"),

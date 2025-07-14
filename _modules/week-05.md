@@ -21,4 +21,5 @@ July 10
 
 July 11
 : Kahoot! 
+  : [html](https://stat720.github.io/summer2025/notes/friday.html)
   : **HW 3 due**{: .label .label-red }
