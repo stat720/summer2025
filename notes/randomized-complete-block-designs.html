@@ -395,6 +395,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li class="chapter" data-level="24.2.1" data-path="split-plot-designs.html"><a href="split-plot-designs.html#applied-case-split-plot-design"><i class="fa fa-check"></i><b>24.2.1</b> Applied case: split-plot design</a></li>
 </ul></li>
+<li class="chapter" data-level="24.3" data-path="split-plot-designs.html"><a href="split-plot-designs.html#summary-of-split-plot-designs"><i class="fa fa-check"></i><b>24.3</b> Summary of split-plot designs</a></li>
 </ul></li>
 <li class="chapter" data-level="25" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>25</b> Semester Project</a>
 <ul>
@@ -470,7 +471,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <p>An experiment was run in South Australia to compare for 107 different wheat varieties, in a randomized complete block design with 3 blocks.</p>
 <p>Get R code <a href="../scripts/07142025_rcbd.Rmd">here</a>.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-91">Table 23.1: </span>ANOVA table for the RCBD</caption>
+<caption><span id="tab:unnamed-chunk-94">Table 23.1: </span>ANOVA table for the RCBD</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -506,7 +507,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb142-8"><a href="randomized-complete-block-designs.html#cb142-8" tabindex="-1"></a>dat_wheat_rcbd <span class="sc">%&gt;%</span> </span>
 <span id="cb142-9"><a href="randomized-complete-block-designs.html#cb142-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(col, row))<span class="sc">+</span></span>
 <span id="cb142-10"><a href="randomized-complete-block-designs.html#cb142-10" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> rep))</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-92-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-95-1.png" width="672" /></p>
 <div class="sourceCode" id="cb143"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb143-1"><a href="randomized-complete-block-designs.html#cb143-1" tabindex="-1"></a>m_block.as.fixed <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> gen <span class="sc">+</span> rep, <span class="at">data =</span> dat_wheat_rcbd)</span>
 <span id="cb143-2"><a href="randomized-complete-block-designs.html#cb143-2" tabindex="-1"></a></span>
 <span id="cb143-3"><a href="randomized-complete-block-designs.html#cb143-3" tabindex="-1"></a>m_block.as.random <span class="ot">&lt;-</span> lme4<span class="sc">::</span><span class="fu">lmer</span>(yield <span class="sc">~</span> gen <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>rep), <span class="at">data =</span> dat_wheat_rcbd)</span>
@@ -542,17 +543,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="randomized-complete-block-designs.html#cb147-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4
-##   df t.ratio p.value
-##  221  -0.258  0.7968
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258  0.7968
 ## 
 ## Results are averaged over the levels of: rep</code></pre>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="randomized-complete-block-designs.html#cb149-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.random, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4
-##   df t.ratio p.value
-##  221  -0.258  0.7968
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258  0.7968
 ## 
 ## Degrees-of-freedom method: kenward-roger</code></pre>
 <div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="randomized-complete-block-designs.html#cb151-1" tabindex="-1"></a><span class="fu">bind_rows</span>(<span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,]) <span class="sc">%&gt;%</span> <span class="fu">transmute</span>(gen, emmean, SE, <span class="at">blocks =</span> <span class="st">&quot;fixed&quot;</span>),</span>
@@ -563,7 +560,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb151-6"><a href="randomized-complete-block-designs.html#cb151-6" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;tomato&quot;</span>, <span class="st">&quot;#1282A2&quot;</span>))<span class="sc">+</span></span>
 <span id="cb151-7"><a href="randomized-complete-block-designs.html#cb151-7" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">30</span>))<span class="sc">+</span></span>
 <span id="cb151-8"><a href="randomized-complete-block-designs.html#cb151-8" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Difference in Mean SE between fixed blocks and random blocks analyses&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-94-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-97-1.png" width="672" /></p>
 <div class="sourceCode" id="cb152"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb152-1"><a href="randomized-complete-block-designs.html#cb152-1" tabindex="-1"></a><span class="fu">bind_rows</span>(<span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>)), </span>
 <span id="cb152-2"><a href="randomized-complete-block-designs.html#cb152-2" tabindex="-1"></a>                                                                     <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">3</span>))))<span class="sc">$</span>contr) <span class="sc">%&gt;%</span> </span>
 <span id="cb152-3"><a href="randomized-complete-block-designs.html#cb152-3" tabindex="-1"></a>            <span class="fu">transmute</span>(estimate, SE, <span class="at">blocks =</span> <span class="st">&quot;fixed&quot;</span>, <span class="at">contrast =</span> <span class="fu">c</span>(<span class="st">&quot;t1 vs. t2&quot;</span>, <span class="st">&quot;t1 vs. t3&quot;</span>)),</span>
@@ -576,7 +573,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb152-10"><a href="randomized-complete-block-designs.html#cb152-10" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;tomato&quot;</span>, <span class="st">&quot;#1282A2&quot;</span>))<span class="sc">+</span></span>
 <span id="cb152-11"><a href="randomized-complete-block-designs.html#cb152-11" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">30</span>))<span class="sc">+</span></span>
 <span id="cb152-12"><a href="randomized-complete-block-designs.html#cb152-12" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">&quot;Difference in Contrast SE between fixed blocks and random blocks analyses&quot;</span>)</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-94-2.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-97-2.png" width="672" /></p>
 <p>Mean standard error, blocks as fixed: <span class="math inline">\(\sqrt{\frac{\sigma_{\varepsilon}^2 }{b}}\)</span></p>
 <div class="sourceCode" id="cb153"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb153-1"><a href="randomized-complete-block-designs.html#cb153-1" tabindex="-1"></a>n_blocks <span class="ot">&lt;-</span> <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>rep)</span>
 <span id="cb153-2"><a href="randomized-complete-block-designs.html#cb153-2" tabindex="-1"></a>sigma2_blocks.as.fixed <span class="ot">&lt;-</span> <span class="fu">sigma</span>(m_block.as.fixed)<span class="sc">^</span><span class="dv">2</span></span>
@@ -602,7 +599,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">23.4.1</span> Applied design and analysis of a Balanced IBD<a href="randomized-complete-block-designs.html#applied-design-and-analysis-of-a-balanced-ibd" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The data below correspond to a study comparing soybean genotypes in a balanced incomplete block designed experiment.</p>
 <table>
-<caption><span id="tab:unnamed-chunk-97">Table 23.2: </span>ANOVA table for the soybean BIBD</caption>
+<caption><span id="tab:unnamed-chunk-100">Table 23.2: </span>ANOVA table for the soybean BIBD</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -633,7 +630,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb157-3"><a href="randomized-complete-block-designs.html#cb157-3" tabindex="-1"></a>dat_soy_ibd <span class="sc">%&gt;%</span> </span>
 <span id="cb157-4"><a href="randomized-complete-block-designs.html#cb157-4" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(col, row))<span class="sc">+</span></span>
 <span id="cb157-5"><a href="randomized-complete-block-designs.html#cb157-5" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> block))</span></code></pre></div>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-98-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-101-1.png" width="672" /></p>
 <div class="sourceCode" id="cb158"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb158-1"><a href="randomized-complete-block-designs.html#cb158-1" tabindex="-1"></a>m_block.as.fixed <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> gen <span class="sc">+</span> block, <span class="at">data =</span> dat_soy_ibd)</span>
 <span id="cb158-2"><a href="randomized-complete-block-designs.html#cb158-2" tabindex="-1"></a></span>
 <span id="cb158-3"><a href="randomized-complete-block-designs.html#cb158-3" tabindex="-1"></a>m_block.as.random <span class="ot">&lt;-</span> lme4<span class="sc">::</span><span class="fu">lmer</span>(yield <span class="sc">~</span> gen <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>block), <span class="at">data =</span> dat_soy_ibd)</span>
@@ -669,17 +666,13 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
 <div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="randomized-complete-block-designs.html#cb162-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_soy_ibd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -2.34 1.18
-##   df t.ratio p.value
-##  125  -1.982  0.0496
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -2.34 1.18 125  -1.982  0.0496
 ## 
 ## Results are averaged over the levels of: block</code></pre>
 <div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="randomized-complete-block-designs.html#cb164-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.random, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_soy_ibd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      -2.4 1.17
-##   df t.ratio p.value
-##  129  -2.054  0.0420
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      -2.4 1.17 129  -2.054  0.0420
 ## 
 ## Degrees-of-freedom method: kenward-roger</code></pre>
 
