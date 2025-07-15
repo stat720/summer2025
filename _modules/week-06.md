@@ -8,7 +8,7 @@ July 14
 
 July 15 
 : Split-plot Review   
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/split-plot-designs.html)
 
 July 16 
 : Multi-location trials / split-split-plot designs   
