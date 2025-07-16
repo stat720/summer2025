@@ -8,11 +8,11 @@ July 14
 
 July 15 
 : Split-plot Review   
-  : [html](https://stat720.github.io/summer2025/notes/split-plot-designs.html)
+  : [html](https://stat720.github.io/summer2025/notes/split-plot-designs.html) | [in-class R code](../scripts/07152025_splitplot.Rmd)
 
 July 16 
 : Multi-location trials / split-split-plot designs   
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/more-multilevel-designs.html)
 
 July 17 
 : Strip-plot designs  
