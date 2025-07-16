@@ -31,7 +31,7 @@ df_multienv <- agridat::besag.met
 
 df_multienv %>% 
   ggplot(aes(col, row))+
-  geom_tile(aes(fill = gen))+
+  geom_tile(aes(fill = block))+
   facet_wrap(~county)
 
 m_multienv <- lmer(yield ~ gen + (1|county/block), 
