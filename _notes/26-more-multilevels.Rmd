@@ -107,7 +107,7 @@ t_subs <- data.frame(Source = c("Block",
                            "(t-1) * 8 * 3 - 24= 72 - 24 = 48",
                            "(s-1) * 4 * 8 * 3 = 96",
                            "N-1 = 191"))
-knitr::kable(t_met, caption = "Sources of Variability for the Multi-environment trial")
+knitr::kable(t_subs, caption = "Sources of Variability for the Multi-environment trial")
 ```
 
 ```{r}

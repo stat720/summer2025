@@ -245,3 +245,14 @@ split-plot-designs
 announcements-14
 split-plot-designs-1
 applied-case-split-plot-design
+tab:unnamed-chunk-7
+standard-errors
+summary-of-split-plot-designs
+more-multilevel-designs
+announcements-15
+review-statistical-models
+multi-location-trials
+example-2
+marginal-means
+subsampling
+example-3

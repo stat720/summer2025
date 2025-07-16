@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments</title>
-  <meta name="description" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <title>Day 25 More multilevel designs | STAT 720 - Design of Experiments</title>
+  <meta name="description" content="Day 25 More multilevel designs | STAT 720 - Design of Experiments" />
   <meta name="generator" content="bookdown 0.43 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <meta property="og:title" content="Day 25 More multilevel designs | STAT 720 - Design of Experiments" />
   <meta property="og:type" content="book" />
   
   
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Day 3 Basic types of designed experiments | STAT 720 - Design of Experiments" />
+  <meta name="twitter:title" content="Day 25 More multilevel designs | STAT 720 - Design of Experiments" />
   
   
   
@@ -29,8 +29,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="basic-types-of-designed-experiments.html"/>
-<link rel="next" href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html"/>
+<link rel="prev" href="split-plot-designs.html"/>
+<link rel="next" href="semester-project.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -440,57 +440,65 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="basic-types-of-designed-experiments-1" class="section level1 hasAnchor" number="3">
-<h1><span class="header-section-number">Day 3</span> Basic types of designed experiments<a href="basic-types-of-designed-experiments-1.html#basic-types-of-designed-experiments-1" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>June 11th, 2025</p>
-<div id="review-1" class="section level2 hasAnchor" number="3.1">
-<h2><span class="header-section-number">3.1</span> Review<a href="basic-types-of-designed-experiments-1.html#review-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div id="more-multilevel-designs" class="section level1 hasAnchor" number="25">
+<h1><span class="header-section-number">Day 25</span> More multilevel designs<a href="more-multilevel-designs.html#more-multilevel-designs" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>July 15th, 2025</p>
+<div id="announcements-15" class="section level2 hasAnchor" number="25.1">
+<h2><span class="header-section-number">25.1</span> Announcements<a href="more-multilevel-designs.html#announcements-15" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>Experimental unit<br />
+<li>HW 4 due Friday</li>
+</ul>
+</div>
+<div id="review-statistical-models" class="section level2 hasAnchor" number="25.2">
+<h2><span class="header-section-number">25.2</span> Review: statistical models<a href="more-multilevel-designs.html#review-statistical-models" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><span class="math display">\[y = \text{Treatment sources of variability} + \text{Design sources of variability} + \varepsilon\]</span></p>
+</div>
+<div id="multi-location-trials" class="section level2 hasAnchor" number="25.3">
+<h2><span class="header-section-number">25.3</span> Multi-location trials<a href="more-multilevel-designs.html#multi-location-trials" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Nature of multi-location trials</li>
+<li>Objectives of a multi-location trial<br />
 </li>
-<li>The golden rules of designed experiments:
-<ul>
-<li>Replication</li>
-<li>Randomization</li>
-<li>Local control (blocking)</li>
-</ul></li>
+<li>How many years?</li>
+<li>Exercise: find the experimental unit and the groups that are not independent.</li>
 </ul>
-</div>
-<div id="types-of-designs" class="section level2 hasAnchor" number="3.2">
-<h2><span class="header-section-number">3.2</span> Types of designs<a href="basic-types-of-designed-experiments-1.html#types-of-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<div id="completely-randomized-design-crd-1" class="section level3 hasAnchor" number="3.2.1">
-<h3><span class="header-section-number">3.2.1</span> Completely randomized design (CRD)<a href="basic-types-of-designed-experiments-1.html#completely-randomized-design-crd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-5"></span>
-<img src="../figures/designs_crd.PNG" alt="Schematic description of an experiment with a completely randomized design" width="100%" />
-<p class="caption">
-Figure 3.1: Schematic description of an experiment with a completely randomized design
-</p>
-</div>
-</div>
-<div id="randomized-complete-block-design-rcbd-1" class="section level3 hasAnchor" number="3.2.2">
-<h3><span class="header-section-number">3.2.2</span> Randomized complete block design (RCBD)<a href="basic-types-of-designed-experiments-1.html#randomized-complete-block-design-rcbd-1" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Blocks are groups of similar experimental units and are large enough to fit each treatment at least once</li>
-</ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-6"></span>
-<img src="../figures/designs_rcbd.PNG" alt="Schematic description of an experiment with a randomized complete block design" width="100%" />
-<p class="caption">
-Figure 3.2: Schematic description of an experiment with a randomized complete block design
-</p>
-</div>
-</div>
-</div>
-<div id="building-an-anova-skeleton-using-design-aka-topographical-and-treatment-elements" class="section level2 hasAnchor" number="3.3">
-<h2><span class="header-section-number">3.3</span> Building an ANOVA skeleton using design (aka topographical) and treatment elements<a href="basic-types-of-designed-experiments-1.html#building-an-anova-skeleton-using-design-aka-topographical-and-treatment-elements" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<table class="kable_wrapper">
-<caption>
-<span id="tab:unnamed-chunk-7">Table 3.1: </span>Constructing the ANOVA skeleton
-</caption>
-<tbody>
-<tr>
-<td>
+<div id="example-2" class="section level3 hasAnchor" number="25.3.1">
+<h3><span class="header-section-number">25.3.1</span> Example<a href="more-multilevel-designs.html#example-2" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Multi-environment trial of 64 corn hybrids in six counties in North Carolina. Each location had 3 replicates in in incomplete-block design.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="more-multilevel-designs.html#cb1-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="more-multilevel-designs.html#cb1-2" tabindex="-1"></a><span class="fu">library</span>(agridat)</span>
+<span id="cb1-3"><a href="more-multilevel-designs.html#cb1-3" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
+<span id="cb1-4"><a href="more-multilevel-designs.html#cb1-4" tabindex="-1"></a><span class="fu">library</span>(emmeans)</span>
+<span id="cb1-5"><a href="more-multilevel-designs.html#cb1-5" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="more-multilevel-designs.html#cb1-6" tabindex="-1"></a>df_multienv <span class="ot">&lt;-</span> agridat<span class="sc">::</span>besag.met</span>
+<span id="cb1-7"><a href="more-multilevel-designs.html#cb1-7" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="more-multilevel-designs.html#cb1-8" tabindex="-1"></a>df_multienv <span class="sc">%&gt;%</span> </span>
+<span id="cb1-9"><a href="more-multilevel-designs.html#cb1-9" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(col, row))<span class="sc">+</span></span>
+<span id="cb1-10"><a href="more-multilevel-designs.html#cb1-10" tabindex="-1"></a>  <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> block))<span class="sc">+</span></span>
+<span id="cb1-11"><a href="more-multilevel-designs.html#cb1-11" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>county)</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="more-multilevel-designs.html#cb2-1" tabindex="-1"></a>m_multienv <span class="ot">&lt;-</span> <span class="fu">lmer</span>(yield <span class="sc">~</span> gen <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>county<span class="sc">/</span>block), </span>
+<span id="cb2-2"><a href="more-multilevel-designs.html#cb2-2" tabindex="-1"></a>                    <span class="at">data =</span> df_multienv)</span>
+<span id="cb2-3"><a href="more-multilevel-designs.html#cb2-3" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="more-multilevel-designs.html#cb2-4" tabindex="-1"></a><span class="fu">VarCorr</span>(m_multienv)</span></code></pre></div>
+<pre><code>##  Groups       Name        Std.Dev.
+##  block:county (Intercept)  3.9453 
+##  county       (Intercept) 36.2722 
+##  Residual                 18.2529</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="more-multilevel-designs.html#cb4-1" tabindex="-1"></a>df_multienv <span class="sc">%&gt;%</span> </span>
+<span id="cb4-2"><a href="more-multilevel-designs.html#cb4-2" tabindex="-1"></a>  <span class="fu">group_by</span>(county) <span class="sc">%&gt;%</span> </span>
+<span id="cb4-3"><a href="more-multilevel-designs.html#cb4-3" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="fu">n_distinct</span>(gen))</span></code></pre></div>
+<pre><code>## # A tibble: 6 × 2
+##   county `n_distinct(gen)`
+##   &lt;fct&gt;              &lt;int&gt;
+## 1 C1                    64
+## 2 C2                    64
+## 3 C3                    64
+## 4 C4                    64
+## 5 C5                    64
+## 6 C6                    64</code></pre>
 <table>
-<caption><span id="tab:unnamed-chunk-7">Table 3.1: </span>Experiment or Topographical</caption>
+<caption><span id="tab:unnamed-chunk-4">Table 25.1: </span>Sources of Variability for the Multi-environment trial</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -499,27 +507,84 @@ Figure 3.2: Schematic description of an experiment with a randomized complete bl
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Block</td>
-<td align="left">b-1</td>
+<td align="left">Location</td>
+<td align="left">l - 1 = 5</td>
 </tr>
 <tr class="even">
-<td align="left"></td>
-<td align="left">-</td>
+<td align="left">Block (Location)</td>
+<td align="left">(b-1) * l = 7*6 = 42</td>
 </tr>
 <tr class="odd">
-<td align="left">Pens(Block)</td>
-<td align="left">(u-1)*b</td>
+<td align="left">Genotype</td>
+<td align="left">g-1 = 63</td>
 </tr>
 <tr class="even">
+<td align="left">Error</td>
+<td align="left">1078</td>
+</tr>
+<tr class="odd">
 <td align="left">Total</td>
-<td align="left">N-1</td>
+<td align="left">N-1 = 1187</td>
 </tr>
 </tbody>
 </table>
-</td>
-<td>
+<div id="marginal-means" class="section level4 hasAnchor" number="25.3.1.1">
+<h4><span class="header-section-number">25.3.1.1</span> Marginal means<a href="more-multilevel-designs.html#marginal-means" class="anchor-section" aria-label="Anchor link to header"></a></h4>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="more-multilevel-designs.html#cb6-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_multienv, <span class="sc">~</span> gen)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>]</span></code></pre></div>
+<pre><code>##  gen emmean   SE   df lower.CL upper.CL
+##  G01  111.2 15.5 5.93     73.2      149
+##  G02  107.4 15.5 5.93     69.4      145
+##  G03   99.1 15.5 5.93     61.1      137
+##  G04  115.1 15.5 5.93     77.1      153
+##  G05  120.3 15.5 5.93     82.3      158
+##  G06  107.4 15.5 5.93     69.5      145
+##  G07  106.7 15.5 5.93     68.7      145
+##  G08  113.7 15.5 5.93     75.7      152
+##  G09  110.1 15.4 5.88     72.1      148
+##  G10   95.4 15.4 5.88     57.4      133
+## 
+## Degrees-of-freedom method: kenward-roger 
+## Confidence level used: 0.95</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="more-multilevel-designs.html#cb8-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_multienv, <span class="sc">~</span> gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(df_multienv<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
+<pre><code>##  contrast                                                        estimate   SE
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      3.81 6.35
+##    df t.ratio p.value
+##  1029   0.601  0.5479
+## 
+## Degrees-of-freedom method: kenward-roger</code></pre>
+</div>
+</div>
+</div>
+<div id="subsampling" class="section level2 hasAnchor" number="25.4">
+<h2><span class="header-section-number">25.4</span> Subsampling<a href="more-multilevel-designs.html#subsampling" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Review: split-plots</strong></p>
+<ul>
+<li>Split-plot designs are multi-level designed experiments.</li>
+<li>Randomization happens in different levels.</li>
+<li>Split-plot designs can happen in blocked designs or in CRDs.</li>
+<li>Importance of accounting for the subsampling (df and variance)</li>
+</ul>
+<div id="example-3" class="section level3 hasAnchor" number="25.4.1">
+<h3><span class="header-section-number">25.4.1</span> Example<a href="more-multilevel-designs.html#example-3" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>A split-plot experiment in three blocks. Whole-plot is ’management’, sub-plot is ’time’ of application, with two subsamples. The data are the heights, measured on two single-hill sampling units in each plot.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="more-multilevel-designs.html#cb10-1" tabindex="-1"></a>df_subsample <span class="ot">&lt;-</span> gomez.splitplot.subsample</span>
+<span id="cb10-2"><a href="more-multilevel-designs.html#cb10-2" tabindex="-1"></a><span class="fu">str</span>(df_subsample)</span></code></pre></div>
+<pre><code>## &#39;data.frame&#39;:    192 obs. of  5 variables:
+##  $ time  : Factor w/ 4 levels &quot;T1&quot;,&quot;T2&quot;,&quot;T3&quot;,..: 1 1 1 1 1 1 1 1 2 2 ...
+##  $ manage: Factor w/ 8 levels &quot;M1&quot;,&quot;M2&quot;,&quot;M3&quot;,..: 1 2 3 4 5 6 7 8 1 2 ...
+##  $ rep   : Factor w/ 3 levels &quot;R1&quot;,&quot;R2&quot;,&quot;R3&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ sample: Factor w/ 2 levels &quot;S1&quot;,&quot;S2&quot;: 1 1 1 1 1 1 1 1 1 1 ...
+##  $ height: num  104.5 92.3 96.8 94.7 105.7 ...</code></pre>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="more-multilevel-designs.html#cb12-1" tabindex="-1"></a>m_subsample <span class="ot">&lt;-</span> <span class="fu">lmer</span>(height <span class="sc">~</span> manage <span class="sc">*</span> time <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>rep<span class="sc">/</span>manage<span class="sc">/</span>time), <span class="at">data =</span> df_subsample)</span>
+<span id="cb12-2"><a href="more-multilevel-designs.html#cb12-2" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="more-multilevel-designs.html#cb12-3" tabindex="-1"></a><span class="fu">VarCorr</span>(m_subsample)</span></code></pre></div>
+<pre><code>##  Groups          Name        Std.Dev.
+##  time:manage:rep (Intercept) 4.0433  
+##  manage:rep      (Intercept) 2.7422  
+##  rep             (Intercept) 4.3692  
+##  Residual                    1.3205</code></pre>
 <table>
-<caption><span id="tab:unnamed-chunk-7">Table 3.1: </span>Treatment</caption>
+<caption><span id="tab:unnamed-chunk-7">Table 25.2: </span>Sources of Variability for the Multi-environment trial</caption>
 <thead>
 <tr class="header">
 <th align="left">Source</th>
@@ -528,146 +593,43 @@ Figure 3.2: Schematic description of an experiment with a randomized complete bl
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"></td>
-<td align="left">-</td>
+<td align="left">Location</td>
+<td align="left">l - 1 = 5</td>
 </tr>
 <tr class="even">
-<td align="left">Treatment</td>
-<td align="left">t-1</td>
+<td align="left">Block (Location)</td>
+<td align="left">(b-1) * l = 7*6 = 42</td>
 </tr>
 <tr class="odd">
-<td align="left">Parallels</td>
-<td align="left">N-t</td>
+<td align="left">Genotype</td>
+<td align="left">g-1 = 63</td>
 </tr>
 <tr class="even">
+<td align="left">Error</td>
+<td align="left">1078</td>
+</tr>
+<tr class="odd">
 <td align="left">Total</td>
-<td align="left">N-1</td>
+<td align="left">N-1 = 1187</td>
 </tr>
 </tbody>
 </table>
-</td>
-<td>
-<table>
-<caption><span id="tab:unnamed-chunk-7">Table 3.1: </span>Combined Table</caption>
-<thead>
-<tr class="header">
-<th align="left">Source</th>
-<th align="left">df</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Block</td>
-<td align="left">b-1</td>
-</tr>
-<tr class="even">
-<td align="left">Treatment</td>
-<td align="left">t-1</td>
-</tr>
-<tr class="odd">
-<td align="left">Pens(Block x Trt)</td>
-<td align="left">(u-1)*b - (t-1)</td>
-</tr>
-<tr class="even">
-<td align="left">Total</td>
-<td align="left">N-1</td>
-</tr>
-</tbody>
-</table>
-</td>
-</tr>
-</tbody>
-</table>
-<p>This way to do an ANOVA is normally considered the “What Would Fisher Do” ANOVA. Sir R.A. Fisher did plenty of his very influential work while he was working at the Rothamsted Agricultural Station!</p>
-<center>
-<div class="float">
-<img src="https://www.ucl.ac.uk/biosciences/sites/biosciences/files/styles/medium_image/public/untitled_design_3_0.png?itok=oQ8Gv5fq" style="width:90.0%" alt="Sir R.A. Fisher" />
-<div class="figcaption">Sir R.A. Fisher</div>
-</div>
-</center>
-</div>
-<div id="linear-model-good-old-friend" class="section level2 hasAnchor" number="3.4">
-<h2><span class="header-section-number">3.4</span> Linear model good old friend<a href="basic-types-of-designed-experiments-1.html#linear-model-good-old-friend" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>What does “linear” mean?<br />
-</li>
-<li>What does “ANOVA” mean?</li>
-</ul>
-<p><span class="math display">\[\begin{equation}
-  y_{ij} = \mu + \tau_i + \varepsilon_{ij}, \\ \varepsilon_{ij} \sim N(0, \sigma^2),
-\end{equation}\]</span></p>
-<p>OR</p>
-<p><span class="math display">\[\begin{equation}
-  y_{i} = \beta_0 + x_{1i}\beta_1 +x_{2i}\beta_2 + x_{3i}\beta_3 + \varepsilon_{i}, \\
-  \varepsilon_{i} \sim N(0, \sigma^2), \\
-  x_{1i} = \begin{cases}
-      1, &amp; \text{if treatment A}\\
-            0, &amp; \text{otherwise}
-         \end{cases} \\
-  x_{2i} = \begin{cases}
-      1, &amp; \text{if treatment B}\\
-            0, &amp; \text{otherwise}
-         \end{cases} \\
-  x_{3i} = \begin{cases}
-      1, &amp; \text{if treatment C}\\
-            0, &amp; \text{otherwise}
-         \end{cases}
-\end{equation}\]</span></p>
-<p>OR</p>
-<p><span class="math display">\[\begin{equation}
-  \mathbf{y} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}, \\
-  \boldsymbol{\varepsilon} \sim N(\boldsymbol{0}, \sigma^2 \mathbf{I}), \\
-\end{equation}\]</span></p>
-<p>OR</p>
-<p><span class="math display">\[\begin{equation}
-  \mathbf{y} \sim N(\boldsymbol{\mu}, \sigma^2 \mathbf{I}), \\
-  \boldsymbol{\mu} = \mathbf{X}\boldsymbol{\beta} + \boldsymbol{\varepsilon}
-\end{equation}\]</span></p>
-<div id="the-most-common-assumptions-behind-most-software" class="section level3 hasAnchor" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> The most common assumptions behind most software<a href="basic-types-of-designed-experiments-1.html#the-most-common-assumptions-behind-most-software" class="anchor-section" aria-label="Anchor link to header"></a></h3>
-<ul>
-<li>Constant variance<br />
-</li>
-<li>Independence<br />
-</li>
-<li>Normality</li>
-</ul>
-<p>We can describe the general linear model as
-<span class="math display">\[\begin{equation}
-  y_{ij} = \mu + \tau_i + \varepsilon_{ij},
-\end{equation}\]</span>
-<span class="math display">\[\begin{equation}
-  \varepsilon_{ij} \sim N(0, \sigma^2),
-\end{equation}\]</span>
-where <span class="math inline">\(y_{ij}\)</span> is the <span class="math inline">\(j\)</span>th observation of the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(\mu\)</span> is the overall mean, <span class="math inline">\(\tau_i\)</span> is the treatment effect of the <span class="math inline">\(i\)</span>th treatment, and <span class="math inline">\(\varepsilon_{ij}\)</span> is the residual for the <span class="math inline">\(j\)</span>th observation of the <span class="math inline">\(i\)</span>th treatment (i.e., the difference between observed and predicted).</p>
-<p>The form used to describe the model above is called “Model equation form”.
-Another way of saying the same is the “Probability distribution form”, where we describe the distribution of <span class="math inline">\(y\)</span> directly.<br />
-<span class="math display">\[\begin{equation}
-  y_{ij} \sim N(\mu_{ij}, \sigma^2),
-\end{equation}\]</span>
-or
-<span class="math display">\[\begin{equation}
-  \mathbf{y} \sim N(\mu_{ij}, \sigma^2).
-\end{equation}\]</span></p>
-</div>
-</div>
-<div id="some-practice" class="section level2 hasAnchor" number="3.5">
-<h2><span class="header-section-number">3.5</span> Some Practice<a href="basic-types-of-designed-experiments-1.html#some-practice" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>Check out <a href="../scripts/06112025_rcbd.Rmd">this R script</a> to follow along!</p>
-</div>
-<div id="to-do" class="section level2 hasAnchor" number="3.6">
-<h2><span class="header-section-number">3.6</span> To do<a href="basic-types-of-designed-experiments-1.html#to-do" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<ul>
-<li>Start reading:
-<ul>
-<li>Chapter 4 in Messy Data Vol1 (Milliken &amp; Johnson) OR<br />
-</li>
-<li>Chapter 2 in GLMM (Stroup, 1st ed) - 1st edition of the GLMM book, until “Complication”<br />
-</li>
-</ul></li>
-<li>Schedule a meeting to discuss your project topic.</li>
-</ul>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="more-multilevel-designs.html#cb14-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_subsample, <span class="sc">~</span>manage, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">0</span>)))<span class="sc">$</span>contr</span></code></pre></div>
+<pre><code>## NOTE: Results may be misleading due to involvement in interactions</code></pre>
+<pre><code>##  contrast                   estimate   SE df t.ratio p.value
+##  c(1, -1, 0, 0, 0, 0, 0, 0)     5.85 2.81 14   2.085  0.0559
+## 
+## Results are averaged over the levels of: time 
+## Degrees-of-freedom method: kenward-roger</code></pre>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="more-multilevel-designs.html#cb17-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_subsample, <span class="sc">~</span>time, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>)))<span class="sc">$</span>contr</span></code></pre></div>
+<pre><code>## NOTE: Results may be misleading due to involvement in interactions</code></pre>
+<pre><code>##  contrast       estimate  SE df t.ratio p.value
+##  c(1, -1, 0, 0)    -2.68 1.2 48  -2.238  0.0299
+## 
+## Results are averaged over the levels of: manage 
+## Degrees-of-freedom method: kenward-roger</code></pre>
 
+</div>
 </div>
 </div>
             </section>
@@ -675,8 +637,8 @@ or
           </div>
         </div>
       </div>
-<a href="basic-types-of-designed-experiments.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="linear-models-anova-shells-applied-to-the-more-basic-experiment-designs.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="split-plot-designs.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="semester-project.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -707,7 +669,7 @@ gitbook.start({
     "size": 2
   },
   "edit": {
-    "link": "https://github.com/stat720/book2025/edit/main/03-design2.Rmd",
+    "link": "https://github.com/stat720/book2025/edit/main/26-more-multilevels.Rmd",
     "text": "Edit"
   },
   "history": {
@@ -715,7 +677,7 @@ gitbook.start({
     "text": null
   },
   "view": {
-    "link": "https://github.com/stat720/book2025/blob/main/03-design2.Rmd",
+    "link": "https://github.com/stat720/book2025/blob/main/26-more-multilevels.Rmd",
     "text": null
   },
   "download": null,
