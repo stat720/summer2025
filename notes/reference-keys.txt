@@ -204,7 +204,7 @@ split-plot-designs-1
 applied-case-split-plot-design
 standard-errors
 summary-of-split-plot-designs
-split-plot-designs-2
+more-multilevel-designs
 announcements-15
 review-statistical-models
 multi-location-trials
