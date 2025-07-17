@@ -16,7 +16,7 @@ July 16
 
 July 17 
 : Strip-plot designs  
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/planning-a-multi-location-design.html)
 
 July 18
 : Kahoot!   
