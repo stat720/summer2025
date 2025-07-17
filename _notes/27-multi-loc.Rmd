@@ -14,13 +14,13 @@ July 17th, 2025
 - Different approaches to picking the multiple locations: 
   - Carefully select multiple environments 
   - Randomly*(ish)* select multiple environments within the target environment 
-  - 
+  - How do both affect the response? 
   
 ### On the importance of sample size 
 
 - "The truth wears off" by Jonah Lehrer [[link](https://www.newyorker.com/magazine/2010/12/13/the-truth-wears-off)] | [[alt. link](https://sites.ualberta.ca/~ahamann/teaching/renr480/reading/Lehrer_2010_The_truth_wears_off.pdf)] 
 - How much are we relying on our results? Which results? 
-- Sample size, design, etc. are important 
+- Sample size, design, etc. are important and affect conclusions! 
 
 
 ### What do the results for different multi-environment trials look like?  
@@ -28,11 +28,12 @@ July 17th, 2025
 Below is a simulation comparing 3 different scenarios of multi-environment trials with different number of environments tested. 
 We assume that, within each environment, the trial is an RCBD with three repetitions. 
 *[Context: this is perhaps the most common design in agronomy.]* 
+
 We assume the following data generating process: 
 $$y_{ijk} = \mu_i + b_{j(k)} + u_k +\varepsilon_{ijk}, \\
 b_{j(k)} \sim N(0, \sigma_{b}^2), \\
 u_k \sim N(0, \sigma_{u}^2), \\
-\varepsilon_{ijk} \sim N(0, \sigma_{\varepsilon}^2)$$
+\varepsilon_{ijk} \sim N(0, \sigma_{\varepsilon}^2),$$
 where:
 
 - $\mu_i$ is the treatment mean for the $i$th treatment ($i = 1,2, ..., 30$), 
@@ -40,13 +41,13 @@ where:
 - $u_k$ is the effect of the $k$th environment ($k = 1,2,..., E$), and 
 - $\varepsilon_{ijk}$ is the residual for the observation corresponding to the $i$th treatment, $j$th block in the $k$th environment. 
 
-For this simulation, we assume that all $b_{j(k)}$, $u_k$ and $\varepsilon_{ijk}$ arise from a Normal distribution, with variances $\sigma_{b}^2 = 3$, $\sigma_{u}^2 = 35$, $\sigma_{\varepsilon}^2 = 10$.
+For this simulation, we assume that all $b_{j(k)}$, $u_k$ and $\varepsilon_{ijk}$ arise from independent normal distributions, with variances $\sigma_{b}^2 = 3$, $\sigma_{u}^2 = 35$, $\sigma_{\varepsilon}^2 = 10$.
 
 Each simulation consists of 3 steps: 
 
 1. Set "true" states (i.e., set $\mu_i$). We assume the same "ground truth" for all cases. To demonstrate the properties of the designs, we will assume some treatments have no difference (i.e., $\mu_i = \mu_{i'}$) and others are different (i.e., $\mu_i \neq \mu_{i'}$). *Note: this step does not depend on sample size.* 
 2. Draw random samples from $b_{j(k)}$, $u_k$ and $\varepsilon_{ijk}$ to simulate observed values $y_{ijk}$. *Note: this step depends on sample size.*
-3. Estimate the $\mu_i$s and test the type I error rate (count of times when $p<0.05$ when the truth was actually $\mu_i = \mu_{i'}$), and the statistical power (count of times when $p<0.05$ when the truth was $\mu_i \ne \mu_{i'}$). 
+3. Estimate the $\mu_i$s and test the type I error rate (count of times when $p<0.05$ when the truth was actually $\mu_i = \mu_{i'}$ -- reject $H_0$ when it was true), and the statistical power (count of times when $p<0.05$ when the truth was $\mu_i \ne \mu_{i'}$ -- reject $H_0$ when it was false). 
 
 
 **R packages required for this simulation** 
@@ -165,9 +166,9 @@ for (i in 1:n_sims) {
     mutate(block_re = block_re)
   
   df_me <- df_me %>%
-    mutate(mu_t = case_when(trt == "t10" ~ 200, 
-                            trt == "t11" ~ 200, 
-                            trt == "t12" ~ 180, 
+    mutate(mu_t = case_when(trt == "t11" ~ 200, 
+                            trt == "t12" ~ 200, 
+                            trt == "t13" ~ 180, 
                             .default = 220)) %>% 
     left_join(df_envs) %>% 
     left_join(df_blocks) %>% 
@@ -240,9 +241,9 @@ for (i in 1:n_sims) {
     mutate(block_re = block_re)
   
   df_me <- df_me %>%
-    mutate(mu_t = case_when(trt == "t10" ~ 200, 
-                            trt == "t11" ~ 200, 
-                            trt == "t12" ~ 180, 
+    mutate(mu_t = case_when(trt == "t11" ~ 200, 
+                            trt == "t12" ~ 200, 
+                            trt == "t13" ~ 180, 
                             .default = 220)) %>% 
     left_join(df_envs) %>% 
     left_join(df_blocks) %>% 
@@ -280,6 +281,8 @@ mean(pval_0diff<0.05)
 mean(pval_20diff<0.05)
 ```
 
+
+- **2 environments with 3x the environment variability, 3 blocks each**
 
 
 

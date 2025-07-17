@@ -472,7 +472,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>Carefully select multiple environments</li>
 <li>Randomly<em>(ish)</em> select multiple environments within the target environment</li>
-<li></li>
+<li>How do both affect the response?</li>
 </ul></li>
 </ul>
 <div id="on-the-importance-of-sample-size" class="section level3 hasAnchor" number="26.2.1">
@@ -480,19 +480,19 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <ul>
 <li>“The truth wears off” by Jonah Lehrer [<a href="https://www.newyorker.com/magazine/2010/12/13/the-truth-wears-off">link</a>] | [<a href="https://sites.ualberta.ca/~ahamann/teaching/renr480/reading/Lehrer_2010_The_truth_wears_off.pdf">alt. link</a>]</li>
 <li>How much are we relying on our results? Which results?</li>
-<li>Sample size, design, etc. are important</li>
+<li>Sample size, design, etc. are important and affect conclusions!</li>
 </ul>
 </div>
 <div id="what-do-the-results-for-different-multi-environment-trials-look-like" class="section level3 hasAnchor" number="26.2.2">
 <h3><span class="header-section-number">26.2.2</span> What do the results for different multi-environment trials look like?<a href="planning-a-multi-location-design.html#what-do-the-results-for-different-multi-environment-trials-look-like" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Below is a simulation comparing 3 different scenarios of multi-environment trials with different number of environments tested.
 We assume that, within each environment, the trial is an RCBD with three repetitions.
-<em>[Context: this is perhaps the most common design in agronomy.]</em>
-We assume the following data generating process:
+<em>[Context: this is perhaps the most common design in agronomy.]</em></p>
+<p>We assume the following data generating process:
 <span class="math display">\[y_{ijk} = \mu_i + b_{j(k)} + u_k +\varepsilon_{ijk}, \\
 b_{j(k)} \sim N(0, \sigma_{b}^2), \\
 u_k \sim N(0, \sigma_{u}^2), \\
-\varepsilon_{ijk} \sim N(0, \sigma_{\varepsilon}^2)\]</span>
+\varepsilon_{ijk} \sim N(0, \sigma_{\varepsilon}^2),\]</span>
 where:</p>
 <ul>
 <li><span class="math inline">\(\mu_i\)</span> is the treatment mean for the <span class="math inline">\(i\)</span>th treatment (<span class="math inline">\(i = 1,2, ..., 30\)</span>),</li>
@@ -500,12 +500,12 @@ where:</p>
 <li><span class="math inline">\(u_k\)</span> is the effect of the <span class="math inline">\(k\)</span>th environment (<span class="math inline">\(k = 1,2,..., E\)</span>), and</li>
 <li><span class="math inline">\(\varepsilon_{ijk}\)</span> is the residual for the observation corresponding to the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(j\)</span>th block in the <span class="math inline">\(k\)</span>th environment.</li>
 </ul>
-<p>For this simulation, we assume that all <span class="math inline">\(b_{j(k)}\)</span>, <span class="math inline">\(u_k\)</span> and <span class="math inline">\(\varepsilon_{ijk}\)</span> arise from a Normal distribution, with variances <span class="math inline">\(\sigma_{b}^2 = 3\)</span>, <span class="math inline">\(\sigma_{u}^2 = 35\)</span>, <span class="math inline">\(\sigma_{\varepsilon}^2 = 10\)</span>.</p>
+<p>For this simulation, we assume that all <span class="math inline">\(b_{j(k)}\)</span>, <span class="math inline">\(u_k\)</span> and <span class="math inline">\(\varepsilon_{ijk}\)</span> arise from independent normal distributions, with variances <span class="math inline">\(\sigma_{b}^2 = 3\)</span>, <span class="math inline">\(\sigma_{u}^2 = 35\)</span>, <span class="math inline">\(\sigma_{\varepsilon}^2 = 10\)</span>.</p>
 <p>Each simulation consists of 3 steps:</p>
 <ol style="list-style-type: decimal">
 <li>Set “true” states (i.e., set <span class="math inline">\(\mu_i\)</span>). We assume the same “ground truth” for all cases. To demonstrate the properties of the designs, we will assume some treatments have no difference (i.e., <span class="math inline">\(\mu_i = \mu_{i&#39;}\)</span>) and others are different (i.e., <span class="math inline">\(\mu_i \neq \mu_{i&#39;}\)</span>). <em>Note: this step does not depend on sample size.</em></li>
 <li>Draw random samples from <span class="math inline">\(b_{j(k)}\)</span>, <span class="math inline">\(u_k\)</span> and <span class="math inline">\(\varepsilon_{ijk}\)</span> to simulate observed values <span class="math inline">\(y_{ijk}\)</span>. <em>Note: this step depends on sample size.</em></li>
-<li>Estimate the <span class="math inline">\(\mu_i\)</span>s and test the type I error rate (count of times when <span class="math inline">\(p&lt;0.05\)</span> when the truth was actually <span class="math inline">\(\mu_i = \mu_{i&#39;}\)</span>), and the statistical power (count of times when <span class="math inline">\(p&lt;0.05\)</span> when the truth was <span class="math inline">\(\mu_i \ne \mu_{i&#39;}\)</span>).</li>
+<li>Estimate the <span class="math inline">\(\mu_i\)</span>s and test the type I error rate (count of times when <span class="math inline">\(p&lt;0.05\)</span> when the truth was actually <span class="math inline">\(\mu_i = \mu_{i&#39;}\)</span> – reject <span class="math inline">\(H_0\)</span> when it was true), and the statistical power (count of times when <span class="math inline">\(p&lt;0.05\)</span> when the truth was <span class="math inline">\(\mu_i \ne \mu_{i&#39;}\)</span> – reject <span class="math inline">\(H_0\)</span> when it was false).</li>
 </ol>
 <p><strong>R packages required for this simulation</strong></p>
 <div class="sourceCode" id="cb196"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb196-1"><a href="planning-a-multi-location-design.html#cb196-1" tabindex="-1"></a><span class="fu">library</span>(tidyverse) <span class="co"># data wrangling &amp; data viz  </span></span>
@@ -561,8 +561,8 @@ Click to show code for the simulation
 <span id="cb197-40"><a href="planning-a-multi-location-design.html#cb197-40" tabindex="-1"></a>  pval_20diff[i] <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m, <span class="sc">~</span> trt, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">26</span>))))<span class="sc">$</span>contr)<span class="sc">$</span>p.value</span>
 <span id="cb197-41"><a href="planning-a-multi-location-design.html#cb197-41" tabindex="-1"></a>} </span></code></pre></div>
 </details>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-121-1.png" width="672" /></p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-122-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-130-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
 <div class="sourceCode" id="cb198"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb198-1"><a href="planning-a-multi-location-design.html#cb198-1" tabindex="-1"></a><span class="co"># type I error rate</span></span>
 <span id="cb198-2"><a href="planning-a-multi-location-design.html#cb198-2" tabindex="-1"></a><span class="fu">mean</span>(pval_0diff<span class="sc">&lt;</span><span class="fl">0.05</span>)</span></code></pre></div>
 <pre><code>## [1] 0.11</code></pre>
@@ -604,9 +604,9 @@ Click to show code for the simulation
 <span id="cb202-26"><a href="planning-a-multi-location-design.html#cb202-26" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">block_re =</span> block_re)</span>
 <span id="cb202-27"><a href="planning-a-multi-location-design.html#cb202-27" tabindex="-1"></a>  </span>
 <span id="cb202-28"><a href="planning-a-multi-location-design.html#cb202-28" tabindex="-1"></a>  df_me <span class="ot">&lt;-</span> df_me <span class="sc">%&gt;%</span></span>
-<span id="cb202-29"><a href="planning-a-multi-location-design.html#cb202-29" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">mu_t =</span> <span class="fu">case_when</span>(trt <span class="sc">==</span> <span class="st">&quot;t10&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
-<span id="cb202-30"><a href="planning-a-multi-location-design.html#cb202-30" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t11&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
-<span id="cb202-31"><a href="planning-a-multi-location-design.html#cb202-31" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t12&quot;</span> <span class="sc">~</span> <span class="dv">180</span>, </span>
+<span id="cb202-29"><a href="planning-a-multi-location-design.html#cb202-29" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">mu_t =</span> <span class="fu">case_when</span>(trt <span class="sc">==</span> <span class="st">&quot;t11&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
+<span id="cb202-30"><a href="planning-a-multi-location-design.html#cb202-30" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t12&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
+<span id="cb202-31"><a href="planning-a-multi-location-design.html#cb202-31" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t13&quot;</span> <span class="sc">~</span> <span class="dv">180</span>, </span>
 <span id="cb202-32"><a href="planning-a-multi-location-design.html#cb202-32" tabindex="-1"></a>                            <span class="at">.default =</span> <span class="dv">220</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb202-33"><a href="planning-a-multi-location-design.html#cb202-33" tabindex="-1"></a>    <span class="fu">left_join</span>(df_envs) <span class="sc">%&gt;%</span> </span>
 <span id="cb202-34"><a href="planning-a-multi-location-design.html#cb202-34" tabindex="-1"></a>    <span class="fu">left_join</span>(df_blocks) <span class="sc">%&gt;%</span> </span>
@@ -619,11 +619,11 @@ Click to show code for the simulation
 <span id="cb202-41"><a href="planning-a-multi-location-design.html#cb202-41" tabindex="-1"></a>  pval_20diff[i] <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m, <span class="sc">~</span> trt, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">26</span>))))<span class="sc">$</span>contr)<span class="sc">$</span>p.value</span>
 <span id="cb202-42"><a href="planning-a-multi-location-design.html#cb202-42" tabindex="-1"></a>}</span></code></pre></div>
 </details>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-126-1.png" width="672" /></p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-127-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-135-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-136-1.png" width="672" /></p>
 <div class="sourceCode" id="cb203"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb203-1"><a href="planning-a-multi-location-design.html#cb203-1" tabindex="-1"></a><span class="co"># type I error rate</span></span>
 <span id="cb203-2"><a href="planning-a-multi-location-design.html#cb203-2" tabindex="-1"></a><span class="fu">mean</span>(pval_0diff<span class="sc">&lt;</span><span class="fl">0.05</span>)</span></code></pre></div>
-<pre><code>## [1] 0.91</code></pre>
+<pre><code>## [1] 0.05</code></pre>
 <div class="sourceCode" id="cb205"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb205-1"><a href="planning-a-multi-location-design.html#cb205-1" tabindex="-1"></a><span class="co"># statistical power</span></span>
 <span id="cb205-2"><a href="planning-a-multi-location-design.html#cb205-2" tabindex="-1"></a><span class="fu">mean</span>(pval_20diff<span class="sc">&lt;</span><span class="fl">0.05</span>)</span></code></pre></div>
 <pre><code>## [1] 0.9</code></pre>
@@ -662,9 +662,9 @@ Click to show code for the simulation
 <span id="cb207-26"><a href="planning-a-multi-location-design.html#cb207-26" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">block_re =</span> block_re)</span>
 <span id="cb207-27"><a href="planning-a-multi-location-design.html#cb207-27" tabindex="-1"></a>  </span>
 <span id="cb207-28"><a href="planning-a-multi-location-design.html#cb207-28" tabindex="-1"></a>  df_me <span class="ot">&lt;-</span> df_me <span class="sc">%&gt;%</span></span>
-<span id="cb207-29"><a href="planning-a-multi-location-design.html#cb207-29" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">mu_t =</span> <span class="fu">case_when</span>(trt <span class="sc">==</span> <span class="st">&quot;t10&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
-<span id="cb207-30"><a href="planning-a-multi-location-design.html#cb207-30" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t11&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
-<span id="cb207-31"><a href="planning-a-multi-location-design.html#cb207-31" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t12&quot;</span> <span class="sc">~</span> <span class="dv">180</span>, </span>
+<span id="cb207-29"><a href="planning-a-multi-location-design.html#cb207-29" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">mu_t =</span> <span class="fu">case_when</span>(trt <span class="sc">==</span> <span class="st">&quot;t11&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
+<span id="cb207-30"><a href="planning-a-multi-location-design.html#cb207-30" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t12&quot;</span> <span class="sc">~</span> <span class="dv">200</span>, </span>
+<span id="cb207-31"><a href="planning-a-multi-location-design.html#cb207-31" tabindex="-1"></a>                            trt <span class="sc">==</span> <span class="st">&quot;t13&quot;</span> <span class="sc">~</span> <span class="dv">180</span>, </span>
 <span id="cb207-32"><a href="planning-a-multi-location-design.html#cb207-32" tabindex="-1"></a>                            <span class="at">.default =</span> <span class="dv">220</span>)) <span class="sc">%&gt;%</span> </span>
 <span id="cb207-33"><a href="planning-a-multi-location-design.html#cb207-33" tabindex="-1"></a>    <span class="fu">left_join</span>(df_envs) <span class="sc">%&gt;%</span> </span>
 <span id="cb207-34"><a href="planning-a-multi-location-design.html#cb207-34" tabindex="-1"></a>    <span class="fu">left_join</span>(df_blocks) <span class="sc">%&gt;%</span> </span>
@@ -677,11 +677,11 @@ Click to show code for the simulation
 <span id="cb207-41"><a href="planning-a-multi-location-design.html#cb207-41" tabindex="-1"></a>  pval_20diff[i] <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m, <span class="sc">~</span> trt, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">0</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="dv">26</span>))))<span class="sc">$</span>contr)<span class="sc">$</span>p.value</span>
 <span id="cb207-42"><a href="planning-a-multi-location-design.html#cb207-42" tabindex="-1"></a>}</span></code></pre></div>
 </details>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-131-1.png" width="672" /></p>
-<p><img src="bookdownproj_files/figure-html/unnamed-chunk-132-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-140-1.png" width="672" /></p>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-141-1.png" width="672" /></p>
 <div class="sourceCode" id="cb208"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb208-1"><a href="planning-a-multi-location-design.html#cb208-1" tabindex="-1"></a><span class="co"># type I error rate</span></span>
 <span id="cb208-2"><a href="planning-a-multi-location-design.html#cb208-2" tabindex="-1"></a><span class="fu">mean</span>(pval_0diff<span class="sc">&lt;</span><span class="fl">0.05</span>)</span></code></pre></div>
-<pre><code>## [1] 0.7</code></pre>
+<pre><code>## [1] 0.05</code></pre>
 <div class="sourceCode" id="cb210"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb210-1"><a href="planning-a-multi-location-design.html#cb210-1" tabindex="-1"></a><span class="co"># statistical power</span></span>
 <span id="cb210-2"><a href="planning-a-multi-location-design.html#cb210-2" tabindex="-1"></a><span class="fu">mean</span>(pval_20diff<span class="sc">&lt;</span><span class="fl">0.05</span>)</span></code></pre></div>
 <pre><code>## [1] 0.67</code></pre>
