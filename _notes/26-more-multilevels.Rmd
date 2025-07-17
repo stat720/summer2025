@@ -1,5 +1,5 @@
 # More multilevel designs
-July 15th, 2025  
+July 16th, 2025  
 
 ## Announcements
 
@@ -38,13 +38,6 @@ m_multienv <- lmer(yield ~ gen + (1|county/block),
                     data = df_multienv)
 
 VarCorr(m_multienv)
-```
-
-```{r}
-df_multienv %>% 
-  group_by(county) %>% 
-  summarise(n_distinct(gen))
-  
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE}

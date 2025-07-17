@@ -410,15 +410,24 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="25.4.1" data-path="more-multilevel-designs.html"><a href="more-multilevel-designs.html#example-3"><i class="fa fa-check"></i><b>25.4.1</b> Example</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="26" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>26</b> Semester Project</a>
+<li class="chapter" data-level="26" data-path="planning-a-multi-location-design.html"><a href="planning-a-multi-location-design.html"><i class="fa fa-check"></i><b>26</b> Planning a multi-location design</a>
 <ul>
-<li class="chapter" data-level="26.1" data-path="semester-project.html"><a href="semester-project.html#learning-objectives"><i class="fa fa-check"></i><b>26.1</b> Learning objectives</a></li>
-<li class="chapter" data-level="26.2" data-path="semester-project.html"><a href="semester-project.html#partial-deadlines"><i class="fa fa-check"></i><b>26.2</b> Partial deadlines</a>
+<li class="chapter" data-level="26.1" data-path="planning-a-multi-location-design.html"><a href="planning-a-multi-location-design.html#announcements-16"><i class="fa fa-check"></i><b>26.1</b> Announcements</a></li>
+<li class="chapter" data-level="26.2" data-path="planning-a-multi-location-design.html"><a href="planning-a-multi-location-design.html#planning-a-multi-environment-trial"><i class="fa fa-check"></i><b>26.2</b> Planning a multi-environment trial</a>
 <ul>
-<li class="chapter" data-level="26.2.1" data-path="semester-project.html"><a href="semester-project.html#project-proposal---due-friday-june-20-at-2pm-ct"><i class="fa fa-check"></i><b>26.2.1</b> Project proposal - Due Friday June 20 at 2pm CT</a></li>
-<li class="chapter" data-level="26.2.2" data-path="semester-project.html"><a href="semester-project.html#written-report---due-wednesday-july-23-at-2pm-ct-for-peer-review"><i class="fa fa-check"></i><b>26.2.2</b> Written report - Due Wednesday July 23 at 2pm CT for peer review</a></li>
-<li class="chapter" data-level="26.2.3" data-path="semester-project.html"><a href="semester-project.html#oral-presentation---somewhere-between-july-21---august-1"><i class="fa fa-check"></i><b>26.2.3</b> Oral presentation - Somewhere between July 21 - August 1</a></li>
-<li class="chapter" data-level="26.2.4" data-path="semester-project.html"><a href="semester-project.html#practical-reads"><i class="fa fa-check"></i><b>26.2.4</b> Practical reads</a></li>
+<li class="chapter" data-level="26.2.1" data-path="planning-a-multi-location-design.html"><a href="planning-a-multi-location-design.html#on-the-importance-of-sample-size"><i class="fa fa-check"></i><b>26.2.1</b> On the importance of sample size</a></li>
+<li class="chapter" data-level="26.2.2" data-path="planning-a-multi-location-design.html"><a href="planning-a-multi-location-design.html#what-do-multi-environment-trials-look-like"><i class="fa fa-check"></i><b>26.2.2</b> What do multi-environment trials look like?</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>27</b> Semester Project</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="semester-project.html"><a href="semester-project.html#learning-objectives"><i class="fa fa-check"></i><b>27.1</b> Learning objectives</a></li>
+<li class="chapter" data-level="27.2" data-path="semester-project.html"><a href="semester-project.html#partial-deadlines"><i class="fa fa-check"></i><b>27.2</b> Partial deadlines</a>
+<ul>
+<li class="chapter" data-level="27.2.1" data-path="semester-project.html"><a href="semester-project.html#project-proposal---due-friday-june-20-at-2pm-ct"><i class="fa fa-check"></i><b>27.2.1</b> Project proposal - Due Friday June 20 at 2pm CT</a></li>
+<li class="chapter" data-level="27.2.2" data-path="semester-project.html"><a href="semester-project.html#written-report---due-wednesday-july-23-at-2pm-ct-for-peer-review"><i class="fa fa-check"></i><b>27.2.2</b> Written report - Due Wednesday July 23 at 2pm CT for peer review</a></li>
+<li class="chapter" data-level="27.2.3" data-path="semester-project.html"><a href="semester-project.html#oral-presentation---somewhere-between-july-21---august-1"><i class="fa fa-check"></i><b>27.2.3</b> Oral presentation - Somewhere between July 21 - August 1</a></li>
+<li class="chapter" data-level="27.2.4" data-path="semester-project.html"><a href="semester-project.html#practical-reads"><i class="fa fa-check"></i><b>27.2.4</b> Practical reads</a></li>
 </ul></li>
 </ul></li>
 <li class="divider"></li>
@@ -556,13 +565,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
 <div class="sourceCode" id="cb147"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb147-1"><a href="randomized-complete-block-designs.html#cb147-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258  0.7968
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258
+##  p.value
+##   0.7968
 ## 
 ## Results are averaged over the levels of: rep</code></pre>
 <div class="sourceCode" id="cb149"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb149-1"><a href="randomized-complete-block-designs.html#cb149-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.random, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_wheat_rcbd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258  0.7968
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -24.3 94.4 221  -0.258
+##  p.value
+##   0.7968
 ## 
 ## Degrees-of-freedom method: kenward-roger</code></pre>
 <div class="sourceCode" id="cb151"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb151-1"><a href="randomized-complete-block-designs.html#cb151-1" tabindex="-1"></a><span class="fu">bind_rows</span>(<span class="fu">as.data.frame</span>(<span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen)[<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>,]) <span class="sc">%&gt;%</span> <span class="fu">transmute</span>(gen, emmean, SE, <span class="at">blocks =</span> <span class="st">&quot;fixed&quot;</span>),</span>
@@ -679,13 +692,17 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
 <div class="sourceCode" id="cb162"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb162-1"><a href="randomized-complete-block-designs.html#cb162-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.fixed, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_soy_ibd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -2.34 1.18 125  -1.982  0.0496
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,     -2.34 1.18 125  -1.982
+##  p.value
+##   0.0496
 ## 
 ## Results are averaged over the levels of: block</code></pre>
 <div class="sourceCode" id="cb164"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb164-1"><a href="randomized-complete-block-designs.html#cb164-1" tabindex="-1"></a><span class="fu">emmeans</span>(m_block.as.random, <span class="sc">~</span>gen, <span class="at">contr =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="dv">1</span>, <span class="sc">-</span><span class="dv">1</span>, <span class="fu">rep</span>(<span class="dv">0</span>, <span class="fu">n_distinct</span>(dat_soy_ibd<span class="sc">$</span>gen)<span class="sc">-</span><span class="dv">2</span>))))<span class="sc">$</span>contr</span></code></pre></div>
-<pre><code>##  contrast                                                        estimate   SE  df t.ratio p.value
-##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      -2.4 1.17 129  -2.054  0.0420
+<pre><code>##  contrast                                                        estimate   SE  df t.ratio
+##  c(1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,      -2.4 1.17 129  -2.054
+##  p.value
+##   0.0420
 ## 
 ## Degrees-of-freedom method: kenward-roger</code></pre>
 

@@ -40,8 +40,8 @@ fig:unnamed-chunk-56
 tab:unnamed-chunk-93
 tab:unnamed-chunk-99
 fig:unnamed-chunk-101
-tab:unnamed-chunk-110
-tab:unnamed-chunk-113
+tab:unnamed-chunk-109
+tab:unnamed-chunk-112
 welcome-to-stat-720
 about-this-course
 logistics
@@ -212,6 +212,11 @@ example-2
 marginal-means
 subsampling
 example-3
+planning-a-multi-location-design
+announcements-16
+planning-a-multi-environment-trial
+on-the-importance-of-sample-size
+what-do-multi-environment-trials-look-like
 semester-project
 learning-objectives
 partial-deadlines

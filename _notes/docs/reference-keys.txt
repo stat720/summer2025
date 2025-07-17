@@ -256,3 +256,8 @@ example-2
 marginal-means
 subsampling
 example-3
+planning-a-multi-location-design
+announcements-16
+planning-a-multi-environment-trial
+the-importance-of-sample-size
+what-do-multi-environment-trials-look-like
