@@ -475,7 +475,20 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Potential problems: carryover or residual effects.</li>
 <li>More in Chapter 29 in the Messy Data book.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-163"></span>
+<p><strong>Pros:</strong></p>
+<ul>
+<li>Fewer EUs (probably living beings) required</li>
+<li>Power (?)</li>
+<li>Between-EU variability is accounted for in the model</li>
+</ul>
+<p><strong>Cons:</strong></p>
+<ul>
+<li>Carryover (residual) effects<br />
+</li>
+<li>Power (!?)</li>
+<li>Longer duration of the experiment</li>
+</ul>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-128"></span>
 <img src="../figures/crossover.jpg" alt="Schematic representation of a crossover design" width="100%" />
 <p class="caption">
 Figure 27.1: Schematic representation of a crossover design
@@ -492,39 +505,19 @@ Then, all persons were given the other drug they hadn’t taken yet.</p>
 <span id="cb213-2"><a href="crossover-designs-i.html#cb213-2" tabindex="-1"></a>df<span class="sc">$</span>Period <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>Period)</span>
 <span id="cb213-3"><a href="crossover-designs-i.html#cb213-3" tabindex="-1"></a>df<span class="sc">$</span>Person <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>Person)</span>
 <span id="cb213-4"><a href="crossover-designs-i.html#cb213-4" tabindex="-1"></a></span>
-<span id="cb213-5"><a href="crossover-designs-i.html#cb213-5" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Y <span class="sc">~</span> Trt <span class="sc">+</span> Period <span class="sc">+</span> Seq <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Seq<span class="sc">:</span>Person) , <span class="at">data =</span> df)</span></code></pre></div>
-<pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
-<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="crossover-designs-i.html#cb215-1" tabindex="-1"></a><span class="fu">summary</span>(m)</span></code></pre></div>
-<pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
-## Formula: Y ~ Trt + Period + Seq + (1 | Seq:Person)
-##    Data: df
+<span id="cb213-5"><a href="crossover-designs-i.html#cb213-5" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Y <span class="sc">~</span> Seq <span class="sc">+</span> Trt <span class="sc">+</span> Period <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Seq<span class="sc">:</span>Person) , <span class="at">data =</span> df)</span>
+<span id="cb213-6"><a href="crossover-designs-i.html#cb213-6" tabindex="-1"></a></span>
+<span id="cb213-7"><a href="crossover-designs-i.html#cb213-7" tabindex="-1"></a>car<span class="sc">::</span><span class="fu">Anova</span>(m, <span class="at">type =</span> <span class="dv">3</span>, <span class="at">test.statistic =</span> <span class="st">&quot;F&quot;</span>)</span></code></pre></div>
+<pre><code>## Analysis of Deviance Table (Type III Wald F tests with Kenward-Roger df)
 ## 
-## REML criterion at convergence: 84.2
-## 
-## Scaled residuals: 
-##      Min       1Q   Median       3Q      Max 
-## -1.56885 -0.69596  0.07667  0.53180  2.39456 
-## 
-## Random effects:
-##  Groups     Name        Variance Std.Dev.
-##  Seq:Person (Intercept) 0.000    0.00    
-##  Residual               1.123    1.06    
-## Number of obs: 28, groups:  Seq:Person, 14
-## 
-## Fixed effects:
-##              Estimate Std. Error t value
-## (Intercept)  0.008333   0.202339   0.041
-## Trt1         0.360417   0.202339   1.781
-## Period1     -0.477083   0.202339  -2.358
-## Seq1         0.408333   0.202339   2.018
-## 
-## Correlation of Fixed Effects:
-##         (Intr) Trt1  Perid1
-## Trt1    0.000              
-## Period1 0.000  0.143       
-## Seq1    0.143  0.000 0.000 
-## optimizer (nloptwrap) convergence code: 0 (OK)
-## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+## Response: Y
+##                  F Df Df.res  Pr(&gt;F)  
+## (Intercept) 0.0017  1     12 0.96783  
+## Seq         4.0726  1     12 0.06651 .
+## Trt         3.1729  1     12 0.10018  
+## Period      5.5594  1     12 0.03619 *
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1</code></pre>
 </div>
 <div id="variations-to-this-example" class="section level2 hasAnchor" number="27.3">
 <h2><span class="header-section-number">27.3</span> Variations to this example<a href="crossover-designs-i.html#variations-to-this-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>

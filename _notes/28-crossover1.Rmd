@@ -15,7 +15,17 @@ July 21st, 2025
 - Potential problems: carryover or residual effects. 
 - More in Chapter 29 in the Messy Data book. 
 
+**Pros:**
 
+- Fewer EUs (probably living beings) required 
+- Power (?) 
+- Between-EU variability is accounted for in the model  
+
+**Cons:** 
+
+- Carryover (residual) effects  
+- Power (!?) 
+- Longer duration of the experiment 
 
 ```{r echo=FALSE, fig.cap="Schematic representation of a crossover design", out.width = '100%'}
 knitr::include_graphics("../figures/crossover.jpg")
@@ -34,15 +44,14 @@ library(tidyverse)
 ```
 
 
-```{r}
+```{r message=FALSE, warning=FALSE}
 df <- read.csv("../data/grizzle_messydata.csv")
 df$Period <- as.factor(df$Period)
 df$Person <- as.factor(df$Person)
 
-m <- lmer(Y ~ Trt + Period + Seq + (1|Seq:Person) , data = df)
+m <- lmer(Y ~ Seq + Trt + Period + (1|Seq:Person) , data = df)
 
-summary(m)
-
+car::Anova(m, type = 3, test.statistic = "F")
 ```
 
 ## Variations to this example 
