@@ -78,7 +78,6 @@ df_me <- expand.grid(trt = trts,
                      rep = 1:n_rep, 
                      environm = paste("e", 11:(10+n_envs), sep = ""))
 
-diff0 <- numeric(n_sims)
 pval_0diff <- numeric(n_sims)
 pval_20diff <- numeric(n_sims)
 
@@ -105,7 +104,6 @@ for (i in 1:n_sims) {
   
   m <- lmer(y ~ trt + (1|environm/rep), data = df_me)
   pval_0diff[i] <- as.data.frame(emmeans(m, ~ trt, contr = list(c(1, -1, rep(0, 28))))$contr)$p.value
-  diff0[i] <- as.data.frame(emmeans(m, ~ trt, contr = list(c(1, -1, rep(0, 28))))$contr)$estimate
   pval_20diff[i] <- as.data.frame(emmeans(m, ~ trt, contr = list(c(1, 0, 0, -1, rep(0, 26))))$contr)$p.value
 } 
 ```
@@ -127,9 +125,6 @@ hist(pval_20diff, main = "P-values testing a difference that, in reality, is 20.
      breaks = seq(0, 1, by = 0.05))
 ```
 
-```{r}
-hist(diff0)
-```
 
 ```{r}
 # type I error rate

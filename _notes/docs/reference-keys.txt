@@ -261,3 +261,9 @@ announcements-16
 planning-a-multi-environment-trial
 the-importance-of-sample-size
 what-do-multi-environment-trials-look-like
+on-the-importance-of-sample-size
+what-do-the-results-for-different-multi-environment-trials-look-like
+crossover-designs-i
+announcements-17
+crossover-designs
+variations-to-this-example
