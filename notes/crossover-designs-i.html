@@ -467,66 +467,71 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <div id="crossover-designs" class="section level2 hasAnchor" number="27.2">
 <h2><span class="header-section-number">27.2</span> Crossover designs<a href="crossover-designs-i.html#crossover-designs" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li><p>Apply treatments to the same experimental unit sequentially, to eliminate between-experimental unit variation when comparing treatments</p></li>
-<li><p><span class="math inline">\(t\)</span> treatments are compared where each treatment is observed on each of the experimental units (i.e., the treatments are applied in a specified sequence to the experimental units).</p></li>
-<li><p>Mostly applied in animal studies.</p></li>
-<li><p>More in Chapter 29 in the Messy Data book.</p></li>
-<li><p>In non-crossover designs: <span class="math inline">\(y_{ik} = \mu + T_i+ \varepsilon_{ik}\)</span>, where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment and the <span class="math inline">\(k\)</span>th individual, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, and <span class="math inline">\(\varepsilon_{ij}\)</span> is the residual that includes the variability between individuals (i.e., experimental units).</p></li>
-<li><p>In crossover designs, <span class="math inline">\(y_{ijkl} = \mu + T_i + P_j + u_k + \varepsilon_{ijkl}\)</span>,where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(j\)</span>th period for the <span class="math inline">\(k\)</span>th individual that recieved the treatments in the <span class="math inline">\(l\)</span>th sequence, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(P_j\)</span> is the effect of the <span class="math inline">\(j\)</span>th period, <span class="math inline">\(u_k\)</span> is the (random) effect of the <span class="math inline">\(k\)</span>th individual under the <span class="math inline">\(l\)</span>th sequence, and <span class="math inline">\(\varepsilon_{ijkl}\)</span> is the residual.</p></li>
+<li>Apply treatments to the same experimental unit sequentially, to eliminate between-experimental unit variation when comparing treatments</li>
+<li><span class="math inline">\(t\)</span> treatments are compared where each treatment is observed on each of the experimental units (i.e., the treatments are applied in a specified sequence to the experimental units).</li>
+<li>Mostly applied in animal studies.</li>
+<li>In non-crossover designs: <span class="math inline">\(y_{ik} = \mu + T_i+ \varepsilon_{ik}\)</span>, where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment and the <span class="math inline">\(k\)</span>th individual, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, and <span class="math inline">\(\varepsilon_{ij}\)</span> is the residual that includes the variability between individuals (i.e., experimental units).</li>
+<li>In crossover designs, <span class="math inline">\(y_{ijkl} = \mu + T_i + P_j + S_k + u_l + \varepsilon_{ijkl}\)</span>,where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(j\)</span>th period for the <span class="math inline">\(l\)</span>th individual that received the treatments in the <span class="math inline">\(k\)</span>th sequence, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(P_j\)</span> is the effect of the <span class="math inline">\(j\)</span>th period, <span class="math inline">\(S_k\)</span> is the effect of the <span class="math inline">\(k\)</span>th sequence, <span class="math inline">\(u_l\)</span> is the (random) effect of the <span class="math inline">\(l\)</span>th individual under the <span class="math inline">\(k\)</span>th sequence, and <span class="math inline">\(\varepsilon_{ijkl}\)</span> is the residual.</li>
+<li>Potential problems: carryover or residual effects.</li>
+<li>More in Chapter 29 in the Messy Data book.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-128"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-163"></span>
 <img src="../figures/crossover.jpg" alt="Schematic representation of a crossover design" width="100%" />
 <p class="caption">
 Figure 27.1: Schematic representation of a crossover design
 </p>
 </div>
 <p><strong>Example study the effect of <span class="math inline">\(k\)</span> treatments on response <span class="math inline">\(y\)</span>:</strong></p>
-<p>This study was published in Grizzle (1965).
-In this study, the application of treatments was performed in two periods.
-First, 28 persons were randomly applied 1 of 2 treatments, and the trait of study was measured at the end of the treatment duration.
-Then, all persons were applied the other treatment.</p>
+<p>This study was published in <a href="https://www.jstor.org/stable/2528104?seq=1">Grizzle (1965)</a>.
+This study studied the effect of 2 drugs (A and B) on humans.
+First, 28 persons were randomly assigned one of two drugs, and the trait of study was measured at the end of the treatment duration.
+Then, all persons were given the other drug they hadn’t taken yet.</p>
 <div class="sourceCode" id="cb212"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb212-1"><a href="crossover-designs-i.html#cb212-1" tabindex="-1"></a><span class="fu">library</span>(lme4)</span>
 <span id="cb212-2"><a href="crossover-designs-i.html#cb212-2" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div>
 <div class="sourceCode" id="cb213"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb213-1"><a href="crossover-designs-i.html#cb213-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/grizzle_messydata.csv&quot;</span>)</span>
 <span id="cb213-2"><a href="crossover-designs-i.html#cb213-2" tabindex="-1"></a>df<span class="sc">$</span>Period <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>Period)</span>
 <span id="cb213-3"><a href="crossover-designs-i.html#cb213-3" tabindex="-1"></a>df<span class="sc">$</span>Person <span class="ot">&lt;-</span> <span class="fu">as.factor</span>(df<span class="sc">$</span>Person)</span>
 <span id="cb213-4"><a href="crossover-designs-i.html#cb213-4" tabindex="-1"></a></span>
-<span id="cb213-5"><a href="crossover-designs-i.html#cb213-5" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Y <span class="sc">~</span> Trt <span class="sc">+</span> Period <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Seq<span class="sc">:</span>Person) , <span class="at">data =</span> df)</span>
-<span id="cb213-6"><a href="crossover-designs-i.html#cb213-6" tabindex="-1"></a></span>
-<span id="cb213-7"><a href="crossover-designs-i.html#cb213-7" tabindex="-1"></a><span class="fu">summary</span>(m)</span></code></pre></div>
+<span id="cb213-5"><a href="crossover-designs-i.html#cb213-5" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">lmer</span>(Y <span class="sc">~</span> Trt <span class="sc">+</span> Period <span class="sc">+</span> Seq <span class="sc">+</span> (<span class="dv">1</span><span class="sc">|</span>Seq<span class="sc">:</span>Person) , <span class="at">data =</span> df)</span></code></pre></div>
+<pre><code>## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
+<div class="sourceCode" id="cb215"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb215-1"><a href="crossover-designs-i.html#cb215-1" tabindex="-1"></a><span class="fu">summary</span>(m)</span></code></pre></div>
 <pre><code>## Linear mixed model fit by REML [&#39;lmerMod&#39;]
-## Formula: Y ~ Trt + Period + (1 | Seq:Person)
+## Formula: Y ~ Trt + Period + Seq + (1 | Seq:Person)
 ##    Data: df
 ## 
-## REML criterion at convergence: 86.7
+## REML criterion at convergence: 84.2
 ## 
 ## Scaled residuals: 
-##     Min      1Q  Median      3Q     Max 
-## -1.7918 -0.7318  0.1402  0.6980  1.9359 
+##      Min       1Q   Median       3Q      Max 
+## -1.56885 -0.69596  0.07667  0.53180  2.39456 
 ## 
 ## Random effects:
 ##  Groups     Name        Variance Std.Dev.
-##  Seq:Person (Intercept) 0.01502  0.1226  
-##  Residual               1.24534  1.1159  
+##  Seq:Person (Intercept) 0.000    0.00    
+##  Residual               1.123    1.06    
 ## Number of obs: 28, groups:  Seq:Person, 14
 ## 
 ## Fixed effects:
-##             Estimate Std. Error t value
-## (Intercept)  -0.0500     0.2134  -0.234
-## Trt1          0.3604     0.2131   1.691
-## Period1      -0.4771     0.2131  -2.239
+##              Estimate Std. Error t value
+## (Intercept)  0.008333   0.202339   0.041
+## Trt1         0.360417   0.202339   1.781
+## Period1     -0.477083   0.202339  -2.358
+## Seq1         0.408333   0.202339   2.018
 ## 
 ## Correlation of Fixed Effects:
-##         (Intr) Trt1 
-## Trt1    0.000       
-## Period1 0.000  0.143</code></pre>
+##         (Intr) Trt1  Perid1
+## Trt1    0.000              
+## Period1 0.000  0.143       
+## Seq1    0.143  0.000 0.000 
+## optimizer (nloptwrap) convergence code: 0 (OK)
+## boundary (singular) fit: see help(&#39;isSingular&#39;)</code></pre>
 </div>
 <div id="variations-to-this-example" class="section level2 hasAnchor" number="27.3">
 <h2><span class="header-section-number">27.3</span> Variations to this example<a href="crossover-designs-i.html#variations-to-this-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <ul>
-<li>More than 2 periods</li>
+<li>More than 2 periods - repeated measures</li>
 <li>More than 2 treatments</li>
-<li>carryover / no carryover</li>
+<li>Carryover / no carryover effects</li>
 </ul>
 
 </div>
