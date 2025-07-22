@@ -8,16 +8,16 @@ July 21
 
 July 22 
 : Crossover designs II   
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/crossover-designs-ii.html)
 
 July 23 
 : Wrap-up   
   : [](#)
 
 July 24 
-: TBD   
+: Work on project   
   : [](#)
 
 July 25
-: TBD   
+: Work on project   
   : [](#)
