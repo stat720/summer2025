@@ -10,29 +10,25 @@ July 22nd, 2025
 
 ## Crossover designs  
 
+**Baseline:** 
+
 - Apply treatments to the same experimental unit sequentially, to eliminate between-experimental unit variation when comparing treatments 
-- $t$ treatments are compared where each treatment is observed on each of the experimental units (i.e., the treatments are applied in a specified sequence to the experimental units). 
-- Mostly applied in animal studies. 
-- In non-crossover designs: $y_{ik} = \mu + T_i+ \varepsilon_{ik}$, where $y_{ijk}$ is the observation for the $i$th treatment and the $k$th individual, $T_i$ is the effect of the $i$th treatment, and $\varepsilon_{ij}$ is the residual that includes the variability between individuals (i.e., experimental units). 
-- In crossover designs, $y_{ijkl} = \mu + T_i + P_j + S_k + u_l + \varepsilon_{ijkl}$,where $y_{ijk}$ is the observation for the $i$th treatment, $j$th period for the $l$th individual that received the treatments in the $k$th sequence, $T_i$ is the effect of the $i$th treatment, $P_j$ is the effect of the $j$th period, $S_k$ is the effect of the $k$th sequence, $u_l$ is the (random) effect of the $l$th individual under the $k$th sequence, and $\varepsilon_{ijkl}$ is the residual. 
-- More in Chapter 29 in the Messy Data book. 
-
-**Pros:**
-
-- Fewer EUs (probably living beings) required 
+- Fewer EUs (probably living beings) are required than in non-crossover designs 
 - Power (?) 
 - Between-EU variability is accounted for in the model  
+- Sources of variability:
+  - Treatment ($\geq$2) 
+  - Period ($\geq$2) 
+  - Sequence ($\geq$2) 
+  - Carryover (residual) effects -- may or may not be there 
+  - Between-individuals 
+- What is the difference between crossover designs capturing between-individuals variability, and subsampling?  
 
-**Cons:** 
 
-- Carryover (residual) effects  
-- Power (!?) 
-- Longer duration of the experiment 
-
-Overall model:  
+**Overall model:**  
 
 $$y_{ijklm} = \mu + T_i + P_j + S_k +PT_{l} + u_m + \varepsilon_{ijklm}, \\
-u{m} \sim N(0, \sigma^2_u), \\
+u_{m} \sim N(0, \sigma^2_u), \\
 \varepsilon_{ijklm} \sim N(0, \sigma^2_\varepsilon),$$
 where:
 
@@ -45,6 +41,7 @@ where:
 and $\varepsilon_{ijkl}$ is the residual. 
 
 
+
 ```{r echo=FALSE, fig.cap="Schematic representation of a crossover design", out.width = '100%'}
 knitr::include_graphics("../figures/crossover.jpg")
 ```
@@ -55,8 +52,13 @@ knitr::include_graphics("../figures/crossover.jpg")
 
 6 cows were used to test 3 different treatments in a crossover design.  
 
+- Repeated measures. Now we are assuming compound symmetry (a specific type of correlation function). 
+- How does carryover affect power? 
+
+
 ```{r message=FALSE, warning=FALSE}
-df <- read.csv("../data/cow_prod_cox.csv")
+url <- "https://raw.githubusercontent.com/stat720/summer2025/refs/heads/main/data/cow_prod_cox.csv"
+df <- read.csv(url)
 df
 ```
 
@@ -69,6 +71,8 @@ m_milk.nocarryover <- lmer(milk_production ~ Sequence + Period + Treatment + (1|
 emmeans(m_milk.nocarryover, ~ Treatment )
 
 ```
+
+
 ```{r}
 m_milk.carryover <- lmer(milk_production ~ Sequence + Period + Treatment + Prior_trt + (1|Sequence:Cow),
                data = df)
@@ -76,8 +80,5 @@ m_milk.carryover <- lmer(milk_production ~ Sequence + Period + Treatment + Prior
 emmeans(m_milk.carryover, ~ Treatment )
 ```
 
-**Note:** 
 
-- Repeated measures. Now we are assuming compound symmetry (a specific type of correlation function). 
-- How does carryover affect power? 
 

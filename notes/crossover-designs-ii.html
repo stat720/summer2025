@@ -474,30 +474,26 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </div>
 <div id="crossover-designs-1" class="section level2 hasAnchor" number="28.2">
 <h2><span class="header-section-number">28.2</span> Crossover designs<a href="crossover-designs-ii.html#crossover-designs-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><strong>Baseline:</strong></p>
 <ul>
 <li>Apply treatments to the same experimental unit sequentially, to eliminate between-experimental unit variation when comparing treatments</li>
-<li><span class="math inline">\(t\)</span> treatments are compared where each treatment is observed on each of the experimental units (i.e., the treatments are applied in a specified sequence to the experimental units).</li>
-<li>Mostly applied in animal studies.</li>
-<li>In non-crossover designs: <span class="math inline">\(y_{ik} = \mu + T_i+ \varepsilon_{ik}\)</span>, where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment and the <span class="math inline">\(k\)</span>th individual, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, and <span class="math inline">\(\varepsilon_{ij}\)</span> is the residual that includes the variability between individuals (i.e., experimental units).</li>
-<li>In crossover designs, <span class="math inline">\(y_{ijkl} = \mu + T_i + P_j + S_k + u_l + \varepsilon_{ijkl}\)</span>,where <span class="math inline">\(y_{ijk}\)</span> is the observation for the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(j\)</span>th period for the <span class="math inline">\(l\)</span>th individual that received the treatments in the <span class="math inline">\(k\)</span>th sequence, <span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment, <span class="math inline">\(P_j\)</span> is the effect of the <span class="math inline">\(j\)</span>th period, <span class="math inline">\(S_k\)</span> is the effect of the <span class="math inline">\(k\)</span>th sequence, <span class="math inline">\(u_l\)</span> is the (random) effect of the <span class="math inline">\(l\)</span>th individual under the <span class="math inline">\(k\)</span>th sequence, and <span class="math inline">\(\varepsilon_{ijkl}\)</span> is the residual.</li>
-<li>More in Chapter 29 in the Messy Data book.</li>
-</ul>
-<p><strong>Pros:</strong></p>
-<ul>
-<li>Fewer EUs (probably living beings) required</li>
+<li>Fewer EUs (probably living beings) are required than in non-crossover designs</li>
 <li>Power (?)</li>
-<li>Between-EU variability is accounted for in the model</li>
-</ul>
-<p><strong>Cons:</strong></p>
-<ul>
-<li>Carryover (residual) effects<br />
+<li>Between-EU variability is accounted for in the model<br />
 </li>
-<li>Power (!?)</li>
-<li>Longer duration of the experiment</li>
+<li>Sources of variability:
+<ul>
+<li>Treatment ($$2)</li>
+<li>Period ($$2)</li>
+<li>Sequence ($$2)</li>
+<li>Carryover (residual) effects – may or may not be there</li>
+<li>Between-individuals</li>
+</ul></li>
+<li>What is the difference between crossover designs capturing between-individuals variability, and subsampling?</li>
 </ul>
-<p>Overall model:</p>
+<p><strong>Overall model:</strong></p>
 <p><span class="math display">\[y_{ijklm} = \mu + T_i + P_j + S_k +PT_{l} + u_m + \varepsilon_{ijklm}, \\
-u{m} \sim N(0, \sigma^2_u), \\
+u_{m} \sim N(0, \sigma^2_u), \\
 \varepsilon_{ijklm} \sim N(0, \sigma^2_\varepsilon),\]</span>
 where:</p>
 <ul>
@@ -510,7 +506,7 @@ where:</p>
 <li><span class="math inline">\(u_{mk}\)</span> is the (random) effect of the <span class="math inline">\(m\)</span>th individual under the <span class="math inline">\(k\)</span>th sequence,
 and <span class="math inline">\(\varepsilon_{ijkl}\)</span> is the residual.</li>
 </ul>
-<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-164"></span>
+<div class="figure"><span style="display:block;" id="fig:unnamed-chunk-133"></span>
 <img src="../figures/crossover.jpg" alt="Schematic representation of a crossover design" width="100%" />
 <p class="caption">
 Figure 28.1: Schematic representation of a crossover design
@@ -520,8 +516,13 @@ Figure 28.1: Schematic representation of a crossover design
 <div id="applied-example" class="section level2 hasAnchor" number="28.3">
 <h2><span class="header-section-number">28.3</span> Applied example<a href="crossover-designs-ii.html#applied-example" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>6 cows were used to test 3 different treatments in a crossover design.</p>
-<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="crossover-designs-ii.html#cb219-1" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;../data/cow_prod_cox.csv&quot;</span>)</span>
-<span id="cb219-2"><a href="crossover-designs-ii.html#cb219-2" tabindex="-1"></a>df</span></code></pre></div>
+<ul>
+<li>Repeated measures. Now we are assuming compound symmetry (a specific type of correlation function).</li>
+<li>How does carryover affect power?</li>
+</ul>
+<div class="sourceCode" id="cb219"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb219-1"><a href="crossover-designs-ii.html#cb219-1" tabindex="-1"></a>url <span class="ot">&lt;-</span> <span class="st">&quot;https://raw.githubusercontent.com/stat720/summer2025/refs/heads/main/data/cow_prod_cox.csv&quot;</span></span>
+<span id="cb219-2"><a href="crossover-designs-ii.html#cb219-2" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(url)</span>
+<span id="cb219-3"><a href="crossover-designs-ii.html#cb219-3" tabindex="-1"></a>df</span></code></pre></div>
 <pre><code>##    Cow Sequence Period Treatment Prior_trt milk_production
 ## 1    1      ABC      1         A         O              38
 ## 2    1      ABC      2         B         A              25
@@ -566,11 +567,6 @@ Figure 28.1: Schematic representation of a crossover design
 ## Results are averaged over the levels of: Sequence, Prior_trt 
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
-<p><strong>Note:</strong></p>
-<ul>
-<li>Repeated measures. Now we are assuming compound symmetry (a specific type of correlation function).</li>
-<li>How does carryover affect power?</li>
-</ul>
 
 </div>
 </div>
