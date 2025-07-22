@@ -17,9 +17,9 @@ July 22nd, 2025
 - Power (?) 
 - Between-EU variability is accounted for in the model  
 - Sources of variability:
-  - Treatment ($\geq$2) 
-  - Period ($\geq$2) 
-  - Sequence ($\geq$2) 
+  - Treatment ( $\geq$ 2) 
+  - Period ( $\geq$ 2) 
+  - Sequence ( $\geq$ 2) 
   - Carryover (residual) effects 
   - Between-individuals 
 - The EUs are randomized to sequences
