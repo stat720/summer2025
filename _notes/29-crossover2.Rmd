@@ -20,14 +20,15 @@ July 22nd, 2025
   - Treatment ($\geq$2) 
   - Period ($\geq$2) 
   - Sequence ($\geq$2) 
-  - Carryover (residual) effects -- may or may not be there 
+  - Carryover (residual) effects 
   - Between-individuals 
+- The EUs are randomized to sequences
 - What is the difference between crossover designs capturing between-individuals variability, and subsampling?  
 
 
 **Overall model:**  
 
-$$y_{ijklm} = \mu + T_i + P_j + S_k +PT_{l} + u_m + \varepsilon_{ijklm}, \\
+$$y_{ijklm} = \mu + T_i + P_j + S_k +C_{l} + u_m + \varepsilon_{ijklm}, \\
 u_{m} \sim N(0, \sigma^2_u), \\
 \varepsilon_{ijklm} \sim N(0, \sigma^2_\varepsilon),$$
 where:
@@ -36,13 +37,25 @@ where:
 - $T_i$ is the effect of the $i$th treatment, 
 - $P_j$ is the effect of the $j$th period, 
 - $S_k$ is the effect of the $k$th sequence, 
-- $PT_{l}$ is the carryover effect of the $l$th treatment,   
+- $C_{l}$ is the carryover effect of the $l$th treatment,   
 - $u_{mk}$ is the (random) effect of the $m$th individual under the $k$th sequence, 
 and $\varepsilon_{ijkl}$ is the residual. 
 
+**Considerations:**
+
+**Carryover effects:**
+
+- Experiment designs may be better or worsely designed to separate carryover effect from treatment effect. 
+  - Type of treatment, adequate time between treatments ("wash out" period) 
+  - Some treatments may damage the individual for indefinite time (e.g., damaging the liver) 
+
+**Repeated measures:**
+
+- When $P > 2$, the several measurements on the same individual assume a compound symmetry correlation function. 
+- Other types of correlation functions assume that the correlation "wears out" with time (e.g., AR(1) correlation function) 
 
 
-```{r echo=FALSE, fig.cap="Schematic representation of a crossover design", out.width = '100%'}
+```{r echo=FALSE, fig.cap="Schematic representation of a 2x2 crossover design", out.width = '100%'}
 knitr::include_graphics("../figures/crossover.jpg")
 ```
 
@@ -81,4 +94,6 @@ emmeans(m_milk.carryover, ~ Treatment )
 ```
 
 
+## Tomorrow 
 
+- Wrapup

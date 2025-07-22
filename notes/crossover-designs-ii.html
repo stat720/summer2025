@@ -430,6 +430,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="28.1" data-path="crossover-designs-ii.html"><a href="crossover-designs-ii.html#announcements-18"><i class="fa fa-check"></i><b>28.1</b> Announcements</a></li>
 <li class="chapter" data-level="28.2" data-path="crossover-designs-ii.html"><a href="crossover-designs-ii.html#crossover-designs-1"><i class="fa fa-check"></i><b>28.2</b> Crossover designs</a></li>
 <li class="chapter" data-level="28.3" data-path="crossover-designs-ii.html"><a href="crossover-designs-ii.html#applied-example"><i class="fa fa-check"></i><b>28.3</b> Applied example</a></li>
+<li class="chapter" data-level="28.4" data-path="crossover-designs-ii.html"><a href="crossover-designs-ii.html#tomorrow-11"><i class="fa fa-check"></i><b>28.4</b> Tomorrow</a></li>
 </ul></li>
 <li class="chapter" data-level="29" data-path="semester-project.html"><a href="semester-project.html"><i class="fa fa-check"></i><b>29</b> Semester Project</a>
 <ul>
@@ -486,13 +487,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li>Treatment ($$2)</li>
 <li>Period ($$2)</li>
 <li>Sequence ($$2)</li>
-<li>Carryover (residual) effects – may or may not be there</li>
+<li>Carryover (residual) effects</li>
 <li>Between-individuals</li>
 </ul></li>
+<li>The EUs are randomized to sequences</li>
 <li>What is the difference between crossover designs capturing between-individuals variability, and subsampling?</li>
 </ul>
 <p><strong>Overall model:</strong></p>
-<p><span class="math display">\[y_{ijklm} = \mu + T_i + P_j + S_k +PT_{l} + u_m + \varepsilon_{ijklm}, \\
+<p><span class="math display">\[y_{ijklm} = \mu + T_i + P_j + S_k +C_{l} + u_m + \varepsilon_{ijklm}, \\
 u_{m} \sim N(0, \sigma^2_u), \\
 \varepsilon_{ijklm} \sim N(0, \sigma^2_\varepsilon),\]</span>
 where:</p>
@@ -501,15 +503,29 @@ where:</p>
 <li><span class="math inline">\(T_i\)</span> is the effect of the <span class="math inline">\(i\)</span>th treatment,</li>
 <li><span class="math inline">\(P_j\)</span> is the effect of the <span class="math inline">\(j\)</span>th period,</li>
 <li><span class="math inline">\(S_k\)</span> is the effect of the <span class="math inline">\(k\)</span>th sequence,</li>
-<li><span class="math inline">\(PT_{l}\)</span> is the carryover effect of the <span class="math inline">\(l\)</span>th treatment,<br />
+<li><span class="math inline">\(C_{l}\)</span> is the carryover effect of the <span class="math inline">\(l\)</span>th treatment,<br />
 </li>
 <li><span class="math inline">\(u_{mk}\)</span> is the (random) effect of the <span class="math inline">\(m\)</span>th individual under the <span class="math inline">\(k\)</span>th sequence,
 and <span class="math inline">\(\varepsilon_{ijkl}\)</span> is the residual.</li>
 </ul>
+<p><strong>Considerations:</strong></p>
+<p><strong>Carryover effects:</strong></p>
+<ul>
+<li>Experiment designs may be better or worsely designed to separate carryover effect from treatment effect.
+<ul>
+<li>Type of treatment, adequate time between treatments (“wash out” period)</li>
+<li>Some treatments may damage the individual for indefinite time (e.g., damaging the liver)</li>
+</ul></li>
+</ul>
+<p><strong>Repeated measures:</strong></p>
+<ul>
+<li>When <span class="math inline">\(P &gt; 2\)</span>, the several measurements on the same individual assume a compound symmetry correlation function.</li>
+<li>Other types of correlation functions assume that the correlation “wears out” with time (e.g., AR(1) correlation function)</li>
+</ul>
 <div class="figure"><span style="display:block;" id="fig:unnamed-chunk-133"></span>
-<img src="../figures/crossover.jpg" alt="Schematic representation of a crossover design" width="100%" />
+<img src="../figures/crossover.jpg" alt="Schematic representation of a 2x2 crossover design" width="100%" />
 <p class="caption">
-Figure 28.1: Schematic representation of a crossover design
+Figure 28.1: Schematic representation of a 2x2 crossover design
 </p>
 </div>
 </div>
@@ -567,6 +583,12 @@ Figure 28.1: Schematic representation of a crossover design
 ## Results are averaged over the levels of: Sequence, Prior_trt 
 ## Degrees-of-freedom method: kenward-roger 
 ## Confidence level used: 0.95</code></pre>
+</div>
+<div id="tomorrow-11" class="section level2 hasAnchor" number="28.4">
+<h2><span class="header-section-number">28.4</span> Tomorrow<a href="crossover-designs-ii.html#tomorrow-11" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Wrapup</li>
+</ul>
 
 </div>
 </div>

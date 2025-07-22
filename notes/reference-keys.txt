@@ -227,6 +227,7 @@ crossover-designs-ii
 announcements-18
 crossover-designs-1
 applied-example
+tomorrow-11
 semester-project
 learning-objectives
 partial-deadlines
