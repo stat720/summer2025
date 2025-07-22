@@ -346,7 +346,8 @@ knitr::kable(t_power, caption = "ANOVA Table comparing the split-plot design pro
 
 # Conclusion 
 
-Considering the main priority of this experiment (i.e., detecting differences between recipe treatments) and 
+Considering the main priority of this experiment (i.e., detecting differences between recipe treatments) and logistical restrictions, a split-plot design with temperature in the whole plot and 3 repetitions is appropriate to find differences between recipes, but lacks power to detect small differences among temperature levels. 
+If temperature were more important, the experiment may be conducted using approximately 6 repetitions.  
 
 
 # References  
