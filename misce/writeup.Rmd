@@ -11,9 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ### The golden rules of designed experiments  
 
-- **Randomization** 
+- **Randomization** allows us to assume independent observations. 
 - **Replication** 
 - **Local control** 
+
+### 
 
 ```{r}
 

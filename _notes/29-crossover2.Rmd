@@ -90,6 +90,8 @@ emmeans(m_milk.nocarryover, ~ Treatment )
 m_milk.carryover <- lmer(milk_production ~ Sequence + Period + Treatment + Prior_trt + (1|Sequence:Cow),
                data = df)
 
+car::Anova(m_milk.carryover, test.statistic = "F")
+
 emmeans(m_milk.carryover, ~ Treatment )
 ```
 
