@@ -23,6 +23,7 @@ knitr::include_graphics("../figures/principles.jpg")
   - Multilevel designs: split-plot designs, multi-location designs, subsampling, etc.
   - Crossover designs 
   - Repeated measures (Time is one of the treatment factors) 
+    - Comment: repeated measures in SAS and in R 
   - What is what? Sketch it! 
 - Inter-block recovery of information for incomplete block designs 
 - One model versus dividing the data  
@@ -70,6 +71,7 @@ where:
 - $TR_{ij}$ is the interaction between the $i$th temperature and $j$th recipe, 
 - $\varepsilon_{ijk}$ is the residual for the height of a muffin baked on day $k$ under the $i$th temperature, prepared with the $i$th recipe. 
 
+- Effects model versus Means model 
 
 ### What happens if we drop blocks, split-plots, etc? 
 
@@ -77,13 +79,14 @@ where:
 
 - Interpreting a small variance component (e.g., $\sigma^2_b$ ) vs. a non-significant fixed effect (i.e., $p_B >0.05$ ) 
 - The Difference Between “Significant” and “Not Significant” is not Itself Statistically Significant - [Gelman and Stern (2012)](https://www.tandfonline.com/doi/abs/10.1198/000313006X152649) 
-- Currently, the general advice is to include the randomization structure to avoid type I error inflation -- see "[Analyze as randomized -- Why dropping block effects in designed experiments is a bad idea (Frey et al., 2024)](https://acsess.onlinelibrary.wiley.com/doi/full/10.1002/agj2.21570)" 
+- Currently, the general advice is to include the randomization structure to avoid type I error deflation -- see "[Analyze as randomized -- Why dropping block effects in designed experiments is a bad idea (Frey et al., 2024)](https://acsess.onlinelibrary.wiley.com/doi/full/10.1002/agj2.21570)" 
 - Review on split-plot designs, EU sizes, and subsampling/pseudoreplication. 
 
 ### Differences modeling multi-location designed experiments  
 
 - Random effects versus fixed effects assumptions  
 - Remember that you are designing a model that describes how the data were generated, not using the model that will fit the results you hope to get. 
+- See [Gelman (2005)](https://projecteuclid.org/journals/annals-of-statistics/volume-33/issue-1/Analysis-of-variancewhy-it-is-more-important-than-ever/10.1214/009053604000001048.full) - page 20. 
 
 **Example: sites that are somewhat different** 
 
