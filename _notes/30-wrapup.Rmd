@@ -7,7 +7,7 @@ July 23rd, 2025
 
 ## Principles for conducting valid and efficient experiments 
 
-```{r echo=FALSE, fig.cap="'Principles for conducting valid and efficient experiments'. From Box, Hunter and Hunter.", out.width = '60%', fig.align='center'}
+```{r echo=FALSE, fig.cap="'Principles for conducting valid and efficient experiments'. From Box, Hunter and Hunter (2005).", out.width = '60%', fig.align='center'}
 knitr::include_graphics("../figures/principles.jpg")
 ```
 
@@ -141,7 +141,7 @@ And then take a look at $\hat{l}$ (random location effect):
 as.vector(getME(m_random, "b"))
 ```
 
-```{r echo=FALSE, fig.cap="'Principles for conducting valid and efficient experiments'. From Box, Hunter and Hunter.", out.width = '60%', fig.align='center'}
+```{r echo=FALSE, fig.cap="'Principles for conducting valid and efficient experiments'. From Box, Hunter and Hunter (2005).", out.width = '60%', fig.align='center'}
 knitr::include_graphics("../figures/principles.jpg")
 ```
 
