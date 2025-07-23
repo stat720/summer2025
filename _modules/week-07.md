@@ -1,5 +1,5 @@
 ---
-title: Crossover and  
+title: Crossover and Wrap-up  
 ---
 
 July 21
@@ -12,7 +12,7 @@ July 22
 
 July 23 
 : Wrap-up   
-  : [](#)
+  : [html](https://stat720.github.io/summer2025/notes/thats-all-folks.html)
 
 July 24 
 : Work on project   
